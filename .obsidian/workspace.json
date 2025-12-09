@@ -29,9 +29,9 @@
               "state": {
                 "file": "互联网/互联网基本架构.canvas",
                 "viewState": {
-                  "x": 838.1238957490909,
-                  "y": -1196.6642367766606,
-                  "zoom": -0.23832029857189088
+                  "x": 2538.4873705141854,
+                  "y": -945.455602629002,
+                  "zoom": -0.4741919337506146
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -230,6 +230,7 @@
   },
   "active": "4d830d8ec8a8446a",
   "lastOpenFiles": [
+    "mermaid-diagram (1).svg",
     "TCP协议详解.md",
     "mermaid-diagram.svg",
     "互联网/互联网基本架构.canvas",
