@@ -29,9 +29,9 @@
               "state": {
                 "file": "视频流传输协议.canvas",
                 "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
+                  "x": 671.5486129439894,
+                  "y": -1194.8300998080222,
+                  "zoom": -0.7700754254062974
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -113,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "d22c3be14a683c0f",
