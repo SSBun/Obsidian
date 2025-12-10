@@ -92,7 +92,19 @@
 			"y":-1800,
 			"width":670,
 			"height":340
-		}
+		},
+		{"id":"d1d428008481a3a9","type":"file","file":"HTTP 协议详细介绍.md","x":-660,"y":-1420,"width":692,"height":400},
+		{
+			"id":"509fdfa616b19ea3",
+			"type":"text",
+			"text":"### TLS 握手过程完整详解（以主流的 TLS 1.2 和 TLS 1.3 为重点）\n\nTLS 握手的目的是在客户端与服务器之间安全地协商出一套对称加密密钥，同时完成以下三件事：\n1. 协商双方都支持的协议版本和加密算法（密码套件）\n2. 完成服务器身份认证（有时也认证客户端）\n3. 生成用于加密应用数据的会话密钥（Master Secret / Traffic Secret）\n\n下面分别详细讲解 TLS 1.2 和 TLS 1.3 的握手流程（目前互联网 95%+ 的 HTTPS 流量已经使用 TLS 1.3）。\n\n#### 一、TLS 1.2 握手（经典 2-RTT 握手，目前仍在大量使用）\n\n```mermaid\nsequenceDiagram\n    participant C as 客户端\n    participant S as 服务器\n\n    C->>S: 1. ClientHello\n    Note right of C: 协议最高版本(TLS1.2)<br>随机数 ClientRandom<br>支持的密码套件列表<br>支持的扩展(SNI, ALPN, 支持的椭圆曲线等)\n\n    S->>C: 2. ServerHello\n    Note right of S: 选定版本(TLS1.2)<br>随机数 ServerRandom<br>选定的密码套件<br>Session ID（可复用会话时使用）\n\n    S->>C: 3. Certificate（服务器证书链）\n    S->>C: 4. ServerKeyExchange（可选）<br>仅在使用 DHE/ECDHE 时发送<br>包含服务器临时公钥和签名\n\n    S->>C: 5. CertificateRequest（可选）<br>服务器要求客户端证书时发送\n\n    S->>C: 6. ServerHelloDone\n\n    C->>S: 7. Certificate（可选）<br>客户端证书\n\n    C->>S: 8. ClientKeyExchange\n    Note right of C: 根据密码套件不同：<br>• RSA：加密 PreMaster Secret<br>• DHE/ECDHE：发送客户端临时公钥\n\n    C->>S: 9. ChangeCipherSpec（通知后续消息已加密）\n    C->>S: 10. Finished（加密的校验消息，含所有握手消息的哈希）\n\n    S->>C: 11. ChangeCipherSpec\n    S->>C: 12. Finished（加密的校验消息）\n\n    Note over C,S: 握手结束，此后所有应用数据（HTTP 请求/响应）均加密传输\n```\n\n**关键计算过程（TLS 1.2）**\n1. 双方各自拥有：ClientRandom + ServerRandom + PreMaster Secret\n2. 通过 PRF（伪随机函数，通常是 HMAC-SHA256）生成 Master Secret（48 字节）\n3. 再从 Master Secret 扩展出 4 个密钥：\n   - client_write_MAC_key\n   - server_write_MAC_key\n   - client_write_key（对称加密密钥）\n   - server_write_key\n\n**TLS 1.2 主要缺点**\n- 往返次数多：2-RTT（不含 TCP 握手）\n- 不支持 0-RTT\n- 部分旧密码套件不提供前向保密（PFS）\n- 握手消息明文传输（易被嗅探算法信息）\n\n#### 二、TLS 1.3 握手（现代标准，已占主导地位）\n\nTLS 1.3 彻底重构了握手流程，核心目标：\n- 减少到 1-RTT（甚至 0-RTT 复用）\n- 所有握手消息（除了最初的 ClientHello）都加密\n- 强制前向保密（只允许 ECDHE/DHE）\n- 去除旧的、不安全的加密算法\n\n```mermaid\nsequenceDiagram\n    participant C as 客户端\n    participant S as 服务器\n\n    Note over C,S: TCP 三次握手已完成\n\n    C->>S: 1. ClientHello + 早期数据（可选 0-RTT）\n    Note right of C: 支持版本: TLS 1.3<br>Client Random<br>Key Share（客户端 ECDHE 公钥）<br>支持的密码套件（仅 PFS 套件）<br>扩展：pre_shared_key（会话恢复）、early_data 等\n\n    S->>C: 2. ServerHello + 加密扩展\n    Note right of S: 选定 TLS 1.3<br>Server Random<br>Key Share（服务器 ECDHE 公钥）<br>选定密码套件（如 TLS_AES_256_GCM_SHA384）\n\n    S->>C: 3. EncryptedExtensions\n    S->>C: 4. Certificate（服务器证书）\n    S->>C: 5. CertificateVerify（服务器对所有握手消息的签名）\n    S->>C: 6. Finished（HMAC 校验）\n\n    Note over C,S: 此时双方已可计算出所有流量密钥<br>（Early Secret → Handshake Secret → Master Secret → Application Traffic Secret）\n\n    C->>C: 验证服务器证书和签名\n\n    C->>S: 7. Finished（HMAC 校验）\n\n    Note over C,S: 握手完成！<br>之后所有 HTTP 数据均使用 Application Data 密钥加密\n\n    opt 会话恢复（Session Resumption）\n        C->>S: 下次连接使用 PSK（Pre-Shared Key）<br>可实现 0-RTT 早期数据发送\n    end\n```\n\n**TLS 1.3 密钥派生流程（HKDF + SHA-384）**\n```\nEarly Secret\n├── Handshake Secret（使用 ECDHE 共享密钥）\n│   ├── Client Handshake Traffic Secret\n│   ├── Server Handshake Traffic Secret\n│   └── Derived Secret\n└── Master Secret\n    ├── Client Application Traffic Secret\n    ├── Server Application Traffic Secret\n    └── Resumption Master Secret（用于下次 PSK）\n```\n\n**TLS 1.3 的四大改进**\n| 项目                | TLS 1.2                  | TLS 1.3                              |\n|---------------------|--------------------------|--------------------------------------|\n| 往返次数            | 2-RTT                    | 1-RTT（新连接）/ 0-RTT（复用）       |\n| 握手消息是否加密    | 全部明文                 | 除了 ClientHello 外全部加密          |\n| 前向保密            | 可选（看密码套件）       | 强制（只允许 ECDHE）                 |\n| 支持 0-RTT          | 不支持                   | 支持（使用 PSK）                     |\n| 密钥更新            | 不支持                   | 支持 KeyUpdate 消息，可随时轮换密钥  |\n| 协商时间            | 约 200–400ms             | 通常 < 100ms                         |\n\n#### 三、实际抓包看到的典型 TLS 1.3 握手（Wireshark 示例）\n```\n1. Client Hello          (明文，包含 key_share)\n2. Server Hello           (明文，包含 key_share)\n   ↳ 此时双方已经可以计算 handshake keys\n3. Encrypted Extensions + Certificate + CertVerify + Finished  (全部加密)\n4. Finished               (加密，来自客户端)\n5. Application Data       (加密的 HTTP GET 请求立即发送)\n```\n\n#### 四、TLS 握手常见扩展（Extensions）\n| 扩展名称               | 作用                                      |\n|------------------------|-------------------------------------------|\n| server_name (SNI)      | 虚拟主机支持，告诉服务器要访问哪个域名    |\n| ALPN                   | 协商应用层协议（如 h2 表示 HTTP/2）       |\n| supported_groups       | 支持的椭圆曲线（x25519, secp256r1 等）    |\n| key_share              | 提前发送 ECDHE 公钥（TLS 1.3 关键）       |\n| pre_shared_key         | 会话票据（Session Ticket）或 PSK 恢复     |\n| early_data             | 声明支持 0-RTT                            |\n| signature_algorithms   | 支持的签名算法（rsa-pkcs1-sha256, ecdsa-secp256r1-sha256 等） |\n\n#### 五、总结对比表\n\n| 特性                  | TLS 1.2                              | TLS 1.3                              |\n|-----------------------|--------------------------------------|--------------------------------------|\n| 首次连接延迟          | 2-RTT + TCP 握手 ≈ 3-RTT             | 1-RTT + TCP 握手 ≈ 2-RTT             |\n| 恢复连接延迟          | 1-RTT（Session ID/Ticket）           | 0-RTT（PSK + early data）            |\n| 安全性                | 依赖密码套件，有非 PFS 选项          | 强制 PFS，所有握手消息（几乎）加密   |\n| 性能                  | 一般                                 | 显著提升（尤其移动网络）             |\n| 互联网占比（2025年）  | < 5%                                 | > 95%                                |\n\n这就是目前最详细、最实用的 TLS 握手过程说明。实际部署中，强烈推荐强制使用 TLS 1.3 + ECDHE + AES-256-GCM 或 ChaCha20-Poly1305 组合。",
+			"styleAttributes":{},
+			"x":-1540,
+			"y":-1420,
+			"width":692,
+			"height":380
+		},
+		{"id":"ac203ff2f015cfa5","type":"file","file":"TCP 复用TCP 复用.md","x":-660,"y":-1920,"width":692,"height":400}
 	],
 	"edges":[
 		{"id":"c118c2b7a27d8f6c","fromNode":"3d196d0cfa64859c","fromSide":"right","toNode":"3e5ae91a55a88bd2","toSide":"left"},
@@ -173,6 +185,42 @@
 			"fromSide":"top",
 			"toNode":"479b2304b2f2911a",
 			"toSide":"left"
+		},
+		{
+			"id":"81faf9169075adfc",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"3e5ae91a55a88bd2",
+			"fromSide":"top",
+			"toNode":"d1d428008481a3a9",
+			"toSide":"bottom"
+		},
+		{
+			"id":"7b708dbdd9a72ccc",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"d1d428008481a3a9",
+			"fromSide":"left",
+			"toNode":"509fdfa616b19ea3",
+			"toSide":"right"
+		},
+		{
+			"id":"42e18c415a44626b",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"d1d428008481a3a9",
+			"fromSide":"top",
+			"toNode":"ac203ff2f015cfa5",
+			"toSide":"bottom"
+		},
+		{
+			"id":"46049c8e2c154503",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"7a7c3b2b3179896c",
+			"fromSide":"top",
+			"toNode":"ac203ff2f015cfa5",
+			"toSide":"right"
 		}
 	],
 	"metadata":{
