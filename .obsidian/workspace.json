@@ -29,13 +29,27 @@
               "state": {
                 "file": "互联网/互联网基本架构.canvas",
                 "viewState": {
-                  "x": 423.08543662764487,
-                  "y": -1227.6613892075607,
-                  "zoom": -1.229020356091281
+                  "x": -1570.130083770309,
+                  "y": -558.2474974630335,
+                  "zoom": -1.5872756350040436
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "互联网基本架构"
+            }
+          },
+          {
+            "id": "6c540a37813ae142",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "详述 Socket 协议.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "详述 Socket 协议"
             }
           }
         ],
@@ -216,8 +230,10 @@
   },
   "active": "4d830d8ec8a8446a",
   "lastOpenFiles": [
-    "互联网/note/HTTP 协议详细介绍.md",
+    "详述 Socket 协议.md",
+    "mermaid-diagram (3).svg",
     "互联网/互联网基本架构.canvas",
+    "互联网/note/HTTP 协议详细介绍.md",
     "互联网/note/TLS 握手过程完整详解.md",
     "互联网/note/HTTP-3 与 QUIC 协议详细介绍.md",
     "互联网/note/TCP协议详解.md",
@@ -254,7 +270,6 @@
     "互联网/resource/Pasted image 20251209134207.png",
     "互联网/网络传输层协议.canvas",
     "互联网/note",
-    "互联网/note/IP协议详解 (Internet Protocol).md",
     "Untitled",
     "互联网/resource",
     "互联网",
