@@ -97,7 +97,7 @@
 		{"id":"d1d428008481a3a9","type":"file","file":"互联网/note/HTTP 协议详细介绍.md","x":-660,"y":-1420,"width":692,"height":400},
 		{"id":"ac203ff2f015cfa5","type":"file","file":"互联网/note/TCP 复用TCP 复用.md","x":-160,"y":-1860,"width":692,"height":400},
 		{"id":"001b654866c849e8","type":"file","file":"互联网/note/HTTP-3 与 QUIC 协议详细介绍.md","x":-1000,"y":-1920,"width":800,"height":380},
-		{"id":"d594b1257902dadc","type":"file","file":"详述 Socket 协议.md","x":-1994,"y":-930,"width":800,"height":480},
+		{"id":"d594b1257902dadc","type":"file","file":"互联网/详述 Socket 协议.md","x":-1994,"y":-930,"width":800,"height":480},
 		{
 			"id":"3ab676352610623c",
 			"type":"text",

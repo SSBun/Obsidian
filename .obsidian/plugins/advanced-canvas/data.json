@@ -71,7 +71,7 @@
   "fullscreenPresentationEnabled": true,
   "slideTransitionAnimationDuration": 0.5,
   "slideTransitionAnimationIntensity": 1.25,
-  "canvasEncapsulationEnabled": false,
+  "canvasEncapsulationEnabled": true,
   "portalsFeatureEnabled": true,
   "showEdgesIntoDisabledPortals": true,
   "autoFileNodeEdgesFeatureEnabled": false,
