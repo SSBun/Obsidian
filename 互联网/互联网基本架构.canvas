@@ -145,6 +145,15 @@
 			"fromSide":"right",
 			"toNode":"ff40b55e06644573",
 			"toSide":"left"
+		},
+		{
+			"id":"9b7ae1dc229faa64",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"938913b464c12521",
+			"fromSide":"right",
+			"toNode":"b80cdf10f03b401b",
+			"toSide":"left"
 		}
 	],
 	"metadata":{
