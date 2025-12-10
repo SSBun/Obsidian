@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UDP-Lite 协议.md",
+                "file": "互联网/note/UDP-Lite 协议.md",
                 "mode": "source",
                 "source": false
               },
@@ -29,9 +29,9 @@
               "state": {
                 "file": "互联网/互联网基本架构.canvas",
                 "viewState": {
-                  "x": 351.49779393794694,
-                  "y": -2815.1021736408206,
-                  "zoom": -0.8483922950947486
+                  "x": 423.08543662764487,
+                  "y": -1227.6613892075607,
+                  "zoom": -1.229020356091281
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -216,16 +216,18 @@
   },
   "active": "4d830d8ec8a8446a",
   "lastOpenFiles": [
-    "HTTP 协议详细介绍.md",
+    "互联网/note/HTTP 协议详细介绍.md",
     "互联网/互联网基本架构.canvas",
-    "TCP协议详解.md",
-    "TCP 复用TCP 复用.md",
-    "mermaid-diagram (1).svg",
-    "mermaid-diagram.svg",
+    "互联网/note/TLS 握手过程完整详解.md",
+    "互联网/note/HTTP-3 与 QUIC 协议详细介绍.md",
+    "互联网/note/TCP协议详解.md",
+    "互联网/note/TCP 复用TCP 复用.md",
+    "互联网/note/mermaid-diagram (1).svg",
+    "互联网/note/mermaid-diagram.svg",
     "Excalidraw/Drawing 2025-12-09 19.23.53.excalidraw.md",
-    "UDP相比IP协议，除了增加端口号用来实现多路复用，还有那些区别呢？.md",
+    "互联网/note/UDP相比IP协议，除了增加端口号用来实现多路复用，还有那些区别呢？.md",
     "互联网/note/UDP 协议详解.md",
-    "UDP-Lite 协议.md",
+    "互联网/note/UDP-Lite 协议.md",
     "Excalidraw/Drawing 2025-12-09 16.08.40.excalidraw.md",
     "Excalidraw/Drawing 2025-12-09 16.08.53.excalidraw.md",
     "Excalidraw",
@@ -253,8 +255,6 @@
     "互联网/网络传输层协议.canvas",
     "互联网/note",
     "互联网/note/IP协议详解 (Internet Protocol).md",
-    "互联网/note/数据链路层的主要工作方式.md",
-    "Untitled.md",
     "Untitled",
     "互联网/resource",
     "互联网",
