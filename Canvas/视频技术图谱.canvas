@@ -31,11 +31,14 @@
 			"type":"text",
 			"text":"以下是 2025 年仍然活跃的**主流高级音频格式**（按实际使用量从高到低排序），并附上最直观的对比表，方便你一眼看清谁更适合什么场景。\n\n| 排名 | 格式                  | 类型         | 压缩方式       | 典型码率               | 音质（主观）                | 主要使用场景                          | 专利/费用 | 硬件支持度 | 备注                                      |\n|------|-----------------------|--------------|----------------|-------------------------|-----------------------------|----------------------------------------|-----------|------------|-------------------------------------------|\n| 1    | AAC (.m4a/.aac)       | 有损         | 感知编码       | 128~320kbps            | 256kbps 已接近透明          | 苹果音乐、YouTube、B站、抖音、直播     | 专利已过期 | ★★★★★      | 事实上的“互联网音频标准”                  |\n| 2    | Opus                  | 有损/无损混合| 语音+音乐双模式| 32~256kbps（推荐96+）  | 128kbps 碾压 AAC 256kbps   | WebRTC、Discord、WhatsApp、游戏语音    | 完全免费   | ★★★★★      | 延迟极低，被称为“神器”                    |\n| 3    | Dolby AC3 / E-AC3     | 有损         | 感知编码       | 384~640kbps            | 优秀                        | Netflix、蓝光碟、电视、杜比影院        | 专利收费   | ★★★★☆      | 5.1 环绕声标准                            |\n| 4    | Dolby TrueHD          | 无损         | Meridian 无损压缩 | 6~18Mbps               | 数学无损                    | 蓝光原盘、4K UHD 碟                   | 专利收费   | ★★★☆☆      | 最多 7.1.4 沉浸式音频                    |\n| 5    | DTS-HD MA / DTS:X     | 无损         | 无损压缩       | 6~24Mbps               | 数学无损                    | 蓝光原盘、少数影院                    | 专利收费   | ★★★☆☆      | 竞争对手 TrueHD，对象式音频               |\n| 6    | MP3 (.mp3)            | 有损         | 感知编码       | 192~320kbps            | 320kbps 优秀，128kbps 一般  | 老音乐、U盘、车载                     | 专利已过期 | ★★★★☆      | 仍在大量存在，但已逐渐被 AAC 取代         |\n| 7    | FLAC                  | 无损         | 无损压缩       | 600~1400kbps（视内容） | 数学无损                    | 发烧友、Tidal HiFi、本地音乐          | 完全免费   | ★★★★☆      | 开源之王，支持到 32bit/384kHz             |\n| 8    | ALAC (.m4a)           | 无损         | Apple 无损压缩 | 与 FLAC 差不多         | 数学无损                    | 苹果生态（Apple Music 无损）           | 免费开源   | ★★★☆☆      | 苹果专用，但跨平台也支持                  |\n| 9    | APE / WavPack         | 无损         | 无损压缩       | 600~1200kbps           | 数学无损                    | 极少数老发烧友                         | 免费       | ★☆☆☆☆      | 压缩率高但解码慢，基本退出主流            |\n| 10   | Sony 360 Reality Audio| 沉浸式有损   | 基于 MPEG-H 3D | 500~1000kbps           | 优秀                        | Amazon Music、Deezer（空间音频）       | 专利收费   | ★★☆☆☆      | 需要特定耳机+头追踪                       |\n| 11   | Dolby Atmos Music     | 沉浸式有损   | E-AC3+对象音频 | 768kbps 左右           | 优秀                        | Apple Music、Tidal（空间音频）         | 专利收费   | ★★★☆☆      | 目前最火的空间音频格式                    |\n\n### 2025 年实际推荐（一句话总结）\n\n| 你的需求                     | 直接选这个格式                              |\n|------------------------------|---------------------------------------------|\n| 直播 / 视频平台 / 手机       | AAC（256kbps）或 Opus（128~160kbps）        |\n| 实时语音通话 / 游戏语音      | Opus（64~128kbps）                          |\n| 听歌（追求音质）             | Apple Music / Tidal → 选无损（FLAC/ALAC）   |\n| 发烧友本地存档               | FLAC 最高规格（24bit/192kHz）               |\n| 看4K蓝光/原盘                | TrueHD 或 DTS-HD MA（无损环绕）             |\n| 空间音频（沉浸式）           | Apple Music 的 Dolby Atmos 或 360RA         |\n| 兼容最老设备                 | 仍然只能用 MP3                              |\n\n### 未来趋势（2025→2030）\n1. Opus 正在全面取代 AAC 成为新一代互联网音频标准（YouTube 已经在部分视频用 Opus）\n2. 空间音频（Dolby Atmos / 360RA / MPEG-H）会成为流媒体标配\n3. 无损流媒体彻底普及，256kbps AAC 正在成为“最低音质”\n\n一句话口诀：\n“直播看视频用 AAC，语音通话用 Opus，听无损用 FLAC，看电影用 TrueHD，想听头顶唱歌开 Atmos。”  \n记住了这五句话，基本就通杀所有场景了。",
 			"styleAttributes":{},
-			"x":4200,
-			"y":0,
+			"x":3280,
+			"y":-680,
 			"width":800,
 			"height":400
-		}
+		},
+		{"id":"82ee0bf72865a03c","type":"file","file":"AAC.md","x":4240,"y":-1120,"width":800,"height":400},
+		{"id":"6d3bcf0d88f267f7","type":"file","file":"MP3.md","x":4240,"y":-280,"width":800,"height":400},
+		{"id":"50ce0e0018c77952","type":"file","file":"Opus.md","x":4240,"y":-700,"width":800,"height":400}
 	],
 	"edges":[
 		{
@@ -100,10 +103,50 @@
 			"id":"aeb7480308b4775c",
 			"styleAttributes":{},
 			"toFloating":false,
+			"fromFloating":false,
 			"fromNode":"f78a9b75bbef3f70",
 			"fromSide":"right",
 			"toNode":"c548b8954fb238ea",
+			"toSide":"left",
+			"label":"AIFF"
+		},
+		{
+			"id":"dbb7831b5b151836",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"9d4f1d7c6cda441d",
+			"fromSide":"right",
+			"toNode":"82ee0bf72865a03c",
 			"toSide":"left"
+		},
+		{
+			"id":"0195a9de83a56720",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"9d4f1d7c6cda441d",
+			"fromSide":"right",
+			"toNode":"50ce0e0018c77952",
+			"toSide":"left"
+		},
+		{
+			"id":"84aab0c87d091978",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"9d4f1d7c6cda441d",
+			"fromSide":"right",
+			"toNode":"6d3bcf0d88f267f7",
+			"toSide":"left"
+		},
+		{
+			"id":"368858a77ee7a58a",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"f78a9b75bbef3f70",
+			"fromSide":"right",
+			"toNode":"9d4f1d7c6cda441d",
+			"toSide":"left",
+			"label":"Advanced Audio Format"
 		}
 	],
 	"metadata":{
