@@ -60,8 +60,8 @@
               "state": {
                 "file": "Canvas/视频技术图谱.canvas",
                 "viewState": {
-                  "x": 3259.726485369651,
-                  "y": -2249.050648443573,
+                  "x": 2531.453222531091,
+                  "y": -2342.062119554633,
                   "zoom": -0.6216663153966258
                 }
               },
@@ -265,6 +265,8 @@
   },
   "active": "0ce74ec46cf38518",
   "lastOpenFiles": [
+    "高级图片格式.md",
+    "YUV420 的色值含义.md",
     "Opus.md",
     "MP3.md",
     "AAC.md",
@@ -295,10 +297,8 @@
     "互联网/note/TLS 握手过程完整详解.md",
     "互联网/note/HTTP-3 与 QUIC 协议详细介绍.md",
     "互联网/note/TCP协议详解.md",
-    "互联网/note/TCP 复用TCP 复用.md",
     "互联网/note/mermaid-diagram (1).svg",
     "互联网/note/mermaid-diagram.svg",
-    "互联网/note/UDP相比IP协议，除了增加端口号用来实现多路复用，还有那些区别呢？.md",
     "Excalidraw",
     "copilot/copilot-custom-prompts",
     "copilot",
