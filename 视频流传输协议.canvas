@@ -12,8 +12,19 @@
 		},
 		{"id":"9752d91ad777b442","type":"file","file":"RTMP 协议.md","x":220,"y":-2120,"width":880,"height":440},
 		{"id":"db7ddf03448082b0","type":"file","file":"RTMP 直播协议完整流程详细描述.md","x":1240,"y":-2120,"width":800,"height":440},
-		{"id":"1cd9f7e7891c5fce","type":"file","file":"视频采集中的 YUV和RBG格式是什呢？.md","x":2180,"y":-2120,"width":860,"height":440},
-		{"id":"38ae663c06837568","type":"file","file":"YUV 的UV只有红蓝，但是没有绿色，岂不是有色彩缺失？.md","x":2180,"y":-2580,"width":840,"height":360}
+		{"id":"1cd9f7e7891c5fce","type":"file","file":"视频采集中的 YUV和RBG格式是什呢？.md","x":2330,"y":-2160,"width":860,"height":440},
+		{"id":"38ae663c06837568","type":"file","file":"YUV 的UV只有红蓝，但是没有绿色，岂不是有色彩缺失？.md","x":2340,"y":-2660,"width":840,"height":360},
+		{"id":"f78a9b75bbef3f70","type":"file","file":"PCM 是如何记录音频信息的？.md","x":2340,"y":-1320,"width":860,"height":440},
+		{
+			"id":"d49f23c9f3dc1ffd",
+			"type":"text",
+			"text":"",
+			"styleAttributes":{},
+			"x":2340,
+			"y":-680,
+			"width":800,
+			"height":400
+		}
 	],
 	"edges":[
 		{
@@ -39,10 +50,12 @@
 			"id":"b0c82dbd5f6c4a22",
 			"styleAttributes":{},
 			"toFloating":false,
+			"fromFloating":false,
 			"fromNode":"db7ddf03448082b0",
 			"fromSide":"right",
 			"toNode":"1cd9f7e7891c5fce",
-			"toSide":"left"
+			"toSide":"left",
+			"label":"YUV/RGB格式"
 		},
 		{
 			"id":"30dd6feda525c612",
@@ -52,6 +65,16 @@
 			"fromSide":"top",
 			"toNode":"38ae663c06837568",
 			"toSide":"bottom"
+		},
+		{
+			"id":"13ba51e55009c533",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"db7ddf03448082b0",
+			"fromSide":"right",
+			"toNode":"f78a9b75bbef3f70",
+			"toSide":"left",
+			"label":"PCM"
 		}
 	],
 	"metadata":{

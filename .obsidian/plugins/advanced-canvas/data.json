@@ -2,8 +2,8 @@
   "nodeTypeOnDoubleClick": "text",
   "alignNewNodesToGrid": true,
   "defaultTextNodeDimensions": [
-    260,
-    60
+    800,
+    400
   ],
   "defaultFileNodeDimensions": [
     400,
