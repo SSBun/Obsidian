@@ -1,1 +1,8 @@
-{}
+{
+  "cssTheme": "Minimal",
+  "monospaceFontFamily": "0xProto Nerd Font Propo",
+  "textFontFamily": "",
+  "interfaceFontFamily": "",
+  "showViewHeader": false,
+  "showRibbon": false
+}

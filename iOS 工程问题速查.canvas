@@ -1,15 +1,7 @@
 {
 	"nodes":[
-		{
-			"id":"4e38756ed6fe9a16",
-			"type":"text",
-			"text":"### **在 Pod 组件库中从 Objective-C 调用 Swift 代码**\n\n**场景：**\n你的 Pod 组件库同时包含 Swift 和 Objective-C 文件，并已集成到主工程中。现在需要在主工程的 Objective-C 代码中调用 Pod 内部的 Swift 代码。\n\n**核心原理：**\nXcode 会为 Pod 中的 `@objc` Swift 代码自动生成一个 Objective-C 兼容的头文件，通过导入这个头文件，Objective-C 就能识别并调用 Swift 代码。\n\n**关键步骤：**\n\n1.  **标记 Pod 中的 Swift 代码：**\n    *   在 Pod 的 Swift 文件中，所有需要从 Objective-C 访问的类和方法必须：\n        *   继承自 `NSObject` (或其子类)。\n        *   使用 `@objc` 属性进行标记。\n        *   访问权限应为 `public` 或 `internal`。\n    *   **示例 Swift 代码 (在 Pod 中):**\n        ```swift\n        import Foundation\n        @objc public class MySwiftClassInPod: NSObject {\n            @objc public func doSomethingInSwift() { /* ... */ }\n            @objc public func calculateSum(_ a: Int, _ b: Int) -> Int { return a + b }\n        }\n        ```\n\n2.  **导入自动生成的 Swift 兼容头文件：**\n    *   Xcode 会为你的 Pod 自动生成一个名为 `<YourPodName>-Swift.h` 的头文件。\n    *   **注意：** `YourPodName` 是你的 Pod 在 `podspec` 文件中定义的名称 (`s.name`)，而不是主工程的名称。\n    *   在主工程中需要调用 Pod Swift 代码的 Objective-C `.m` 或 `.mm` 文件中，导入此头文件。\n    *   **示例 Objective-C 导入 (在主工程中):**\n        ```objective-c\n        #import \"YourPodName-Swift.h\" // 替换 YourPodName 为你的Pod实际名称\n        ```\n\n3.  **在 Objective-C 中调用 Swift 代码：**\n    *   导入头文件后，你就可以像使用任何其他 Objective-C 类一样，实例化 Pod 中的 Swift 类并调用其 `@objc` 方法。\n    *   **示例 Objective-C 调用 (在主工程中):**\n        ```objective-c\n        // ...\n        MySwiftClassInPod *swiftObject = [[MySwiftClassInPod alloc] init];\n        [swiftObject doSomethingInSwift];\n        NSInteger result = [swiftObject calculateSum:10 :20];\n        NSLog(@\"Result from Pod Swift: %ld\", (long)result);\n        // ...\n        ```\n\n**注意事项：**\n*   确保 Pod 的 Build Settings 中 `DEFINES_MODULE` 设置为 `YES` (CocoaPods 通常会自动处理)。\n*   正确使用 Pod 的模块名称来导入 `import <YourPodName/YourPodName-Swift.h>`。\n\n---",
-			"styleAttributes":{},
-			"x":-800,
-			"y":-880,
-			"width":720,
-			"height":540
-		}
+		{"id":"e557f891aed9cdf1","type":"file","file":"在 Pod 组件库中从 Objective-C 调用 Swift 代码.md","x":-1100,"y":-1100,"width":620,"height":709},
+		{"id":"4b0ca41725984690","type":"file","file":"Should I always add the keyword for classes?.md","x":-380,"y":-1100,"width":640,"height":709,"color":"2"}
 	],
 	"edges":[],
 	"metadata":{

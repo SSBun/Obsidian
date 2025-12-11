@@ -29,9 +29,9 @@
               "state": {
                 "file": "视频流传输协议.canvas",
                 "viewState": {
-                  "x": 715.959038953022,
-                  "y": -1199.4926553303692,
-                  "zoom": -0.6929879517356549
+                  "x": 210,
+                  "y": -1650,
+                  "zoom": -0.6777772069110434
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -76,7 +76,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -113,8 +113,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "d22c3be14a683c0f",
@@ -130,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "视频流传输协议.canvas",
+                "file": "Should I always add the keyword for classes?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +139,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 视频流传输协议"
+              "title": "Backlinks for Should I always add the keyword for classes?"
             }
           },
           {
@@ -149,12 +148,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "视频流传输协议.canvas",
+                "file": "Should I always add the keyword for classes?.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 视频流传输协议"
+              "title": "Outgoing links from Should I always add the keyword for classes?"
             }
           },
           {
@@ -192,13 +191,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "视频流传输协议.canvas",
+                "file": "Should I always add the keyword for classes?.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 视频流传输协议"
+              "title": "Outline of Should I always add the keyword for classes?"
             }
           },
           {
@@ -230,17 +229,20 @@
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "copilot:Open Copilot Chat": false,
       "obsidian-importer:Open Importer": false
     }
   },
   "active": "4d830d8ec8a8446a",
   "lastOpenFiles": [
-    "互联网/互联网基本架构.canvas",
+    "iOS 工程问题速查.canvas",
     "视频流传输协议.canvas",
+    "在 Pod 组件库中从 Objective-C 调用 Swift 代码.md",
+    "Should I always add the keyword for classes?.md",
+    "互联网/互联网基本架构.canvas",
+    "互联网/note/IP协议详解 (Internet Protocol).md",
+    "互联网/note/UDP-Lite 协议.md",
     "互联网/HTTP.canvas",
     "互联网/详述 Socket 协议.md",
-    "iOS 工程问题速查.canvas",
     "Excalidraw/Drawing 2025-12-09 16.08.40.excalidraw.md",
     "Excalidraw/Drawing 2025-12-09 19.23.53.excalidraw.md",
     "Excalidraw/Drawing 2025-12-09 16.08.53.excalidraw.md",
@@ -256,7 +258,6 @@
     "互联网/note/mermaid-diagram.svg",
     "互联网/note/UDP相比IP协议，除了增加端口号用来实现多路复用，还有那些区别呢？.md",
     "互联网/note/UDP 协议详解.md",
-    "互联网/note/UDP-Lite 协议.md",
     "Excalidraw",
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet.md",
@@ -266,9 +267,6 @@
     "copilot/copilot-custom-prompts/Make shorter.md",
     "copilot/copilot-custom-prompts/Emojify.md",
     "copilot/copilot-custom-prompts/Explain like I am 5.md",
-    "copilot/copilot-custom-prompts/Simplify.md",
-    "copilot/copilot-custom-prompts/Translate to Chinese.md",
-    "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "Untitled.base",
