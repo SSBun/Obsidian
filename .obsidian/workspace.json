@@ -29,9 +29,9 @@
               "state": {
                 "file": "视频流传输协议.canvas",
                 "viewState": {
-                  "x": 1991.7583844877377,
-                  "y": -1843.6248245782635,
-                  "zoom": -0.18823538821279523
+                  "x": 1559.030331000923,
+                  "y": -1950.389801884495,
+                  "zoom": -0.12664064974923409
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -234,6 +234,8 @@
   },
   "active": "4d830d8ec8a8446a",
   "lastOpenFiles": [
+    "视频采集中的 YUV和RBG格式是什呢？.md",
+    "YUV 的UV只有红蓝，但是没有绿色，岂不是有色彩缺失？.md",
     "RTMP 直播协议完整流程详细描述.md",
     "RTMP 协议.md",
     "iOS 工程问题速查.canvas",
@@ -266,8 +268,6 @@
     "copilot/copilot-custom-prompts/Generate glossary.md",
     "copilot/copilot-custom-prompts/Generate table of contents.md",
     "copilot/copilot-custom-prompts/Make longer.md",
-    "copilot/copilot-custom-prompts/Make shorter.md",
-    "copilot/copilot-custom-prompts/Emojify.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "Untitled.base",
