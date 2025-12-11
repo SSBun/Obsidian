@@ -25,17 +25,48 @@
             "id": "4d830d8ec8a8446a",
             "type": "leaf",
             "state": {
+              "type": "markdown",
+              "state": {
+                "file": "互联网/note/UDP-Lite 协议.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "UDP-Lite 协议"
+            }
+          },
+          {
+            "id": "db8ebb0a66e616df",
+            "type": "leaf",
+            "state": {
               "type": "canvas",
               "state": {
-                "file": "视频流传输协议.canvas",
+                "file": "Canvas/HTTP.canvas",
                 "viewState": {
-                  "x": 2931.693350563345,
-                  "y": -918.0043958112369,
-                  "zoom": -0.7321747133268838
+                  "x": 350,
+                  "y": -360,
+                  "zoom": -0.8594016698271993
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "视频流传输协议"
+              "title": "HTTP"
+            }
+          },
+          {
+            "id": "0ce74ec46cf38518",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Canvas/视频技术图谱.canvas",
+                "viewState": {
+                  "x": 2740,
+                  "y": -480,
+                  "zoom": 0
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "视频技术图谱"
             }
           },
           {
@@ -56,7 +87,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -232,21 +263,24 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "4d830d8ec8a8446a",
+  "active": "0ce74ec46cf38518",
   "lastOpenFiles": [
-    "PCM 是如何记录音频信息的？.md",
-    "视频采集中的 YUV和RBG格式是什呢？.md",
-    "YUV 的UV只有红蓝，但是没有绿色，岂不是有色彩缺失？.md",
-    "RTMP 直播协议完整流程详细描述.md",
-    "RTMP 协议.md",
-    "iOS 工程问题速查.canvas",
-    "视频流传输协议.canvas",
-    "在 Pod 组件库中从 Objective-C 调用 Swift 代码.md",
-    "Should I always add the keyword for classes?.md",
-    "互联网/互联网基本架构.canvas",
-    "互联网/note/IP协议详解 (Internet Protocol).md",
+    "Canvas/网络基础架构.canvas",
+    "Canvas/视频技术图谱.canvas",
+    "Canvas/HTTP.canvas",
+    "Canvas/iOS 工程问题速查.canvas",
     "互联网/note/UDP-Lite 协议.md",
-    "互联网/HTTP.canvas",
+    "Canvas",
+    "互联网/note/UDP 协议详解.md",
+    "互联网/note/PCM 是如何记录音频信息的？.md",
+    "互联网/note/为什么有44.1kHz这个特殊采样率？.md",
+    "视频采集中的 YUV和RBG格式是什呢？.md",
+    "互联网/note/YUV 的UV只有红蓝，但是没有绿色，岂不是有色彩缺失？.md",
+    "互联网/note/RTMP 直播协议完整流程详细描述.md",
+    "互联网/note/RTMP 协议.md",
+    "互联网/note/在 Pod 组件库中从 Objective-C 调用 Swift 代码.md",
+    "互联网/note/Should I always add the keyword for classes?.md",
+    "互联网/note/IP协议详解 (Internet Protocol).md",
     "互联网/详述 Socket 协议.md",
     "Excalidraw/Drawing 2025-12-09 16.08.40.excalidraw.md",
     "Excalidraw/Drawing 2025-12-09 19.23.53.excalidraw.md",
@@ -262,12 +296,9 @@
     "互联网/note/mermaid-diagram (1).svg",
     "互联网/note/mermaid-diagram.svg",
     "互联网/note/UDP相比IP协议，除了增加端口号用来实现多路复用，还有那些区别呢？.md",
-    "互联网/note/UDP 协议详解.md",
     "Excalidraw",
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet.md",
-    "copilot/copilot-custom-prompts/Generate glossary.md",
-    "copilot/copilot-custom-prompts/Generate table of contents.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "Untitled.base",
@@ -278,7 +309,6 @@
     "互联网/resource/Pasted image 20251209134207.png",
     "互联网/网络传输层协议.canvas",
     "互联网/note",
-    "Untitled",
     "互联网/resource",
     "互联网",
     "Untitled 1.base"
