@@ -56,14 +56,17 @@
             "id": "0ce74ec46cf38518",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "互联网/note/RTMP 直播协议完整流程详细描述.md",
-                "mode": "source",
-                "source": false
+                "file": "Canvas/视频技术图谱.canvas",
+                "viewState": {
+                  "x": 580.9499999999996,
+                  "y": -1641.459999999999,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "RTMP 直播协议完整流程详细描述"
+              "icon": "lucide-layout-dashboard",
+              "title": "视频技术图谱"
             }
           },
           {
@@ -239,12 +242,11 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 356.5,
-    "collapsed": true
+    "width": 356.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -262,6 +264,9 @@
   },
   "active": "0ce74ec46cf38518",
   "lastOpenFiles": [
+    "互联网/note/TCP 复用TCP 复用.md",
+    "互联网/note/Should I always add the keyword for classes?.md",
+    "互联网/note/RTMP 直播协议完整流程详细描述.md",
     "Canvas/视频技术图谱.canvas",
     "主流视频封装格式.md",
     "主流视频编码格式.md",
@@ -280,10 +285,8 @@
     "互联网/note/为什么有44.1kHz这个特殊采样率？.md",
     "视频采集中的 YUV和RBG格式是什呢？.md",
     "互联网/note/YUV 的UV只有红蓝，但是没有绿色，岂不是有色彩缺失？.md",
-    "互联网/note/RTMP 直播协议完整流程详细描述.md",
     "互联网/note/RTMP 协议.md",
     "互联网/note/在 Pod 组件库中从 Objective-C 调用 Swift 代码.md",
-    "互联网/note/Should I always add the keyword for classes?.md",
     "互联网/note/IP协议详解 (Internet Protocol).md",
     "互联网/详述 Socket 协议.md",
     "Excalidraw/Drawing 2025-12-09 16.08.40.excalidraw.md",
