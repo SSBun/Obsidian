@@ -61,7 +61,7 @@
                 "file": "Canvas/视频技术图谱.canvas",
                 "viewState": {
                   "x": -48.66000000000047,
-                  "y": -1641.459999999999,
+                  "y": -1536.3699999999992,
                   "zoom": 0
                 }
               },
@@ -144,7 +144,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "d22c3be14a683c0f",
@@ -246,7 +247,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 356.5
+    "width": 356.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
