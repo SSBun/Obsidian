@@ -61,7 +61,7 @@
                 "file": "Canvas/视频技术图谱.canvas",
                 "viewState": {
                   "x": -48.66000000000047,
-                  "y": -1536.3699999999992,
+                  "y": -1260.1599999999903,
                   "zoom": 0
                 }
               },
@@ -266,6 +266,7 @@
   },
   "active": "0ce74ec46cf38518",
   "lastOpenFiles": [
+    "主流视频传输协议.md",
     "互联网/note/TCP 复用TCP 复用.md",
     "互联网/note/Should I always add the keyword for classes?.md",
     "互联网/note/RTMP 直播协议完整流程详细描述.md",
@@ -296,7 +297,6 @@
     "Excalidraw/Drawing 2025-12-09 16.08.53.excalidraw.md",
     "copilot/copilot-custom-prompts/Remove URLs.md",
     "copilot/copilot-custom-prompts/Summarize.md",
-    "互联网/note/HTTP 协议详细介绍.md",
     "mermaid-diagram (3).svg",
     "互联网/note/mermaid-diagram (1).svg",
     "互联网/note/mermaid-diagram.svg",
