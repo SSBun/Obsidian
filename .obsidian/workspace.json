@@ -60,9 +60,9 @@
               "state": {
                 "file": "Canvas/视频技术图谱.canvas",
                 "viewState": {
-                  "x": -48.66000000000047,
-                  "y": -1260.1599999999903,
-                  "zoom": 0
+                  "x": -72.62158743635482,
+                  "y": -1244.9569665286483,
+                  "zoom": 0.0819323970874158
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -266,6 +266,7 @@
   },
   "active": "0ce74ec46cf38518",
   "lastOpenFiles": [
+    "HLS协议详述.md",
     "主流视频传输协议.md",
     "互联网/note/TCP 复用TCP 复用.md",
     "互联网/note/Should I always add the keyword for classes?.md",
@@ -296,7 +297,6 @@
     "Excalidraw/Drawing 2025-12-09 19.23.53.excalidraw.md",
     "Excalidraw/Drawing 2025-12-09 16.08.53.excalidraw.md",
     "copilot/copilot-custom-prompts/Remove URLs.md",
-    "copilot/copilot-custom-prompts/Summarize.md",
     "mermaid-diagram (3).svg",
     "互联网/note/mermaid-diagram (1).svg",
     "互联网/note/mermaid-diagram.svg",
