@@ -56,17 +56,14 @@
             "id": "0ce74ec46cf38518",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Canvas/视频技术图谱.canvas",
-                "viewState": {
-                  "x": 2531.453222531091,
-                  "y": -2342.062119554633,
-                  "zoom": -0.6216663153966258
-                }
+                "file": "互联网/note/RTMP 直播协议完整流程详细描述.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "视频技术图谱"
+              "icon": "lucide-file",
+              "title": "RTMP 直播协议完整流程详细描述"
             }
           },
           {
@@ -265,13 +262,15 @@
   },
   "active": "0ce74ec46cf38518",
   "lastOpenFiles": [
+    "Canvas/视频技术图谱.canvas",
+    "主流视频封装格式.md",
+    "主流视频编码格式.md",
     "高级图片格式.md",
     "YUV420 的色值含义.md",
     "Opus.md",
     "MP3.md",
     "AAC.md",
     "Canvas/网络基础架构.canvas",
-    "Canvas/视频技术图谱.canvas",
     "Canvas/HTTP.canvas",
     "Canvas/iOS 工程问题速查.canvas",
     "互联网/note/UDP-Lite 协议.md",
@@ -294,9 +293,6 @@
     "copilot/copilot-custom-prompts/Summarize.md",
     "互联网/note/HTTP 协议详细介绍.md",
     "mermaid-diagram (3).svg",
-    "互联网/note/TLS 握手过程完整详解.md",
-    "互联网/note/HTTP-3 与 QUIC 协议详细介绍.md",
-    "互联网/note/TCP协议详解.md",
     "互联网/note/mermaid-diagram (1).svg",
     "互联网/note/mermaid-diagram.svg",
     "Excalidraw",

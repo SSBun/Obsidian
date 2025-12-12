@@ -40,7 +40,9 @@
 		{"id":"6d3bcf0d88f267f7","type":"file","file":"MP3.md","x":4240,"y":-280,"width":800,"height":400},
 		{"id":"50ce0e0018c77952","type":"file","file":"Opus.md","x":4240,"y":-700,"width":800,"height":400},
 		{"id":"a65b27ef2cf76933","type":"file","file":"YUV420 的色值含义.md","x":3480,"y":-2140,"width":800,"height":400},
-		{"id":"dd67f054755582b0","type":"file","file":"高级图片格式.md","x":3380,"y":-2660,"width":1733,"height":380}
+		{"id":"dd67f054755582b0","type":"file","file":"高级图片格式.md","x":3380,"y":-2660,"width":1733,"height":380},
+		{"id":"4031a777ea4645c5","type":"file","file":"主流视频编码格式.md","x":2820,"y":-1660,"width":800,"height":400},
+		{"id":"69662ca2461e4576","type":"file","file":"主流视频封装格式.md","x":3780,"y":-1660,"width":800,"height":400}
 	],
 	"edges":[
 		{
@@ -168,6 +170,24 @@
 			"fromNode":"38ae663c06837568",
 			"fromSide":"right",
 			"toNode":"dd67f054755582b0",
+			"toSide":"left"
+		},
+		{
+			"id":"30f902bf8ea63633",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"1cd9f7e7891c5fce",
+			"fromSide":"bottom",
+			"toNode":"4031a777ea4645c5",
+			"toSide":"left"
+		},
+		{
+			"id":"b39b7e6b4ce4a0fe",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"4031a777ea4645c5",
+			"fromSide":"right",
+			"toNode":"69662ca2461e4576",
 			"toSide":"left"
 		}
 	],
