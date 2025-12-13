@@ -41,53 +41,19 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Canvas/HTTP.canvas",
-                "viewState": {
-                  "x": 350,
-                  "y": -360,
-                  "zoom": -0.8594016698271993
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "HTTP"
-            }
-          },
-          {
-            "id": "0ce74ec46cf38518",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
                 "file": "Canvas/视频技术图谱.canvas",
                 "viewState": {
-                  "x": -156.65670821016008,
-                  "y": -658.9731176378666,
-                  "zoom": -0.05098085492849324
+                  "x": -280,
+                  "y": -820,
+                  "zoom": 0
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "视频技术图谱"
             }
-          },
-          {
-            "id": "8051784328183920",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "互联网/HTTP.canvas",
-                "viewState": {
-                  "x": 161.74142293305528,
-                  "y": -248.30916278908833,
-                  "zoom": -0.960065133770307
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "HTTP"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -144,8 +110,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "d22c3be14a683c0f",
@@ -264,15 +229,16 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "0ce74ec46cf38518",
+  "active": "db8ebb0a66e616df",
   "lastOpenFiles": [
-    "WebRTC：实时通信技术的革命性突破.md",
+    "Canvas/HTTP.canvas",
+    "WebRTC：实时通信技术的全面解析.md",
+    "Canvas/视频技术图谱.canvas",
     "HLS协议详述.md",
     "主流视频传输协议.md",
     "互联网/note/TCP 复用TCP 复用.md",
     "互联网/note/Should I always add the keyword for classes?.md",
     "互联网/note/RTMP 直播协议完整流程详细描述.md",
-    "Canvas/视频技术图谱.canvas",
     "主流视频封装格式.md",
     "主流视频编码格式.md",
     "高级图片格式.md",
@@ -281,7 +247,6 @@
     "MP3.md",
     "AAC.md",
     "Canvas/网络基础架构.canvas",
-    "Canvas/HTTP.canvas",
     "Canvas/iOS 工程问题速查.canvas",
     "互联网/note/UDP-Lite 协议.md",
     "Canvas",
@@ -296,7 +261,6 @@
     "互联网/详述 Socket 协议.md",
     "Excalidraw/Drawing 2025-12-09 16.08.40.excalidraw.md",
     "Excalidraw/Drawing 2025-12-09 19.23.53.excalidraw.md",
-    "Excalidraw/Drawing 2025-12-09 16.08.53.excalidraw.md",
     "mermaid-diagram (3).svg",
     "互联网/note/mermaid-diagram (1).svg",
     "互联网/note/mermaid-diagram.svg",
