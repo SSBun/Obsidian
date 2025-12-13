@@ -39,6 +39,54 @@ RTMP 的设计目标是为了在不可靠的公共互联网上实现**低延迟*
 * RTMP 在客户端和服务器之间建立一个**持久的连接**。在正式传输数据之前，客户端和服务器会进行一个**“握手”**（Handshake）过程，用于确认协议版本和初始化连接参数。
 * **设计思路：** 避免了 HTTP 那种“请求-响应”模式下每次请求都建立新连接的开销，有利于实时通信和长期稳定的流传输。
 
+```mermaid
+sequenceDiagram
+    participant RTMPServer as RTMP 媒体服务器
+    participant UserA as 连麦者A
+    participant UserB as 连麦者B
+    participant UserC as 连麦者C
+    participant Audience1 as 听众1
+    participant Audience2 as 听众2
+
+    Note over UserA,Audience2: 阶段1: 连麦者推流到服务器
+    UserA->>RTMPServer: RTMP 连接 (handshake C0+C1)
+    RTMPServer->>UserA: 响应 (S0+S1+S2)
+    UserA->>RTMPServer: 设置块大小 (Set Chunk Size)
+    UserA->>RTMPServer: 连接命令 (Connect, app=live)
+    RTMPServer->>UserA: 连接成功 (_result)
+    UserA->>RTMPServer: 发布命令 (Publish, stream=streamA)
+    RTMPServer->>UserA: 发布成功 (onStatus)
+    UserA->>RTMPServer: 发送元数据 (@setDataFrame)
+    UserA->>RTMPServer: 发送音视频数据 (AVC/H.264 + AAC)
+
+    UserB->>RTMPServer: RTMP 连接 & 发布 (stream=streamB, 类似以上)
+    UserC->>RTMPServer: RTMP 连接 & 发布 (stream=streamC, 类似以上)
+
+    Note over RTMPServer: 服务器内部处理: 混合或转发多路流 (e.g., 使用FFmpeg混合成复合流)
+
+    Note over UserA,Audience2: 阶段2: 连麦者间互动 (订阅其他流)
+    UserA->>RTMPServer: 播放命令 (Play, stream=streamB)
+    RTMPServer->>UserA: 播放成功 (onStatus)
+    RTMPServer->>UserA: 发送元数据 & 音视频数据 (from B)
+    UserA->>RTMPServer: 播放命令 (Play, stream=streamC)
+    RTMPServer->>UserA: 发送数据 (from C)
+
+    Note over UserB,UserC: B和C类似订阅A、B/C的流 (省略细节，实现相互连麦)
+
+    Note over UserA,Audience2: 阶段3: 听众拉流 (播放混合或所有流)
+    Audience1->>RTMPServer: RTMP 连接 (handshake)
+    RTMPServer->>Audience1: 响应
+    Audience1->>RTMPServer: 连接命令 (Connect)
+    RTMPServer->>Audience1: 连接成功
+    Audience1->>RTMPServer: 播放命令 (Play, stream=mixed or streamA/B/C)
+    RTMPServer->>Audience1: 播放成功
+    RTMPServer->>Audience1: 发送元数据 & 音视频数据 (混合流或多流)
+
+    Audience2->>RTMPServer: RTMP 连接 & 播放 (类似以上)
+
+    Note over RTMPServer,Audience2: 持续传输: RTMP chunks, 带宽控制, 可能转HLS/HTTP-FLV for 听众
+    Note over RTMPServer: 对于大规模听众, 服务器可推送至CDN
+```
 ### 总结 RTMP 的优缺点
 
 | 特点 | 描述 |
