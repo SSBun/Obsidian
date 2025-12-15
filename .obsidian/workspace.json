@@ -41,15 +41,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Canvas/视频技术图谱.canvas",
+                "file": "Canvas/LLM Compare.canvas",
                 "viewState": {
-                  "x": -383.04354415048965,
-                  "y": -1767.6424112982218,
-                  "zoom": -1.1416225806872051
+                  "x": 786.8701711024956,
+                  "y": 2834.41037516025,
+                  "zoom": -0.39871801475683954
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "视频技术图谱"
+              "title": "LLM Compare"
             }
           }
         ],
@@ -110,8 +110,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "d22c3be14a683c0f",
@@ -232,9 +231,11 @@
   },
   "active": "db8ebb0a66e616df",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Canvas/LLM Compare.canvas",
+    "Canvas/视频技术图谱.canvas",
     "互联网/note/HTTP 协议详细介绍.md",
     "Canvas/网络基础架构.canvas",
-    "Canvas/视频技术图谱.canvas",
     "互联网/note/HTTP-3 与 QUIC 协议详细介绍.md",
     "互联网/note/RTMP 协议.md",
     "What is the NTP protocol?.md",
@@ -261,8 +262,6 @@
     "视频采集中的 YUV和RBG格式是什呢？.md",
     "互联网/note/YUV 的UV只有红蓝，但是没有绿色，岂不是有色彩缺失？.md",
     "互联网/note/在 Pod 组件库中从 Objective-C 调用 Swift 代码.md",
-    "互联网/note/IP协议详解 (Internet Protocol).md",
-    "互联网/详述 Socket 协议.md",
     "mermaid-diagram (3).svg",
     "互联网/note/mermaid-diagram (1).svg",
     "互联网/note/mermaid-diagram.svg",
