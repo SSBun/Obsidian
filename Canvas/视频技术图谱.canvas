@@ -46,7 +46,27 @@
 			"width":800,
 			"height":400
 		},
-		{"id":"7dbfd491dd895a81","type":"file","file":"What is the NTP protocol?.md","x":-640,"y":-380,"width":800,"height":400}
+		{"id":"7dbfd491dd895a81","type":"file","file":"What is the NTP protocol?.md","x":-670,"y":-460,"width":800,"height":400},
+		{
+			"id":"54dc9e1547b417e6",
+			"type":"text",
+			"text":"### DASH 协议详解\n\nDASH 协议，全称为 Dynamic Adaptive Streaming over HTTP（动态自适应 HTTP 流媒体），也常被称为 MPEG-DASH，是一个国际标准化组织（ISO/IEC）制定的媒体传输协议。它主要用于通过互联网高效传输视频和音频内容，尤其适用于视频点播（VOD）和实时直播场景。DASH 的核心优势在于其自适应比特率（Adaptive Bitrate Streaming）机制，能够根据用户的网络条件实时调整媒体质量，确保流畅播放而避免缓冲中断。\n\n#### 背景与发展历史\nDASH 协议于 2012 年由 MPEG（Moving Picture Experts Group）标准化，成为 ISO/IEC 23009-1 标准。它旨在解决传统流媒体协议（如 RTSP 或 RTMP）的局限性，这些协议往往需要专用服务器，而 DASH 基于标准的 HTTP 协议，因此可以从任何普通的 Web 服务器（如 CDN）提供内容。这使得它兼容性强，且易于部署。相比苹果的 HLS（HTTP Live Streaming）协议，DASH 是一个开放标准，不依赖特定厂商，已被广泛采用在 Netflix、YouTube 等平台。\n\n#### DASH 的工作原理\nDASH 的工作流程可以分为内容准备、传输和客户端播放三个阶段：\n\n1. **内容准备（Encoding and Segmentation）**：\n   - 媒体文件（如视频）首先被编码成多个比特率版本（例如，低质量的 480p、中等的 720p、高质量的 1080p）。\n   - 然后，这些版本被分割成小段（Segments），每个段通常持续 2-10 秒。这允许客户端灵活切换质量。\n   - 一个关键文件是 MPD（Media Presentation Description），这是一个 XML 文件，描述了所有可用段的 URL、比特率、时长、分辨率等元数据。服务器提供 MPD 给客户端作为“目录”。\n\n2. **传输过程**：\n   - 客户端通过 HTTP 请求 MPD 文件。\n   - 根据当前网络带宽、CPU 负载和设备能力，客户端选择合适的段进行下载。\n   - 如果网络变差，客户端切换到低比特率段；反之，则升级到高质量段。这种自适应调整是动态的，通常每段结束时重新评估。\n   - DASH 支持多种容器格式，如 fMP4（Fragmented MP4，用于 H.264/AVC 或 H.265/HEVC 视频）和 WebM（用于 VP9 和 Opus 音频）。\n\n3. **客户端播放**：\n   - 客户端使用 Media Source Extensions (MSE) API（如在浏览器中）来处理段的拼接和播放。\n   - 支持加密（如 Widevine DRM）和字幕等附加功能，确保安全和多语言兼容。\n\nDASH 的 HTTP 基础使其能穿越防火墙，并利用现有 CDN 基础设施，提高全球分发效率。\n\n#### 关键组件\n以下是 DASH 协议的核心元素，使用表格形式便于比较：\n\n| 组件名称          | 描述                                                                 | 示例应用 |\n|-------------------|----------------------------------------------------------------------|----------|\n| MPD 文件         | XML 格式的媒体描述文件，包含段的元数据，如比特率、时序和 URL。      | 客户端初始请求，用于构建播放列表。 |\n| 媒体段 (Segments) | 短小的媒体片段，支持独立下载和切换。                                | 每个段可独立解码，避免整文件下载。 |\n| 适配集 (Adaptation Sets) | 分组不同媒体类型（如视频、音频、字幕），允许多轨选择。              | 支持多语言音频或不同分辨率视频。 |\n| 表示 (Representations) | 同一内容的多种比特率版本。                                          | 低带宽时选择 360p，高带宽时 4K。 |\n| 初始化段 (Initialization Segment) | 包含解码器配置，用于启动播放。                                      | 只需下载一次，提升启动速度。 |\n\n这些组件确保了协议的灵活性和扩展性。\n\n#### 优势与缺点\n**优势**：\n- **自适应性强**：实时调整质量，适用于波动网络，如移动设备。\n- **兼容性高**：基于 HTTP，无需专用服务器，支持现有基础设施。\n- **标准化**：开放标准，促进跨平台一致性。\n- **支持直播**：通过低延迟模式（如 CMAF - Common Media Application Format）实现近实时传输。\n- **高效**：减少带宽浪费，只下载必要质量的内容。\n\n**缺点**：\n- **复杂性**：内容准备阶段需要多版本编码，增加了服务器端负载。\n- **延迟**：在直播中，传统 DASH 可能有 30 秒延迟（虽有低延迟变体）。\n- **浏览器支持**：依赖 MSE API，不是所有旧设备兼容。\n\n#### 与其他协议的比较\n- ** vs. HLS **：HLS 是苹果主导，基于 TS（Transport Stream）格式，主要用于 iOS。DASH 更通用，支持更多格式，但 HLS 在移动端更优化。\n- ** vs. HDS（HTTP Dynamic Streaming）**：Adobe 的 HDS 已过时，DASH 取代了它，提供更好标准化。\n- ** vs. Smooth Streaming **：微软的协议，类似但专有；DASH 兼容更多生态。\n\n总体上，DASH 已成为行业主流，尤其在 4K、VR 和 360° 视频领域。\n\n#### 实际应用与实现\nDASH 被广泛用于 OTT（Over-The-Top）服务，如视频平台和体育直播。实现时，开发者可以使用开源工具如 MP4Box 或 Bento4 来生成 DASH 内容，客户端则通过 Dash.js 或 Shaka Player 等库集成。如果您是开发者，建议参考 MPEG 官方文档或 MDN Web API 以获取代码示例。\n\n如果需要更具体的代码示例、技术规格或相关工具的演示，请提供更多细节！",
+			"styleAttributes":{},
+			"x":-1680,
+			"y":-1300,
+			"width":800,
+			"height":400
+		},
+		{
+			"id":"ac070e0aa78d2a0f",
+			"type":"text",
+			"text":"### DASH 与 HLS 协议对比\n\nDASH（Dynamic Adaptive Streaming over HTTP）和 HLS（HTTP Live Streaming）都是基于 HTTP 的自适应比特率流媒体协议，用于在互联网上传输视频和音频内容，尤其适用于点播和直播场景。它们的核心原理相似：将媒体文件分割成小段（segments），并提供多个比特率版本，让客户端根据网络条件动态切换质量，以确保流畅播放而减少缓冲。这使得两者在功能上高度重叠，常被用于 OTT（Over-The-Top）服务如 Netflix 或 YouTube。\n\n尽管相似，但两者在起源、实现和技术细节上存在显著差异。以下是从多个维度进行的详细对比，使用表格形式便于阅读：\n\n| 方面             | DASH (MPEG-DASH)                                      | HLS (HTTP Live Streaming)                             |\n|------------------|-------------------------------------------------------|-------------------------------------------------------|\n| **起源与标准**  | 由 MPEG 组织标准化（ISO/IEC 23009-1），开放标准，不依赖特定厂商。于 2012 年发布，旨在成为统一协议。 | 由 Apple 开发并主导，于 2009 年推出。虽开源但更偏向 Apple 生态，非完全开放标准。 |\n| **媒体格式支持**| 支持多种容器格式，如 fMP4（Fragmented MP4）、WebM，支持 H.264、H.265、VP9 等编解码器。更灵活，可扩展到新格式。 | 主要基于 TS（MPEG-2 Transport Stream）格式，支持 H.264 和 H.265。格式较单一，但稳定。 |\n| **兼容性与支持**| 跨平台强，支持 Android、浏览器（通过 MSE API）和多种设备。但在 iOS 上需额外适配，整体支持较新，采用率在上升。 | 在 Apple 设备（如 iOS、macOS、Safari）上原生支持，兼容性更广，尤其在移动端。浏览器支持需依赖特定库。 |\n| **延迟与直播**  | 支持低延迟模式（如 CMAF），直播延迟可低至 2-5 秒。更适合实时应用。 | 传统直播延迟较高（10-30 秒），但有低延迟扩展（LL-HLS），接近 DASH 水平。 |\n| **自适应机制**  | 客户端有更多控制权，可手动选择质量级别。使用 MPD（XML 文件）描述媒体，提供更高灵活性。 | 更自动化，客户端根据算法切换。使用 M3U8 播放列表（文本文件），简单易实现。 |\n| **DRM 与加密** | 支持多种 DRM 系统，如 Widevine、PlayReady、FairPlay。灵活性高。 | 原生支持 FairPlay DRM，其他需扩展。 |\n| **优势**        | 更现代化、灵活，适合跨平台和未来扩展（如 4K、VR）。潜在成为行业统一标准。 | 成熟、广泛采用，特别是在 Apple 生态。部署简单，生态支持丰富。 |\n| **缺点**        | 内容准备复杂，需要多格式编码。浏览器支持依赖 MSE，不如 HLS 普遍。 | 格式单一，难以扩展新编解码器。在非 Apple 设备上需额外工作。 |\n| **适用场景**    | 适合追求灵活性和低延迟的平台，如 Android TV 或 Web 应用。 | 理想于 Apple 重度用户或简单部署，如移动直播。 |\n\n从整体上看，HLS 因其较早推出和 Apple 的推动而在市场上占有更大份额，尤其在移动设备上。但 DASH 作为开放标准，正在逐步赶超，提供更多创新潜力，如更好的多轨支持（音频、字幕）和容器多样性。如果您的应用针对特定平台，HLS 可能更易上手；若需跨平台兼容，DASH 是更好选择。实际中，许多服务（如 Netflix）会同时支持两者以覆盖更多用户。\n\n如果您有特定场景（如直播或点播）或需要代码实现示例，我可以进一步深入！",
+			"styleAttributes":{},
+			"x":-2740,
+			"y":-1600,
+			"width":800,
+			"height":400
+		}
 	],
 	"edges":[
 		{
@@ -229,6 +249,33 @@
 			"fromSide":"bottom",
 			"toNode":"7ddfe1e3431081e4",
 			"toSide":"top"
+		},
+		{
+			"id":"9c177c89fe2521e4",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"141507c60fcef00e",
+			"fromSide":"left",
+			"toNode":"54dc9e1547b417e6",
+			"toSide":"right"
+		},
+		{
+			"id":"42a1c40b567861c6",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"31e52d7264dca8e0",
+			"fromSide":"left",
+			"toNode":"ac070e0aa78d2a0f",
+			"toSide":"right"
+		},
+		{
+			"id":"4753303304a87a22",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"54dc9e1547b417e6",
+			"fromSide":"left",
+			"toNode":"ac070e0aa78d2a0f",
+			"toSide":"right"
 		}
 	],
 	"metadata":{

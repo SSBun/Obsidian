@@ -43,9 +43,9 @@
               "state": {
                 "file": "Canvas/视频技术图谱.canvas",
                 "viewState": {
-                  "x": 3595.415561287497,
-                  "y": -573.7574073119165,
-                  "zoom": -0.41087385286887596
+                  "x": -963.7017248968882,
+                  "y": -1235.3894208070587,
+                  "zoom": -0.5501846782366436
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -110,7 +110,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "d22c3be14a683c0f",
@@ -231,8 +232,11 @@
   },
   "active": "db8ebb0a66e616df",
   "lastOpenFiles": [
-    "互联网/note/RTMP 协议.md",
+    "互联网/note/HTTP 协议详细介绍.md",
+    "Canvas/网络基础架构.canvas",
     "Canvas/视频技术图谱.canvas",
+    "互联网/note/HTTP-3 与 QUIC 协议详细介绍.md",
+    "互联网/note/RTMP 协议.md",
     "What is the NTP protocol?.md",
     "Canvas/HTTP.canvas",
     "WebRTC：实时通信技术的全面解析.md",
@@ -248,7 +252,6 @@
     "Opus.md",
     "MP3.md",
     "AAC.md",
-    "Canvas/网络基础架构.canvas",
     "Canvas/iOS 工程问题速查.canvas",
     "互联网/note/UDP-Lite 协议.md",
     "Canvas",
@@ -260,7 +263,6 @@
     "互联网/note/在 Pod 组件库中从 Objective-C 调用 Swift 代码.md",
     "互联网/note/IP协议详解 (Internet Protocol).md",
     "互联网/详述 Socket 协议.md",
-    "Excalidraw/Drawing 2025-12-09 16.08.40.excalidraw.md",
     "mermaid-diagram (3).svg",
     "互联网/note/mermaid-diagram (1).svg",
     "互联网/note/mermaid-diagram.svg",
