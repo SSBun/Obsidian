@@ -43,9 +43,9 @@
               "state": {
                 "file": "Canvas/LLM Compare.canvas",
                 "viewState": {
-                  "x": 3595.756213075093,
-                  "y": 1813.1087282972562,
-                  "zoom": -0.39871801475683954
+                  "x": -1809.0080095597716,
+                  "y": 1844.4725107429483,
+                  "zoom": -0.005967797008859917
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -231,11 +231,11 @@
   },
   "active": "db8ebb0a66e616df",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Canvas/LLM Compare.canvas",
     "Canvas/视频技术图谱.canvas",
-    "互联网/note/HTTP 协议详细介绍.md",
+    "Canvas/LLM Compare.canvas",
     "Canvas/网络基础架构.canvas",
+    "Untitled.md",
+    "互联网/note/HTTP 协议详细介绍.md",
     "互联网/note/HTTP-3 与 QUIC 协议详细介绍.md",
     "互联网/note/RTMP 协议.md",
     "What is the NTP protocol?.md",

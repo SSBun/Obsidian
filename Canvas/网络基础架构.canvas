@@ -112,7 +112,7 @@
 		}
 	],
 	"edges":[
-		{"id":"c118c2b7a27d8f6c","fromNode":"3d196d0cfa64859c","fromSide":"right","toNode":"3e5ae91a55a88bd2","toSide":"left"},
+		{"id":"c118c2b7a27d8f6c","toFloating":false,"fromNode":"3d196d0cfa64859c","fromSide":"right","toNode":"3e5ae91a55a88bd2","toSide":"left"},
 		{"id":"c4552abb026610f9","fromNode":"3d196d0cfa64859c","fromSide":"right","toNode":"8ab9973a1783d912","toSide":"left"},
 		{"id":"db47b1db9602ab9b","fromNode":"3d196d0cfa64859c","fromSide":"right","toNode":"a0635267dee089ee","toSide":"left"},
 		{"id":"6d08fcb2d45dedea","fromNode":"3d196d0cfa64859c","fromSide":"right","toNode":"518713a596b3cbff","toSide":"left"},
