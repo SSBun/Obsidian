@@ -4,56 +4,27 @@
     "type": "split",
     "children": [
       {
-        "id": "dd90f5f1c861131c",
+        "id": "33e4784ebcc34ada",
         "type": "tabs",
         "children": [
           {
-            "id": "baad611687cf67d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "互联网/note/UDP-Lite 协议.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "UDP-Lite 协议"
-            }
-          },
-          {
-            "id": "4d830d8ec8a8446a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "互联网/note/UDP-Lite 协议.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "UDP-Lite 协议"
-            }
-          },
-          {
-            "id": "db8ebb0a66e616df",
+            "id": "155bf9a6b2cbdaa8",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Canvas/LLM Compare.canvas",
+                "file": "Canvas/视频技术图谱.canvas",
                 "viewState": {
-                  "x": -358.3537280728342,
-                  "y": 88.42800600289851,
-                  "zoom": -1.3133841366248409
+                  "x": 938.4885257270187,
+                  "y": 593.8598658568927,
+                  "zoom": -1.3807345911117725
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "LLM Compare"
+              "title": "视频技术图谱"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -229,17 +200,20 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "db8ebb0a66e616df",
+  "active": "155bf9a6b2cbdaa8",
   "lastOpenFiles": [
+    "互联网/note/UDP-Lite 协议.md",
+    "视频技术小测验.md",
     "Canvas/视频技术图谱.canvas",
-    "Canvas/LLM Compare.canvas",
     "Canvas/网络基础架构.canvas",
+    "Canvas/LLM Compare.canvas",
+    "Canvas/iOS 工程问题速查.canvas",
+    "Canvas/HTTP.canvas",
     "Untitled.md",
     "互联网/note/HTTP 协议详细介绍.md",
     "互联网/note/HTTP-3 与 QUIC 协议详细介绍.md",
     "互联网/note/RTMP 协议.md",
     "What is the NTP protocol?.md",
-    "Canvas/HTTP.canvas",
     "WebRTC：实时通信技术的全面解析.md",
     "HLS协议详述.md",
     "主流视频传输协议.md",
@@ -253,15 +227,12 @@
     "Opus.md",
     "MP3.md",
     "AAC.md",
-    "Canvas/iOS 工程问题速查.canvas",
-    "互联网/note/UDP-Lite 协议.md",
     "Canvas",
     "互联网/note/UDP 协议详解.md",
     "互联网/note/PCM 是如何记录音频信息的？.md",
     "互联网/note/为什么有44.1kHz这个特殊采样率？.md",
     "视频采集中的 YUV和RBG格式是什呢？.md",
     "互联网/note/YUV 的UV只有红蓝，但是没有绿色，岂不是有色彩缺失？.md",
-    "互联网/note/在 Pod 组件库中从 Objective-C 调用 Swift 代码.md",
     "mermaid-diagram (3).svg",
     "互联网/note/mermaid-diagram (1).svg",
     "互联网/note/mermaid-diagram.svg",
