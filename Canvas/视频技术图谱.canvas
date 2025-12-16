@@ -67,7 +67,8 @@
 			"width":800,
 			"height":400
 		},
-		{"id":"20421558de75f7b2","type":"file","file":"视频技术小测验.md","x":560,"y":-460,"width":800,"height":400,"color":"2"}
+		{"id":"20421558de75f7b2","type":"file","file":"视频技术小测验.md","x":560,"y":-460,"width":800,"height":400,"color":"2"},
+		{"id":"a41d00112b08f612","type":"file","file":"视频编码GOP.md","x":560,"y":40,"width":800,"height":400}
 	],
 	"edges":[
 		{
