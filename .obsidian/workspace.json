@@ -15,16 +15,46 @@
               "state": {
                 "file": "Canvas/网络基础架构.canvas",
                 "viewState": {
-                  "x": 357.01560653310395,
-                  "y": -211.286710460024,
-                  "zoom": -1.3133843131591365
+                  "x": -1720,
+                  "y": 640,
+                  "zoom": 0
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "网络基础架构"
             }
+          },
+          {
+            "id": "333e65b7c6fecca8",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "viewState": {
+                  "x": -128.27501390743078,
+                  "y": 3404.9007467283177,
+                  "zoom": -0.38300567546636427
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "一个真实的网络请求流程"
+            }
+          },
+          {
+            "id": "285f0b2382df1a40",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Pasted image 20251217194209.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20251217194209"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -81,7 +111,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 344.5
   },
   "right": {
     "id": "d22c3be14a683c0f",
@@ -97,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Canvas/网络基础架构.canvas",
+                "file": "Pasted image 20251217194209.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +137,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 网络基础架构"
+              "title": "Backlinks for Pasted image 20251217194209"
             }
           },
           {
@@ -116,12 +146,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Should I always add the keyword for classes?.md",
+                "file": "Pasted image 20251217194209.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Should I always add the keyword for classes?"
+              "title": "Outgoing links from Pasted image 20251217194209"
             }
           },
           {
@@ -159,13 +189,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Canvas/网络基础架构.canvas",
+                "file": "Pasted image 20251217194209.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 网络基础架构"
+              "title": "Outline of Pasted image 20251217194209"
             }
           },
           {
@@ -198,17 +228,24 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "155bf9a6b2cbdaa8",
+  "active": "285f0b2382df1a40",
   "lastOpenFiles": [
+    "Pasted image 20251217170506.png",
+    "Pasted image 20251217194209.png",
+    "Resource/Pasted image 20251209134207.png",
+    "Resource/Pasted image 20251209114759.png",
+    "Resource/Pasted image 20251209114655.png",
+    "Resource/Pasted image 20251209114605.png",
+    "Redis 缓存.md",
     "Canvas/一个真实的网络请求流程.canvas",
+    "mermaid-diagram-2025-12-17-193605.svg",
+    "Canvas/网络基础架构.canvas",
+    "一个真实的网络请求处理示例.md",
     "Kafka 核心知识体系汇总.md",
     "Elasticsearch 技术原理解析与应用场景.md",
     "Drawing 2025-12-17 17.06.43.excalidraw.md",
     "mermaid-diagram-2025-12-17-170515.svg",
-    "Pasted image 20251217170506.png",
-    "Canvas/网络基础架构.canvas",
     "Docs/UDP 协议详解.md",
-    "一个真实的网络请求处理示例.md",
     "Canvas/视频技术图谱.canvas",
     "什么是 SYN 消息？.md",
     "Docs/QA-Socket.md",
@@ -219,7 +256,6 @@
     "Docs/高级图片格式.md",
     "Docs/UDP-Lite 协议.md",
     "Docs",
-    "Resource/Pasted image 20251209114605.png",
     "Docs/HTTP 协议详细介绍.md",
     "Docs/视频编码GOP.md",
     "Canvas/LLM Compare.canvas",
@@ -234,7 +270,6 @@
     "Docs/主流视频传输协议.md",
     "Docs/TCP 复用TCP 复用.md",
     "Docs/Should I always add the keyword for classes?.md",
-    "Docs/RTMP 直播协议完整流程详细描述.md",
     "Canvas",
     "mermaid-diagram (3).svg",
     "Docs/mermaid-diagram (1).svg",
@@ -243,10 +278,6 @@
     "copilot/copilot-custom-prompts",
     "copilot",
     "Untitled.base",
-    "Pasted image 20251209134022.png",
-    "Resource/Pasted image 20251209114759.png",
-    "Resource/Pasted image 20251209114655.png",
-    "Resource/Pasted image 20251209134207.png",
     "互联网/网络传输层协议.canvas",
     "互联网/note",
     "Resource",

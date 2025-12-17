@@ -1,5 +1,6 @@
 {
 	"nodes":[
+		{"id":"1327b1c744b83e02","type":"file","file":"Canvas/一个真实的网络请求流程.canvas","x":-1920,"y":440,"width":400,"height":400},
 		{"id":"c38718bfa297e09c","type":"file","file":"什么是 SYN 消息？.md","x":940,"y":-1060,"width":670,"height":260},
 		{"id":"b6bb4b9dfcd00acd","type":"file","file":"TCP “全双工”和“基于字节流”.md","x":940,"y":-1420,"width":670,"height":300},
 		{"id":"d00e8a1bef0cefb6","type":"file","file":"Docs/TLS 握手过程完整详解.md","x":-1540,"y":-1420,"width":692,"height":380},
@@ -83,8 +84,7 @@
 			"width":682,
 			"height":280,
 			"color":"6"
-		},
-		{"id":"2caa73e42540e839","type":"file","file":"一个真实的网络请求处理示例.md","x":-2020,"y":660,"width":800,"height":420}
+		}
 	],
 	"edges":[
 		{"id":"c118c2b7a27d8f6c","toFloating":false,"fromNode":"3d196d0cfa64859c","fromSide":"right","toNode":"3e5ae91a55a88bd2","toSide":"left"},
@@ -248,12 +248,12 @@
 			"toSide":"top"
 		},
 		{
-			"id":"57a484f73c503ccf",
+			"id":"f88b793884ebe0fc",
 			"styleAttributes":{},
 			"toFloating":false,
 			"fromNode":"3d196d0cfa64859c",
 			"fromSide":"bottom",
-			"toNode":"49c1074c32d4d17a",
+			"toNode":"1327b1c744b83e02",
 			"toSide":"top"
 		}
 	],

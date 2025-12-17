@@ -123,3 +123,73 @@ UPDATE orders SET status = 'PAID'
 WHERE id = 1001 AND status = 'UNPAID'; 
 ```
 第二次重复消费时，状态已经是 PAID，不满足条件，更新行数为 0，业务直接跳过。
+
+```mermaid
+graph TD
+    %% 定义样式
+    classDef upstream fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef kafka fill:#fff3e0,stroke:#ff6f00,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef partition fill:#ffe0b2,stroke:#ef6c00,stroke-width:1px;
+    classDef consumerGroup fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
+    classDef consumer fill:#c8e6c9,stroke:#1b5e20,stroke-width:1px;
+    classDef storage fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
+
+    %% 上游系统
+    subgraph Upstream_System ["上游系统 Producers"]
+        OrderSys["订单系统_高并发写入"]:::upstream
+    end
+
+    %% Kafka 集群
+    subgraph Kafka_Cluster ["Kafka集群 Topic_Order"]
+        direction TB
+        subgraph Partitions ["逻辑主题拆分为物理分区"]
+            P0["Partition_0"]:::partition
+            P1["Partition_1"]:::partition
+            P2["Partition_2"]:::partition
+        end
+    end
+
+    %% 下游消费者组 A (库存服务)
+    subgraph Consumer_Group_Stock ["消费者组_库存服务 Group_Stock"]
+        direction TB
+        Stock_C1["库存服务实例_A"]:::consumer
+        Stock_C2["库存服务实例_B"]:::consumer
+        Stock_C3["库存服务实例_C"]:::consumer
+    end
+
+    %% 下游消费者组 B (邮件服务) - 广播模式
+    subgraph Consumer_Group_Email ["消费者组_邮件服务 Group_Email"]
+        direction TB
+        Email_C1["邮件服务实例_A"]:::consumer
+        Email_C2["邮件服务实例_B"]:::consumer
+    end
+
+    %% 存储层
+    subgraph Storage_Layer ["数据持久化_幂等性保障"]
+        DB_Stock["库存数据库_唯一索引防重"]:::storage
+        Redis_Email["Redis_记录已发邮件ID"]:::storage
+    end
+
+    %% 连线关系 - 生产
+    OrderSys -- "1.负载均衡写入" --> P0
+    OrderSys -- "写入" --> P1
+    OrderSys -- "写入" --> P2
+
+    %% 连线关系 - 消费 (库存组 - 并行消费)
+    P0 == "2.拉取消息_Poll" ==> Stock_C1
+    P1 == "并行处理" ==> Stock_C2
+    P2 == "并行处理" ==> Stock_C3
+
+    %% 连线关系 - 消费 (邮件组 - 独立广播)
+    P0 -. "3.独立读取_广播" .-> Email_C1
+    P1 -. "并行处理" .-> Email_C2
+    P2 -. "并行处理" .-> Email_C2
+
+    %% 连线关系 - 业务处理与提交
+    Stock_C1 -- "4.业务处理_幂等写入" --> DB_Stock
+    Stock_C1 -- "5.提交Offset_Ack" --> P0
+
+    Email_C1 -- "业务处理" --> Redis_Email
+    Email_C1 -. "提交Offset" .-> P0
+
+```
