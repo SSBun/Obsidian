@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "file": "Canvas/网络基础架构.canvas",
                 "viewState": {
-                  "x": -104.51072273618298,
-                  "y": 2689.6449223297222,
-                  "zoom": -0.6637817752930699
+                  "x": 357.01560653310395,
+                  "y": -211.286710460024,
+                  "zoom": -1.3133843131591365
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "一个真实的网络请求流程"
+              "title": "网络基础架构"
             }
           }
         ]
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Elasticsearch 技术原理解析与应用场景.md",
+                "file": "Canvas/网络基础架构.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +107,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Elasticsearch 技术原理解析与应用场景"
+              "title": "Backlinks for 网络基础架构"
             }
           },
           {
@@ -159,13 +159,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Elasticsearch 技术原理解析与应用场景.md",
+                "file": "Canvas/网络基础架构.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Elasticsearch 技术原理解析与应用场景"
+              "title": "Outline of 网络基础架构"
             }
           },
           {
@@ -200,9 +200,10 @@
   },
   "active": "155bf9a6b2cbdaa8",
   "lastOpenFiles": [
+    "Canvas/一个真实的网络请求流程.canvas",
+    "Kafka 核心知识体系汇总.md",
     "Elasticsearch 技术原理解析与应用场景.md",
     "Drawing 2025-12-17 17.06.43.excalidraw.md",
-    "Canvas/一个真实的网络请求流程.canvas",
     "mermaid-diagram-2025-12-17-170515.svg",
     "Pasted image 20251217170506.png",
     "Canvas/网络基础架构.canvas",
@@ -234,8 +235,6 @@
     "Docs/TCP 复用TCP 复用.md",
     "Docs/Should I always add the keyword for classes?.md",
     "Docs/RTMP 直播协议完整流程详细描述.md",
-    "Docs/主流视频封装格式.md",
-    "Docs/主流视频编码格式.md",
     "Canvas",
     "mermaid-diagram (3).svg",
     "Docs/mermaid-diagram (1).svg",

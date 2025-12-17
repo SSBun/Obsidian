@@ -1,6 +1,6 @@
 {
 	"nodes":[
-		{"id":"f8f4da2828b9c324","type":"file","file":"Elasticsearch 技术原理解析与应用场景.md","x":-1400,"y":2720,"width":800,"height":400},
+		{"id":"8c4c28077310267a","type":"text","text":"```mermaid\ngraph TD\n    %% 定义样式\n    classDef upstream fill:#e1f5fe,stroke:#01579b,stroke-width:2px;\n    classDef kafka fill:#fff3e0,stroke:#ff6f00,stroke-width:2px,stroke-dasharray: 5 5;\n    classDef partition fill:#ffe0b2,stroke:#ef6c00,stroke-width:1px;\n    classDef consumerGroup fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;\n    classDef consumer fill:#c8e6c9,stroke:#1b5e20,stroke-width:1px;\n    classDef storage fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;\n\n    %% 上游系统\n    subgraph Upstream_System [\"上游系统 (Producers)\"]\n        OrderSys[\"订单系统 (高并发写入)\"]:::upstream\n    end\n\n    %% Kafka 集群\n    subgraph Kafka_Cluster [\"Kafka 集群 (Topic: Order_Topic)\"]\n        direction TB\n        subgraph Partitions [\"逻辑主题拆分为物理分区\"]\n            P0[(\"Partition 0\")]:::partition\n            P1[(\"Partition 1\")]:::partition\n            P2[(\"Partition 2\")]:::partition\n        end\n    end\n\n    %% 下游消费者组 A (库存服务)\n    subgraph Consumer_Group_Stock [\"消费者组: 库存服务 (Group_Stock)\"]\n        direction TB\n        Stock_C1[\"库存服务实例 A\"]:::consumer\n        Stock_C2[\"库存服务实例 B\"]:::consumer\n        Stock_C3[\"库存服务实例 C\"]:::consumer\n    end\n\n    %% 下游消费者组 B (邮件服务) - 广播模式\n    subgraph Consumer_Group_Email [\"消费者组: 邮件服务 (Group_Email)\"]\n        direction TB\n        Email_C1[\"邮件服务实例 A\"]:::consumer\n        Email_C2[\"邮件服务实例 B\"]:::consumer\n    end\n\n    %% 存储层\n    subgraph Storage_Layer [\"数据持久化 & 幂等性保障\"]\n        DB_Stock[(\"库存数据库<br>(唯一索引防重)\")]:::storage\n        Redis_Email[(\"Redis<br>(记录已发邮件ID)\")]:::storage\n    end\n\n    %% 连线关系 - 生产\n    OrderSys -- \"1. 负载均衡写入 (Hash取模)\" --> P0\n    OrderSys -- \"写入\" --> P1\n    OrderSys -- \"写入\" --> P2\n\n    %% 连线关系 - 消费 (库存组 - 并行消费)\n    P0 == \"2. 拉取消息 (Poll)\" ==> Stock_C1\n    P1 == \"并行处理\" ==> Stock_C2\n    P2 == \"并行处理\" ==> Stock_C3\n\n    %% 连线关系 - 消费 (邮件组 - 独立广播)\n    P0 -. \"3. 独立读取 (广播)\" .-> Email_C1\n    P1 -. \"并行处理\" .-> Email_C2\n    P2 -. \"并行处理\" .-> Email_C2\n\n    %% 连线关系 - 业务处理与提交\n    Stock_C1 -- \"4. 业务处理 (幂等写入)\" --> DB_Stock\n    Stock_C1 -- \"5. 提交 Offset (Ack)\" --> P0\n\n    Email_C1 -- \"业务处理\" --> Redis_Email\n    Email_C1 -. \"提交 Offset\" .-> P0\n\n\n```","x":155,"y":3858,"width":1605,"height":962},
 		{
 			"id":"9d84ef1960b4b203",
 			"type":"text",
@@ -20,7 +20,9 @@
 			"y":-200,
 			"width":800,
 			"height":3255
-		}
+		},
+		{"id":"b795ac50112214e5","type":"file","file":"Kafka 核心知识体系汇总.md","x":400,"y":3340,"width":800,"height":400},
+		{"id":"f8f4da2828b9c324","type":"file","file":"Elasticsearch 技术原理解析与应用场景.md","x":-500,"y":3340,"width":800,"height":400}
 	],
 	"edges":[
 		{
@@ -31,6 +33,24 @@
 			"fromSide":"right",
 			"toNode":"8a57be55effb988e",
 			"toSide":"left"
+		},
+		{
+			"id":"fa0fa2528b2c35e9",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"9d84ef1960b4b203",
+			"fromSide":"bottom",
+			"toNode":"b795ac50112214e5",
+			"toSide":"top"
+		},
+		{
+			"id":"15a947a3d50df090",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"9d84ef1960b4b203",
+			"fromSide":"bottom",
+			"toNode":"f8f4da2828b9c324",
+			"toSide":"top"
 		}
 	],
 	"metadata":{
