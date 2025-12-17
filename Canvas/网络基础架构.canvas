@@ -20,19 +20,6 @@
 		{"id":"b04522bde214e686","type":"file","file":"Docs/IP协议详解 (Internet Protocol).md","x":800,"y":-50,"width":740,"height":630,"color":"5"},
 		{"id":"e99b7b0af5b29d58","type":"file","file":"Docs/UDP 协议详解.md","x":126,"y":-490,"width":620,"height":380,"color":"6"},
 		{"id":"8418a07c8d21777e","type":"file","file":"Docs/UDP-Lite 协议.md","x":845,"y":-415,"width":695,"height":305,"color":"6"},
-		{
-			"id":"166d74726f577eaf",
-			"type":"file",
-			"file":"Docs/UDP相比IP协议，除了增加端口号用来实现多路复用，还有那些区别呢？.md",
-			"styleAttributes":{
-				"border":null
-			},
-			"x":845,
-			"y":-740,
-			"width":682,
-			"height":280,
-			"color":"6"
-		},
 		{"id":"7a7c3b2b3179896c","type":"file","file":"Docs/TCP协议详解.md","x":118,"y":-930,"width":682,"height":310,"color":"6"},
 		{
 			"id":"55384b1b5e79aa2a",
@@ -83,7 +70,20 @@
 			"height":360
 		},
 		{"id":"c1ed247f3cbbdc6c","type":"file","file":"Docs/QA-Socket.md","x":-1994,"y":-360,"width":800,"height":400},
-		{"id":"f9b27144d83820c0","type":"file","file":"握手和挥手阶段的消息如果发送失败了会怎样？.md","x":940,"y":-1800,"width":670,"height":340}
+		{"id":"f9b27144d83820c0","type":"file","file":"握手和挥手阶段的消息如果发送失败了会怎样？.md","x":940,"y":-1800,"width":670,"height":340},
+		{
+			"id":"166d74726f577eaf",
+			"type":"file",
+			"file":"Docs/UDP相比IP协议，除了增加端口号用来实现多路复用，还有那些区别呢？.md",
+			"styleAttributes":{
+				"border":null
+			},
+			"x":858,
+			"y":-740,
+			"width":682,
+			"height":280,
+			"color":"6"
+		}
 	],
 	"edges":[
 		{"id":"c118c2b7a27d8f6c","toFloating":false,"fromNode":"3d196d0cfa64859c","fromSide":"right","toNode":"3e5ae91a55a88bd2","toSide":"left"},
@@ -235,6 +235,15 @@
 			"fromNode":"d594b1257902dadc",
 			"fromSide":"bottom",
 			"toNode":"c1ed247f3cbbdc6c",
+			"toSide":"top"
+		},
+		{
+			"id":"32927e8e6dc627a8",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"49ae4ceca94efc32",
+			"fromSide":"left",
+			"toNode":"b9bdb30c217fe544",
 			"toSide":"top"
 		}
 	],
