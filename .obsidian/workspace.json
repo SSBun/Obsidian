@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Canvas/视频技术图谱.canvas",
+                "file": "Canvas/网络基础架构.canvas",
                 "viewState": {
-                  "x": 1619.7822683281263,
-                  "y": 169.95769723510716,
-                  "zoom": -0.4856382137537003
+                  "x": -298.0640719620859,
+                  "y": -1451.4998040496205,
+                  "zoom": -0.11293243733341227
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "视频技术图谱"
+              "title": "网络基础架构"
             }
           },
           {
@@ -216,9 +216,9 @@
   },
   "active": "155bf9a6b2cbdaa8",
   "lastOpenFiles": [
+    "Canvas/视频技术图谱.canvas",
     "视频编码GOP.md",
     "视频技术小测验.md",
-    "Canvas/视频技术图谱.canvas",
     "互联网/note/UDP-Lite 协议.md",
     "Canvas/网络基础架构.canvas",
     "Canvas/LLM Compare.canvas",
@@ -247,7 +247,6 @@
     "互联网/note/PCM 是如何记录音频信息的？.md",
     "互联网/note/为什么有44.1kHz这个特殊采样率？.md",
     "视频采集中的 YUV和RBG格式是什呢？.md",
-    "互联网/note/YUV 的UV只有红蓝，但是没有绿色，岂不是有色彩缺失？.md",
     "mermaid-diagram (3).svg",
     "互联网/note/mermaid-diagram (1).svg",
     "互联网/note/mermaid-diagram.svg",
