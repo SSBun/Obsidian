@@ -83,7 +83,8 @@
 			"width":682,
 			"height":280,
 			"color":"6"
-		}
+		},
+		{"id":"2caa73e42540e839","type":"file","file":"一个真实的网络请求处理示例.md","x":-2020,"y":660,"width":800,"height":420}
 	],
 	"edges":[
 		{"id":"c118c2b7a27d8f6c","toFloating":false,"fromNode":"3d196d0cfa64859c","fromSide":"right","toNode":"3e5ae91a55a88bd2","toSide":"left"},
@@ -244,6 +245,15 @@
 			"fromNode":"49ae4ceca94efc32",
 			"fromSide":"left",
 			"toNode":"b9bdb30c217fe544",
+			"toSide":"top"
+		},
+		{
+			"id":"57a484f73c503ccf",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"3d196d0cfa64859c",
+			"fromSide":"bottom",
+			"toNode":"49c1074c32d4d17a",
 			"toSide":"top"
 		}
 	],

@@ -1,0 +1,39 @@
+{
+	"nodes":[
+		{
+			"id":"9d84ef1960b4b203",
+			"type":"text",
+			"text":"```mermaid\ngraph TD\n    %% 定义样式\n    classDef client fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#000;\n    classDef net fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,color:#000;\n    classDef edge fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000;\n    classDef app fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000;\n    classDef data fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000;\n    classDef returnPath stroke-dasharray: 5 5,stroke:#999;\n\n    %% --- 1. 客户端环境 ---\n    subgraph Client_Side [\"📱 1. 客户端环境\"]\n        direction TB\n        User((用户点击)) --> App[\"App / 浏览器\"]\n        App --> CheckCache{\"本地缓存?\"}\n        CheckCache -- Yes (Cache Hit 1) --> Render[\"渲染页面\"]\n        CheckCache -- No --> DNS_Start[\"发起 DNS 解析\"]\n        \n        subgraph DNS_Process [\"DNS 解析流程\"]\n            DNS_Start --> HostCache[\"Hosts / OS 缓存\"]\n            HostCache --> LocalDNS[\"Local DNS / 路由器\"]\n            LocalDNS --> GSLB[\"权威 DNS / GSLB 全局负载均衡\"]\n        end\n        \n        GSLB -- 返回最佳 IP --> Handshake[\"TCP 三次握手 & TLS 握手\"]\n    end\n\n    %% --- 2. 网络传输 ---\n    subgraph Network [\"🌐 2. 网络传输\"]\n        Handshake --> NAT[\"NAT / 路由器 (局域网转公网)\"]\n        NAT --> ISP[\"ISP 运营商骨干网\"]\n        ISP --> BGP[\"BGP 互联互通 / 跨网路由\"]\n    end\n\n    %% --- 3. 边缘接入层 ---\n    subgraph Edge_Layer [\"🛡️ 3. 边缘接入层 (大厂机房边界)\"]\n        BGP --> CDN_Check{\"请求类型?\"}\n        \n        CDN_Check -- \"静态资源 (图片/JS/CSS)\" --> CDN[\"CDN 边缘节点\"]\n        CDN -- \"命中缓存 (Cache Hit 2)\" --> Return_Flow\n        CDN -- \"未命中 (回源)\" --> WAF\n        \n        CDN_Check -- 动态 API 请求 --> WAF[\"WAF Web应用防火墙\"]\n        WAF -- 恶意流量 --> Block[\"拦截 / 403\"]\n        WAF -- 清洗后流量 --> L4_LB[\"L4 负载均衡 (LVS/F5 VIP)\"]\n    end\n\n    %% --- 4. 应用服务集群 ---\n    subgraph App_Cluster [\"⚙️ 4. 应用服务集群 (K8s/微服务)\"]\n        L4_LB --> L7_LB[\"L7 负载均衡 (Nginx / Ingress)\"]\n        L7_LB -- 路由分发 --> Gateway[\"API 网关 (鉴权/限流/熔断)\"]\n        \n        Gateway --> Agg_Svc[\"BFF / 聚合服务\"]\n        \n        subgraph Microservices [\"微服务网格\"]\n            Agg_Svc -- RPC 调用 --> User_Svc[\"用户服务\"]\n            Agg_Svc -- RPC 调用 --> Order_Svc[\"订单服务\"]\n            Agg_Svc -- RPC 调用 --> Rec_Svc[\"推荐服务\"]\n        end\n    end\n\n    %% --- 5. 数据存储层 ---\n    subgraph Data_Layer [\"💾 5. 数据存储层\"]\n        User_Svc --> Redis_Check{\"查 Redis 缓存\"}\n        Redis_Check -- Hit (Cache Hit 3) --> Data_Return\n        Redis_Check -- Miss --> DB_Read[(\"读取 MySQL 从库\")]\n        \n        Order_Svc --> MQ>\"写入消息队列 (Kafka/RocketMQ)\"]\n        MQ -.-> Async_Worker[\"异步消费者\"] -.-> DB_Write[(\"写入 MySQL 主库\")]\n        \n        Rec_Svc --> ES[(\"搜索引擎 ElasticSearch\")]\n    end\n\n    %% --- 返回路径 ---\n    Data_Return & DB_Read & ES --> Agg_Svc\n    Agg_Svc -- 组装 JSON --> Gateway\n    Gateway -.-> Return_Flow((📡 响应数据回传))\n    Return_Flow -.-> |原路返回| NAT\n    NAT -.-> App\n    App --> Render\n\n    %% 应用样式\n    class User,App,CheckCache,DNS_Start,HostCache,LocalDNS,GSLB,Handshake,Render client;\n    class NAT,ISP,BGP net;\n    class CDN_Check,CDN,WAF,L4_LB,Block edge;\n    class L7_LB,Gateway,Agg_Svc,User_Svc,Order_Svc,Rec_Svc,Microservices app;\n    class Redis_Check,DB_Read,DB_Write,MQ,ES,Async_Worker data;\n```",
+			"styleAttributes":{},
+			"x":-400,
+			"y":-200,
+			"width":1600,
+			"height":3325
+		},
+		{
+			"id":"8a57be55effb988e",
+			"type":"text",
+			"text":"这是一个非常经典且宏大的面试题，也是理解现代互联网架构的最佳切入点。\n\n为了让你清晰地看到全貌，我们将这个过程分为 **“客户端侧”、“网络传输侧”** 和 **“服务端侧”** 三个阶段，模拟一个用户在手机App上点击“刷新首页”的场景（假设目标是 `www.example.com`）。\n\n---\n\n### 第一阶段：客户端侧（出发前的准备）\n\n在请求真正离开你的手机之前，操作系统和App内部已经发生了一场风暴。\n\n#### 1. 应用层构建请求\n*   **封装 HTTP 请求：** App 组装 HTTP 报文（Header, Body, Cookies, User-Agent 等）。\n*   **缓存检查（App 级）：** App 会先检查本地是否有缓存（比如图片是否下载过，API 数据是否过期）。如果有且有效，直接渲染，流程结束（**Cache Hit 1**）。\n\n#### 2. DNS 解析（寻找目的地的地图）\n如果不知道服务器 IP，无法发送数据。DNS 解析流程如下：\n1.  **浏览器/App 缓存：** 先看刚才查过没。\n2.  **操作系统缓存（Hosts/DNS Cache）：** 查手机系统缓存。\n3.  **本地 DNS 服务器（Local DNS）：** 请求发送到你连接的 WiFi 路由器或运营商提供的 DNS 服务器。\n4.  **递归查询：** 如果 Local DNS 也没有，它会替你跑腿：\n    *   问 **根域名服务器** -> 问 **.com 顶级域名服务器** -> 问 **example.com 权威域名服务器**。\n5.  **GSLB（全局负载均衡）：** 大型互联网公司通常在 DNS 层面就做负载均衡。权威 DNS 会根据你的 IP 地址（比如你在北京），返回一个**离你最近的 CDN 节点 IP** 或者**最近的机房 VIP（虚拟 IP）**，而不是固定的某台机器 IP。\n\n#### 3. 建立连接（TCP/TLS 握手）\n拿到 IP 后，开始建立通信管道：\n*   **TCP 三次握手：** 客户端与目标 IP 确认双方收发能力（SYN, SYN-ACK, ACK）。\n*   **TLS/SSL 四次握手（HTTPS）：** 如果是 HTTPS（现在基本都是），还需要交换证书、验证身份、协商加密密钥。\n\n---\n\n### 第二阶段：网络传输侧（漫长的旅途）\n\n数据包从你的手机网卡发出，进入茫茫互联网。\n\n#### 4. 局域网与 NAT（走出家门）\n*   **NAT（网络地址转换）：** 你的手机通常只有局域网 IP（如 192.168.x.x）。路由器会将你的源 IP 修改为运营商分配的公网 IP，并在路由表中记录映射关系，以便回包时能找到你。\n\n#### 5. 运营商网络（ISP 的高速公路）\n*   数据包经过光猫，进入 ISP（电信/联通/移动）的接入网。\n*   经过城域网、骨干网，通过无数个路由器和交换机进行**路由跳转（Hop）**。\n*   **BGP（边界网关协议）：** 如果跨运营商（如移动连电信），数据包会经过骨干网的互联互通节点。\n\n---\n\n### 第三阶段：服务端侧（迷宫般的处理）\n\n数据包终于到达了大型互联网公司的基础设施边界。这里不是一台服务器，而是一个庞大的集群。\n\n#### 6. 边缘层（CDN 与 防火墙）\n*   **CDN（内容分发网络）：** 如果请求的是静态资源（图片、CSS、JS），请求会直接命中离你最近的 CDN 节点。CDN 缓存有数据则直接返回（**Cache Hit 2**），流程结束。\n*   **WAF（Web 应用防火墙）：** 如果是动态请求，流量首先经过 WAF。它会清洗流量，拦截 SQL 注入、XSS 攻击、恶意爬虫等。\n\n#### 7. 接入层（负载均衡）\n*   **L4 LB（四层负载均衡）：** 通常是 LVS 或硬件防火墙（F5）。它只看 IP 和端口，利用 VIP（虚拟 IP）抗住海量并发，将流量分发给后端的七层负载均衡。\n*   **L7 LB（七层负载均衡）：** 通常是 Nginx 或 HAProxy。它能看懂 HTTP 协议，根据 URL 路径（如 `/api/user` 或 `/api/order`）将请求路由到不同的后端服务集群。\n\n#### 8. 网关层（API Gateway）\n*   这是微服务的大门。\n*   **功能：** 身份认证（校验 Token）、权限控制、限流（防止系统被压垮）、熔断降级、日志记录。\n\n#### 9. 应用服务层（微服务处理）\n请求终于到了具体的业务代码（Java/Go/Python 程序）。\n*   **RPC 调用：** 一个请求可能需要调用多个微服务。例如“首页”服务可能需要调用“用户服务”拿头像，调用“推荐服务”拿商品列表，调用“广告服务”拿 Banner。\n*   **服务发现：** 服务之间通过注册中心（如 Nacos, Consul）找到对方的 IP。\n\n#### 10. 存储与缓存层（数据的归宿）\n业务逻辑需要数据，会按顺序查找：\n1.  **分布式缓存（Redis/Memcached）：** 先查缓存，速度极快。如果有数据，直接返回（**Cache Hit 3**）。\n2.  **数据库（MySQL/PostgreSQL）：** 缓存没命中，查询主库或从库。\n3.  **搜索引擎（Elasticsearch）：** 如果是搜索商品，会去查 ES。\n4.  **消息队列（Kafka/RocketMQ）：** 如果是写操作（如下单），可能会先写入 MQ 进行异步处理，快速返回结果，防止阻塞。\n\n---\n\n### 第四阶段：返程（满载而归）\n\n#### 11. 组装响应\n*   各个微服务返回数据，聚合层将结果拼装成 JSON 或 HTML。\n*   数据沿原路返回：应用 -> 网关 -> 负载均衡 -> 运营商 -> 路由器 -> 你的手机。\n\n#### 12. 渲染展示\n*   App 收到 HTTP 200 OK 响应。\n*   解析 JSON，加载图片（可能再次触发上述 CDN 流程），将内容渲染在屏幕上。\n\n---\n\n### 总结：一张图看懂全流程\n\n为了方便记忆，你可以把这个过程想象成**寄快递去大公司办事**：\n\n1.  **打包（App）：** 准备好材料。\n2.  **查地址（DNS）：** 查公司在哪个大厦。\n3.  **小区大门（NAT）：** 门卫把你送出小区。\n4.  **物流运输（ISP）：** 顺丰/邮政卡车在高速公路上跑。\n5.  **公司收发室（CDN/WAF）：** 简单的东西直接拿走，危险品被拦截。\n6.  **前台大厅（L4/L7 LB）：** 前台根据你要办的事，把你指引到不同楼层。\n7.  **部门秘书（API Gateway）：** 查你的证件，看你有没有预约。\n8.  **办事员（微服务）：** 具体处理业务。\n9.  **档案室（DB/Cache）：** 办事员去查阅文件。\n10. **返回结果：** 事情办完，回执单寄回给你。",
+			"styleAttributes":{},
+			"x":1300,
+			"y":-200,
+			"width":800,
+			"height":3255
+		}
+	],
+	"edges":[
+		{
+			"id":"2c06a914bc43ef0f",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"9d84ef1960b4b203",
+			"fromSide":"right",
+			"toNode":"8a57be55effb988e",
+			"toSide":"left"
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}
