@@ -15,8 +15,8 @@
               "state": {
                 "file": "Canvas/一个真实的网络请求流程.canvas",
                 "viewState": {
-                  "x": 1489.6365270616839,
-                  "y": 2115.0447121437983,
+                  "x": -104.51072273618298,
+                  "y": 2689.6449223297222,
                   "zoom": -0.6637817752930699
                 }
               },
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "file": "Elasticsearch 技术原理解析与应用场景.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +107,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 一个真实的网络请求流程"
+              "title": "Backlinks for Elasticsearch 技术原理解析与应用场景"
             }
           },
           {
@@ -159,13 +159,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "file": "Elasticsearch 技术原理解析与应用场景.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 一个真实的网络请求流程"
+              "title": "Outline of Elasticsearch 技术原理解析与应用场景"
             }
           },
           {
@@ -200,6 +200,7 @@
   },
   "active": "155bf9a6b2cbdaa8",
   "lastOpenFiles": [
+    "Elasticsearch 技术原理解析与应用场景.md",
     "Drawing 2025-12-17 17.06.43.excalidraw.md",
     "Canvas/一个真实的网络请求流程.canvas",
     "mermaid-diagram-2025-12-17-170515.svg",

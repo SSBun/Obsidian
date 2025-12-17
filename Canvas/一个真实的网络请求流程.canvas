@@ -1,5 +1,6 @@
 {
 	"nodes":[
+		{"id":"f8f4da2828b9c324","type":"file","file":"Elasticsearch 技术原理解析与应用场景.md","x":-1400,"y":2720,"width":800,"height":400},
 		{
 			"id":"9d84ef1960b4b203",
 			"type":"text",
