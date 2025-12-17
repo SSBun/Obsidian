@@ -1,4 +1,4 @@
-
+[](TCP%20“全双工”和“基于字节流”.md)[](TCP%20“全双工”和“基于字节流”.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)[](TCP%20复用TCP%20复用.md)
 ## 概述
 
 TCP（Transmission Control Protocol，传输控制协议）是互联网协议栈（TCP/IP 协议族）中的核心协议之一，位于传输层（Transport Layer）。它是一种面向连接的、可靠的、基于字节流的传输协议，旨在确保数据在网络中可靠传输。TCP 与 UDP（User Datagram Protocol，用户数据报协议）相对，UDP 是无连接的、不可靠的协议，而 TCP 提供了更高的可靠性，但开销更大。
