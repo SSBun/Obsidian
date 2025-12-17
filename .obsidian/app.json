@@ -3,5 +3,7 @@
   "showLineNumber": false,
   "showInlineTitle": true,
   "showIndentGuide": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "readableLineLength": true,
+  "strictLineBreaks": false
 }

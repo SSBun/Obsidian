@@ -22,7 +22,8 @@
 			"height":3255
 		},
 		{"id":"b795ac50112214e5","type":"file","file":"Kafka 核心知识体系汇总.md","x":400,"y":3340,"width":1360,"height":780},
-		{"id":"f8f4da2828b9c324","type":"file","file":"Elasticsearch 技术原理解析与应用场景.md","x":-500,"y":3340,"width":800,"height":400}
+		{"id":"f8f4da2828b9c324","type":"file","file":"Elasticsearch 技术原理解析与应用场景.md","x":-500,"y":3340,"width":800,"height":400},
+		{"id":"8e03c08a73957b58","type":"file","file":"RPC 调用.md","x":-1540,"y":2305,"width":800,"height":820}
 	],
 	"edges":[
 		{

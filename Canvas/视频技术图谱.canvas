@@ -1,31 +1,12 @@
 {
 	"nodes":[
+		{"id":"2a505f45af41261e","type":"file","file":"主流音频格式对比.md","x":3280,"y":-680,"width":800,"height":400},
 		{"id":"9752d91ad777b442","type":"file","file":"Docs/RTMP 协议.md","x":220,"y":-2120,"width":880,"height":440},
 		{"id":"db7ddf03448082b0","type":"file","file":"Docs/RTMP 直播协议完整流程详细描述.md","x":1240,"y":-2120,"width":800,"height":440},
 		{"id":"1cd9f7e7891c5fce","type":"file","file":"Docs/视频采集中的 YUV和RBG格式是什呢？.md","x":2330,"y":-2160,"width":860,"height":440},
 		{"id":"38ae663c06837568","type":"file","file":"Docs/YUV 的UV只有红蓝，但是没有绿色，岂不是有色彩缺失？.md","x":2340,"y":-2660,"width":840,"height":360},
 		{"id":"f78a9b75bbef3f70","type":"file","file":"Docs/PCM 是如何记录音频信息的？.md","x":2340,"y":-1220,"width":800,"height":440},
 		{"id":"5a945f1b4dabcdf4","type":"file","file":"Docs/为什么有44.1kHz这个特殊采样率？.md","x":2340,"y":-680,"width":800,"height":400},
-		{
-			"id":"c548b8954fb238ea",
-			"type":"text",
-			"text":"AIFF 和 WAV 都是无损音频文件格式，意味着它们都能够以原始质量存储音频数据，不会有任何信息丢失。它们都是非常常见的音频格式，广泛用于专业音频领域，比如录音、编辑和制作。\n\n虽然它们有很多相似之处，但仍然有一些关键的区别：\n\n**什么是 AIFF？**\n\n* **全称：** Audio Interchange File Format (音频交换文件格式)\n* **开发者：** 苹果公司\n* **主要特点：**\n    * **无损：** 存储未压缩的原始音频数据。\n    * **文件扩展名：** `.aiff` 或 `.aif`\n    * **元数据支持：** 可以包含艺术家、专辑、歌曲名称等元数据。\n    * **广泛支持：** 在苹果生态系统（macOS, iOS）中得到原生支持，但在 Windows 和其他平台也基本可以播放。\n    * **块结构：** 使用基于块的结构来组织数据，这在早期设计时是为了更灵活地存储不同类型的数据。\n    * **相对较大的文件大小：** 由于是无损的，文件大小通常比有损格式（如MP3）大。\n\n**什么是 WAV？**\n\n* **全称：** Waveform Audio File Format (波形音频文件格式)\n* **开发者：** 微软和 IBM\n* **主要特点：**\n    * **无损：** 存储未压缩的原始音频数据。\n    * **文件扩展名：** `.wav`\n    * **元数据支持：** 也支持元数据，但早期版本的支持不如 AIFF 丰富。现在通过 RIFF chunk 可以包含更丰富的元数据。\n    * **广泛支持：** 在 Windows 生态系统中得到原生支持，也是所有操作系统和播放器最广泛支持的音频格式之一。\n    * **RIFF 结构：** 基于 Resource Interchange File Format (RIFF) 结构，这是一种通用的数据存储结构。\n    * **相对较大的文件大小：** 和 AIFF 类似，文件大小也较大。\n\n**AIFF 和 WAV 的主要区别：**\n\n| 特征           | AIFF                                           | WAV                                             |\n| :------------- | :--------------------------------------------- | :---------------------------------------------- |\n| **开发者**     | 苹果公司                                       | 微软和 IBM                                      |\n| **操作系统偏好** | macOS / iOS (苹果生态系统)                     | Windows (微软生态系统)                          |\n| **文件扩展名** | `.aiff` 或 `.aif`                              | `.wav`                                          |\n| **文件结构**   | 基于块 (Chunk-based)                           | 基于 RIFF (Resource Interchange File Format)    |\n| **字节顺序**   | 大端序 (Big-endian) - 在早期处理器中更常见     | 小端序 (Little-endian) - 在现代处理器中更常见 |\n| **元数据支持** | 较好，原生支持多种元数据（早期版本）           | 较好，通过 RIFF chunk 扩展支持更丰富元数据      |\n| **兼容性**     | 在苹果设备上表现良好，其他平台也普遍支持       | 在所有平台都具有极佳的兼容性，是最通用的无损格式 |\n| **文件大小**   | 通常与 WAV 文件大小相似（取决于编码参数）    | 通常与 AIFF 文件大小相似（取决于编码参数）    |\n| **应用场景**   | 苹果产品、专业音频制作、音乐创作等             | 几乎所有音频应用、专业音频制作、广播等          |\n\n**关键总结：**\n\n* **本质上，AIFF 和 WAV 都是无损的，这意味着它们都提供最高质量的音频。** 它们之间音质上的差异是**没有的**。\n* **主要区别在于它们的元数据处理方式、内部结构以及它们所诞生的操作系统环境。**\n* **兼容性方面，WAV 通常被认为是更通用的选择，因为它在各种平台和软件中都有着几乎无可匹敌的支持。**\n* **对于大多数用户来说，选择 AIFF 还是 WAV 并没有太大的实际影响，除非你需要在特定的操作系统或软件环境中工作。**\n\n**什么情况下选择哪个格式？**\n\n* **选择 WAV：**\n    * 当你需要最大的兼容性时，无论是在 Windows、macOS 还是 Linux 上。\n    * 当你需要将音频文件分发给可能使用不同操作系统的用户时。\n    * 当你在 Windows 环境下工作，或者你的音频软件更倾向于 WAV 时。\n* **选择 AIFF：**\n    * 当你在苹果生态系统（macOS、Logic Pro 等）中工作时，AIFF 可能会提供更无缝的体验。\n    * 当你对元数据有特定需求，并且 AIFF 能够更好地满足时（尽管现代 WAV 也做得很好）。\n\n总的来说，如果你不确定，**WAV 往往是更安全和通用的无损音频选择。**",
-			"styleAttributes":{},
-			"x":3280,
-			"y":-1220,
-			"width":800,
-			"height":400
-		},
-		{
-			"id":"9d4f1d7c6cda441d",
-			"type":"text",
-			"text":"以下是 2025 年仍然活跃的**主流高级音频格式**（按实际使用量从高到低排序），并附上最直观的对比表，方便你一眼看清谁更适合什么场景。\n\n| 排名 | 格式                  | 类型         | 压缩方式       | 典型码率               | 音质（主观）                | 主要使用场景                          | 专利/费用 | 硬件支持度 | 备注                                      |\n|------|-----------------------|--------------|----------------|-------------------------|-----------------------------|----------------------------------------|-----------|------------|-------------------------------------------|\n| 1    | AAC (.m4a/.aac)       | 有损         | 感知编码       | 128~320kbps            | 256kbps 已接近透明          | 苹果音乐、YouTube、B站、抖音、直播     | 专利已过期 | ★★★★★      | 事实上的“互联网音频标准”                  |\n| 2    | Opus                  | 有损/无损混合| 语音+音乐双模式| 32~256kbps（推荐96+）  | 128kbps 碾压 AAC 256kbps   | WebRTC、Discord、WhatsApp、游戏语音    | 完全免费   | ★★★★★      | 延迟极低，被称为“神器”                    |\n| 3    | Dolby AC3 / E-AC3     | 有损         | 感知编码       | 384~640kbps            | 优秀                        | Netflix、蓝光碟、电视、杜比影院        | 专利收费   | ★★★★☆      | 5.1 环绕声标准                            |\n| 4    | Dolby TrueHD          | 无损         | Meridian 无损压缩 | 6~18Mbps               | 数学无损                    | 蓝光原盘、4K UHD 碟                   | 专利收费   | ★★★☆☆      | 最多 7.1.4 沉浸式音频                    |\n| 5    | DTS-HD MA / DTS:X     | 无损         | 无损压缩       | 6~24Mbps               | 数学无损                    | 蓝光原盘、少数影院                    | 专利收费   | ★★★☆☆      | 竞争对手 TrueHD，对象式音频               |\n| 6    | MP3 (.mp3)            | 有损         | 感知编码       | 192~320kbps            | 320kbps 优秀，128kbps 一般  | 老音乐、U盘、车载                     | 专利已过期 | ★★★★☆      | 仍在大量存在，但已逐渐被 AAC 取代         |\n| 7    | FLAC                  | 无损         | 无损压缩       | 600~1400kbps（视内容） | 数学无损                    | 发烧友、Tidal HiFi、本地音乐          | 完全免费   | ★★★★☆      | 开源之王，支持到 32bit/384kHz             |\n| 8    | ALAC (.m4a)           | 无损         | Apple 无损压缩 | 与 FLAC 差不多         | 数学无损                    | 苹果生态（Apple Music 无损）           | 免费开源   | ★★★☆☆      | 苹果专用，但跨平台也支持                  |\n| 9    | APE / WavPack         | 无损         | 无损压缩       | 600~1200kbps           | 数学无损                    | 极少数老发烧友                         | 免费       | ★☆☆☆☆      | 压缩率高但解码慢，基本退出主流            |\n| 10   | Sony 360 Reality Audio| 沉浸式有损   | 基于 MPEG-H 3D | 500~1000kbps           | 优秀                        | Amazon Music、Deezer（空间音频）       | 专利收费   | ★★☆☆☆      | 需要特定耳机+头追踪                       |\n| 11   | Dolby Atmos Music     | 沉浸式有损   | E-AC3+对象音频 | 768kbps 左右           | 优秀                        | Apple Music、Tidal（空间音频）         | 专利收费   | ★★★☆☆      | 目前最火的空间音频格式                    |\n\n### 2025 年实际推荐（一句话总结）\n\n| 你的需求                     | 直接选这个格式                              |\n|------------------------------|---------------------------------------------|\n| 直播 / 视频平台 / 手机       | AAC（256kbps）或 Opus（128~160kbps）        |\n| 实时语音通话 / 游戏语音      | Opus（64~128kbps）                          |\n| 听歌（追求音质）             | Apple Music / Tidal → 选无损（FLAC/ALAC）   |\n| 发烧友本地存档               | FLAC 最高规格（24bit/192kHz）               |\n| 看4K蓝光/原盘                | TrueHD 或 DTS-HD MA（无损环绕）             |\n| 空间音频（沉浸式）           | Apple Music 的 Dolby Atmos 或 360RA         |\n| 兼容最老设备                 | 仍然只能用 MP3                              |\n\n### 未来趋势（2025→2030）\n1. Opus 正在全面取代 AAC 成为新一代互联网音频标准（YouTube 已经在部分视频用 Opus）\n2. 空间音频（Dolby Atmos / 360RA / MPEG-H）会成为流媒体标配\n3. 无损流媒体彻底普及，256kbps AAC 正在成为“最低音质”\n\n一句话口诀：\n“直播看视频用 AAC，语音通话用 Opus，听无损用 FLAC，看电影用 TrueHD，想听头顶唱歌开 Atmos。”  \n记住了这五句话，基本就通杀所有场景了。",
-			"styleAttributes":{},
-			"x":3280,
-			"y":-680,
-			"width":800,
-			"height":400
-		},
 		{"id":"82ee0bf72865a03c","type":"file","file":"Docs/AAC.md","x":4240,"y":-1120,"width":800,"height":400},
 		{"id":"6d3bcf0d88f267f7","type":"file","file":"Docs/MP3.md","x":4240,"y":-280,"width":800,"height":400},
 		{"id":"50ce0e0018c77952","type":"file","file":"Docs/Opus.md","x":4240,"y":-700,"width":800,"height":400},
@@ -36,39 +17,13 @@
 		{"id":"141507c60fcef00e","type":"file","file":"Docs/主流视频传输协议.md","x":-680,"y":-1620,"width":820,"height":440},
 		{"id":"31e52d7264dca8e0","type":"file","file":"Docs/HLS协议详述.md","x":-1680,"y":-1960,"width":800,"height":400},
 		{"id":"89cf9dd0c2ea3cbf","type":"file","file":"Docs/WebRTC：实时通信技术的全面解析.md","x":-680,"y":-1020,"width":800,"height":400},
-		{
-			"id":"7ddfe1e3431081e4",
-			"type":"text",
-			"text":"### RTMP 在直播中的应用：为什么推流常用但分发罕见\n\nRTMP（Real-Time Messaging Protocol，实时消息协议）是一种由 Adobe 开发的流媒体协议，最初设计用于 Flash Player 传输音频、视频和数据。尽管 Flash 已于 2020 年底正式停止支持，但 RTMP 在 2025 年仍广泛用于直播的**推流（ingestion）**阶段，即从内容创建者（主播）将媒体流推送至服务器的过程。然而，在**分发（distribution）**阶段，即服务器将流交付给观众时，RTMP 已基本被取代，转而使用更现代的协议如 HLS（HTTP Live Streaming）、DASH（Dynamic Adaptive Streaming over HTTP）或 WebRTC。下面我将详细解释这一现象的原因，基于技术演进、兼容性和行业实践。\n\n#### 1. **RTMP 在推流中的优势与持续使用原因**\nRTMP 作为推流协议的流行源于其设计特性，使其特别适合实时媒体上传：\n\n- **低延迟和实时性**：RTMP 基于 TCP 的持久连接，能够实现亚秒级延迟（通常 <1 秒），这对直播推流至关重要。主播可以通过编码软件如 OBS Studio 或 Wirecast 轻松推送流，而无需担心频繁的重连或缓冲中断。 这使得 RTMP 成为 Twitch、YouTube Live 等平台的标准摄取协议，即使在 2025 年，这些平台仍依赖它来处理来自全球主播的实时输入。\n\n- **广泛兼容性和生态支持**：许多硬件编码器、软件工具和 CDN（内容分发网络）服务（如 AWS MediaLive、Akamai）原生支持 RTMP。作为行业标准，它简化了集成过程。例如，主播只需一个 RTMP URL 和密钥即可连接服务器，而无需复杂的配置。 尽管有更新的替代品如 SRT（Secure Reliable Transport）或 WebRTC，RTMP 的成熟生态让它在推流端难以被完全取代，尤其在专业直播环境中。\n\n- **稳定性与简单性**：RTMP 支持元数据注入（如视频分辨率、帧率）和基本 QoS（服务质量）控制，适合从移动设备或 PC 推送流。增强版 RTMP（eRTMP）进一步改进了安全性，添加了加密支持。\n\n总之，推流阶段强调从源头到服务器的快速、可靠传输，RTMP 的这些特性使其在 2025 年仍占主导地位，许多平台视其为“通用摄取标准”。\n\n#### 2. **为什么分发阶段不使用 RTMP**\n在分发端，RTMP 的局限性暴露无遗，导致它被更先进的协议取代。主要原因包括：\n\n- **浏览器和设备兼容性问题**：RTMP 原本依赖 Flash Player 进行播放，但 Flash 已于 2020 年被浏览器废弃（如 Chrome、Safari）。现代 web 浏览器不支持原生 RTMP 播放，需要额外插件或转换，这在移动端（如 iOS、Android）尤为不便。 相反，HLS 和 DASH 基于 HTTP 协议，能无缝集成到 HTML5 视频标签中，支持自适应比特率（ABR），根据观众网络自动调整质量。\n\n- **大规模分发不友好**：RTMP 是基于 TCP 的点对点协议，不适合通过 CDN 分发到数百万观众。它缺乏对缓存和边缘计算的优化，容易导致高服务器负载和瓶颈。 而 HLS/DASH 将流切分为小段文件（TS 或 MP4 片段），便于 CDN 缓存和全球分发，降低成本并提高可靠性。低延迟变体如 LL-HLS（Low-Latency HLS）已将延迟降至 2-5 秒，接近 RTMP。\n\n- **安全性和现代需求不足**：RTMP 的原生版本缺乏强加密，易受中间人攻击。虽有 RTMPS（加密版），但不如 SRT 或 WebRTC 安全，后者支持 DTLS/SRTP。 此外，分发需考虑移动优先、跨平台和互动性（如 WebRTC 的 P2P 支持），RTMP 在这些方面落后。\n\n- **行业趋势与替代方案**：从 2010 年代起，HTTP 流媒体协议主导分发。YouTube 和 Netflix 等平台摄取 RTMP 后，转码为 HLS/DASH。 对于超低延迟需求，WebRTC 或 SRT 已成为首选，尤其在互动直播（如游戏或拍卖）中。\n\n#### 3. **典型直播工作流示例**\n在现代直播系统中（如 Bilibili 或 Douyin）：\n- **推流**：主播用 RTMP 将流推到媒体服务器（e.g., Nginx-RTMP 或 SRS）。\n- **处理**：服务器转码、添加水印或混合多流。\n- **分发**：转换为 HLS/DASH，通过 CDN 交付给观众。观众在浏览器或 App 中播放，无需特殊插件。\n\n这种“RTMP 摄取 + HTTP/WebRTC 交付”的混合模式已成为标准，平衡了效率和兼容性。\n\n#### 4. **未来展望**\n尽管 RTMP 使用在下降，但预计到 2030 年，它仍将作为推流备用协议存在，尤其在遗留系统中。 新协议如 WHIP（WebRTC-HTTP Ingestion Protocol）正挑战其地位，提供更无缝的 WebRTC 推流。 如果你是开发者，建议在推流端保留 RTMP 支持，同时优先 HLS/WebRTC 用于分发，以适应 2025 年的浏览器生态。",
-			"styleAttributes":{},
-			"x":260,
-			"y":-1600,
-			"width":800,
-			"height":400
-		},
 		{"id":"7dbfd491dd895a81","type":"file","file":"Docs/What is the NTP protocol?.md","x":-670,"y":-460,"width":800,"height":400},
-		{
-			"id":"54dc9e1547b417e6",
-			"type":"text",
-			"text":"### DASH 协议详解\n\nDASH 协议，全称为 Dynamic Adaptive Streaming over HTTP（动态自适应 HTTP 流媒体），也常被称为 MPEG-DASH，是一个国际标准化组织（ISO/IEC）制定的媒体传输协议。它主要用于通过互联网高效传输视频和音频内容，尤其适用于视频点播（VOD）和实时直播场景。DASH 的核心优势在于其自适应比特率（Adaptive Bitrate Streaming）机制，能够根据用户的网络条件实时调整媒体质量，确保流畅播放而避免缓冲中断。\n\n#### 背景与发展历史\nDASH 协议于 2012 年由 MPEG（Moving Picture Experts Group）标准化，成为 ISO/IEC 23009-1 标准。它旨在解决传统流媒体协议（如 RTSP 或 RTMP）的局限性，这些协议往往需要专用服务器，而 DASH 基于标准的 HTTP 协议，因此可以从任何普通的 Web 服务器（如 CDN）提供内容。这使得它兼容性强，且易于部署。相比苹果的 HLS（HTTP Live Streaming）协议，DASH 是一个开放标准，不依赖特定厂商，已被广泛采用在 Netflix、YouTube 等平台。\n\n#### DASH 的工作原理\nDASH 的工作流程可以分为内容准备、传输和客户端播放三个阶段：\n\n1. **内容准备（Encoding and Segmentation）**：\n   - 媒体文件（如视频）首先被编码成多个比特率版本（例如，低质量的 480p、中等的 720p、高质量的 1080p）。\n   - 然后，这些版本被分割成小段（Segments），每个段通常持续 2-10 秒。这允许客户端灵活切换质量。\n   - 一个关键文件是 MPD（Media Presentation Description），这是一个 XML 文件，描述了所有可用段的 URL、比特率、时长、分辨率等元数据。服务器提供 MPD 给客户端作为“目录”。\n\n2. **传输过程**：\n   - 客户端通过 HTTP 请求 MPD 文件。\n   - 根据当前网络带宽、CPU 负载和设备能力，客户端选择合适的段进行下载。\n   - 如果网络变差，客户端切换到低比特率段；反之，则升级到高质量段。这种自适应调整是动态的，通常每段结束时重新评估。\n   - DASH 支持多种容器格式，如 fMP4（Fragmented MP4，用于 H.264/AVC 或 H.265/HEVC 视频）和 WebM（用于 VP9 和 Opus 音频）。\n\n3. **客户端播放**：\n   - 客户端使用 Media Source Extensions (MSE) API（如在浏览器中）来处理段的拼接和播放。\n   - 支持加密（如 Widevine DRM）和字幕等附加功能，确保安全和多语言兼容。\n\nDASH 的 HTTP 基础使其能穿越防火墙，并利用现有 CDN 基础设施，提高全球分发效率。\n\n#### 关键组件\n以下是 DASH 协议的核心元素，使用表格形式便于比较：\n\n| 组件名称          | 描述                                                                 | 示例应用 |\n|-------------------|----------------------------------------------------------------------|----------|\n| MPD 文件         | XML 格式的媒体描述文件，包含段的元数据，如比特率、时序和 URL。      | 客户端初始请求，用于构建播放列表。 |\n| 媒体段 (Segments) | 短小的媒体片段，支持独立下载和切换。                                | 每个段可独立解码，避免整文件下载。 |\n| 适配集 (Adaptation Sets) | 分组不同媒体类型（如视频、音频、字幕），允许多轨选择。              | 支持多语言音频或不同分辨率视频。 |\n| 表示 (Representations) | 同一内容的多种比特率版本。                                          | 低带宽时选择 360p，高带宽时 4K。 |\n| 初始化段 (Initialization Segment) | 包含解码器配置，用于启动播放。                                      | 只需下载一次，提升启动速度。 |\n\n这些组件确保了协议的灵活性和扩展性。\n\n#### 优势与缺点\n**优势**：\n- **自适应性强**：实时调整质量，适用于波动网络，如移动设备。\n- **兼容性高**：基于 HTTP，无需专用服务器，支持现有基础设施。\n- **标准化**：开放标准，促进跨平台一致性。\n- **支持直播**：通过低延迟模式（如 CMAF - Common Media Application Format）实现近实时传输。\n- **高效**：减少带宽浪费，只下载必要质量的内容。\n\n**缺点**：\n- **复杂性**：内容准备阶段需要多版本编码，增加了服务器端负载。\n- **延迟**：在直播中，传统 DASH 可能有 30 秒延迟（虽有低延迟变体）。\n- **浏览器支持**：依赖 MSE API，不是所有旧设备兼容。\n\n#### 与其他协议的比较\n- ** vs. HLS **：HLS 是苹果主导，基于 TS（Transport Stream）格式，主要用于 iOS。DASH 更通用，支持更多格式，但 HLS 在移动端更优化。\n- ** vs. HDS（HTTP Dynamic Streaming）**：Adobe 的 HDS 已过时，DASH 取代了它，提供更好标准化。\n- ** vs. Smooth Streaming **：微软的协议，类似但专有；DASH 兼容更多生态。\n\n总体上，DASH 已成为行业主流，尤其在 4K、VR 和 360° 视频领域。\n\n#### 实际应用与实现\nDASH 被广泛用于 OTT（Over-The-Top）服务，如视频平台和体育直播。实现时，开发者可以使用开源工具如 MP4Box 或 Bento4 来生成 DASH 内容，客户端则通过 Dash.js 或 Shaka Player 等库集成。如果您是开发者，建议参考 MPEG 官方文档或 MDN Web API 以获取代码示例。\n\n如果需要更具体的代码示例、技术规格或相关工具的演示，请提供更多细节！",
-			"styleAttributes":{},
-			"x":-1680,
-			"y":-1300,
-			"width":800,
-			"height":400
-		},
-		{
-			"id":"ac070e0aa78d2a0f",
-			"type":"text",
-			"text":"### DASH 与 HLS 协议对比\n\nDASH（Dynamic Adaptive Streaming over HTTP）和 HLS（HTTP Live Streaming）都是基于 HTTP 的自适应比特率流媒体协议，用于在互联网上传输视频和音频内容，尤其适用于点播和直播场景。它们的核心原理相似：将媒体文件分割成小段（segments），并提供多个比特率版本，让客户端根据网络条件动态切换质量，以确保流畅播放而减少缓冲。这使得两者在功能上高度重叠，常被用于 OTT（Over-The-Top）服务如 Netflix 或 YouTube。\n\n尽管相似，但两者在起源、实现和技术细节上存在显著差异。以下是从多个维度进行的详细对比，使用表格形式便于阅读：\n\n| 方面             | DASH (MPEG-DASH)                                      | HLS (HTTP Live Streaming)                             |\n|------------------|-------------------------------------------------------|-------------------------------------------------------|\n| **起源与标准**  | 由 MPEG 组织标准化（ISO/IEC 23009-1），开放标准，不依赖特定厂商。于 2012 年发布，旨在成为统一协议。 | 由 Apple 开发并主导，于 2009 年推出。虽开源但更偏向 Apple 生态，非完全开放标准。 |\n| **媒体格式支持**| 支持多种容器格式，如 fMP4（Fragmented MP4）、WebM，支持 H.264、H.265、VP9 等编解码器。更灵活，可扩展到新格式。 | 主要基于 TS（MPEG-2 Transport Stream）格式，支持 H.264 和 H.265。格式较单一，但稳定。 |\n| **兼容性与支持**| 跨平台强，支持 Android、浏览器（通过 MSE API）和多种设备。但在 iOS 上需额外适配，整体支持较新，采用率在上升。 | 在 Apple 设备（如 iOS、macOS、Safari）上原生支持，兼容性更广，尤其在移动端。浏览器支持需依赖特定库。 |\n| **延迟与直播**  | 支持低延迟模式（如 CMAF），直播延迟可低至 2-5 秒。更适合实时应用。 | 传统直播延迟较高（10-30 秒），但有低延迟扩展（LL-HLS），接近 DASH 水平。 |\n| **自适应机制**  | 客户端有更多控制权，可手动选择质量级别。使用 MPD（XML 文件）描述媒体，提供更高灵活性。 | 更自动化，客户端根据算法切换。使用 M3U8 播放列表（文本文件），简单易实现。 |\n| **DRM 与加密** | 支持多种 DRM 系统，如 Widevine、PlayReady、FairPlay。灵活性高。 | 原生支持 FairPlay DRM，其他需扩展。 |\n| **优势**        | 更现代化、灵活，适合跨平台和未来扩展（如 4K、VR）。潜在成为行业统一标准。 | 成熟、广泛采用，特别是在 Apple 生态。部署简单，生态支持丰富。 |\n| **缺点**        | 内容准备复杂，需要多格式编码。浏览器支持依赖 MSE，不如 HLS 普遍。 | 格式单一，难以扩展新编解码器。在非 Apple 设备上需额外工作。 |\n| **适用场景**    | 适合追求灵活性和低延迟的平台，如 Android TV 或 Web 应用。 | 理想于 Apple 重度用户或简单部署，如移动直播。 |\n\n从整体上看，HLS 因其较早推出和 Apple 的推动而在市场上占有更大份额，尤其在移动设备上。但 DASH 作为开放标准，正在逐步赶超，提供更多创新潜力，如更好的多轨支持（音频、字幕）和容器多样性。如果您的应用针对特定平台，HLS 可能更易上手；若需跨平台兼容，DASH 是更好选择。实际中，许多服务（如 Netflix）会同时支持两者以覆盖更多用户。\n\n如果您有特定场景（如直播或点播）或需要代码实现示例，我可以进一步深入！",
-			"styleAttributes":{},
-			"x":-2740,
-			"y":-1600,
-			"width":800,
-			"height":400
-		},
 		{"id":"20421558de75f7b2","type":"file","file":"Docs/视频技术小测验.md","x":560,"y":-460,"width":800,"height":400,"color":"2"},
-		{"id":"a41d00112b08f612","type":"file","file":"Docs/视频编码GOP.md","x":560,"y":40,"width":800,"height":400}
+		{"id":"a41d00112b08f612","type":"file","file":"Docs/视频编码GOP.md","x":560,"y":40,"width":800,"height":400},
+		{"id":"4d64a49dc1988514","type":"file","file":"RTMP 在直播中的应用：为什么推流常用但分发罕见.md","x":260,"y":-1600,"width":800,"height":400},
+		{"id":"57c33f2c36324d93","type":"file","file":"DASH 协议详解.md","x":-1680,"y":-1300,"width":800,"height":400},
+		{"id":"ecee21f7fc01f3b8","type":"file","file":"DASH 与 HLS 协议对比.md","x":-2740,"y":-1600,"width":800,"height":400},
+		{"id":"5f161aaf476e0434","type":"file","file":"AIFF 格式.md","x":3280,"y":-1220,"width":800,"height":400}
 	],
 	"edges":[
 		{
@@ -136,7 +91,7 @@
 			"fromFloating":false,
 			"fromNode":"f78a9b75bbef3f70",
 			"fromSide":"right",
-			"toNode":"c548b8954fb238ea",
+			"toNode":"5f161aaf476e0434",
 			"toSide":"left",
 			"label":"AIFF"
 		},
@@ -144,7 +99,7 @@
 			"id":"dbb7831b5b151836",
 			"styleAttributes":{},
 			"toFloating":false,
-			"fromNode":"9d4f1d7c6cda441d",
+			"fromNode":"2a505f45af41261e",
 			"fromSide":"right",
 			"toNode":"82ee0bf72865a03c",
 			"toSide":"left"
@@ -153,7 +108,7 @@
 			"id":"0195a9de83a56720",
 			"styleAttributes":{},
 			"toFloating":false,
-			"fromNode":"9d4f1d7c6cda441d",
+			"fromNode":"2a505f45af41261e",
 			"fromSide":"right",
 			"toNode":"50ce0e0018c77952",
 			"toSide":"left"
@@ -162,7 +117,7 @@
 			"id":"84aab0c87d091978",
 			"styleAttributes":{},
 			"toFloating":false,
-			"fromNode":"9d4f1d7c6cda441d",
+			"fromNode":"2a505f45af41261e",
 			"fromSide":"right",
 			"toNode":"6d3bcf0d88f267f7",
 			"toSide":"left"
@@ -174,7 +129,7 @@
 			"fromFloating":false,
 			"fromNode":"f78a9b75bbef3f70",
 			"fromSide":"right",
-			"toNode":"9d4f1d7c6cda441d",
+			"toNode":"2a505f45af41261e",
 			"toSide":"left",
 			"label":"Advanced Audio Format"
 		},
@@ -249,7 +204,7 @@
 			"toFloating":false,
 			"fromNode":"9752d91ad777b442",
 			"fromSide":"bottom",
-			"toNode":"7ddfe1e3431081e4",
+			"toNode":"4d64a49dc1988514",
 			"toSide":"top"
 		},
 		{
@@ -258,7 +213,7 @@
 			"toFloating":false,
 			"fromNode":"141507c60fcef00e",
 			"fromSide":"left",
-			"toNode":"54dc9e1547b417e6",
+			"toNode":"57c33f2c36324d93",
 			"toSide":"right"
 		},
 		{
@@ -267,17 +222,26 @@
 			"toFloating":false,
 			"fromNode":"31e52d7264dca8e0",
 			"fromSide":"left",
-			"toNode":"ac070e0aa78d2a0f",
+			"toNode":"ecee21f7fc01f3b8",
 			"toSide":"right"
 		},
 		{
 			"id":"4753303304a87a22",
 			"styleAttributes":{},
 			"toFloating":false,
-			"fromNode":"54dc9e1547b417e6",
+			"fromNode":"57c33f2c36324d93",
 			"fromSide":"left",
-			"toNode":"ac070e0aa78d2a0f",
+			"toNode":"ecee21f7fc01f3b8",
 			"toSide":"right"
+		},
+		{
+			"id":"5403e003d4fdb016",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"20421558de75f7b2",
+			"fromSide":"bottom",
+			"toNode":"a41d00112b08f612",
+			"toSide":"top"
 		}
 	],
 	"metadata":{

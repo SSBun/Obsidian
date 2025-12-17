@@ -32,9 +32,9 @@
               "state": {
                 "file": "Canvas/一个真实的网络请求流程.canvas",
                 "viewState": {
-                  "x": -128.27501390743078,
-                  "y": 3404.9007467283177,
-                  "zoom": -0.38300567546636427
+                  "x": -753.6771629564228,
+                  "y": 2766.0045085464253,
+                  "zoom": -0.3569705346226689
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -42,19 +42,83 @@
             }
           },
           {
+            "id": "9624ca591ad21bf7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Redis 缓存.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Redis 缓存"
+            }
+          },
+          {
+            "id": "2d069859cb1bab9e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RPC 调用.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "RPC 调用"
+            }
+          },
+          {
             "id": "285f0b2382df1a40",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "canvas",
               "state": {
-                "file": "Pasted image 20251217194209.png"
+                "file": "Canvas/网络基础架构.canvas",
+                "viewState": {
+                  "x": -1019.8181906163021,
+                  "y": 555.501386037071,
+                  "zoom": -0.07711620864564953
+                }
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20251217194209"
+              "icon": "lucide-layout-dashboard",
+              "title": "网络基础架构"
+            }
+          },
+          {
+            "id": "fcd869a65720eda9",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "viewState": {
+                  "x": -603.6790974332009,
+                  "y": 2581.6797376471377,
+                  "zoom": -0.0757044263680802
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "一个真实的网络请求流程"
+            }
+          },
+          {
+            "id": "c00bbbd25f527e91",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RPC 调用.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "RPC 调用"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -127,7 +191,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pasted image 20251217194209.png",
+                "file": "Canvas/一个真实的网络请求流程.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +201,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Pasted image 20251217194209"
+              "title": "Backlinks for 一个真实的网络请求流程"
             }
           },
           {
@@ -146,12 +210,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pasted image 20251217194209.png",
+                "file": "Canvas/一个真实的网络请求流程.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Pasted image 20251217194209"
+              "title": "Outgoing links from 一个真实的网络请求流程"
             }
           },
           {
@@ -189,13 +253,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pasted image 20251217194209.png",
+                "file": "Canvas/一个真实的网络请求流程.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Pasted image 20251217194209"
+              "title": "Outline of 一个真实的网络请求流程"
             }
           },
           {
@@ -212,7 +276,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 356.5
+    "width": 389.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -228,25 +292,33 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "285f0b2382df1a40",
+  "active": "333e65b7c6fecca8",
   "lastOpenFiles": [
+    "Redis 缓存.md",
+    "RPC 调用.md",
+    "Pasted image 20251217200211.png",
+    "Canvas/一个真实的网络请求流程.canvas",
+    "Canvas/网络基础架构.canvas",
+    "TCP 中 server 的 ACK 是如何计算的？.md",
+    "Canvas/视频技术图谱.canvas",
+    "主流音频格式对比.md",
+    "AIFF 格式.md",
+    "DASH 与 HLS 协议对比.md",
+    "DASH 协议详解.md",
+    "RTMP 在直播中的应用：为什么推流常用但分发罕见.md",
+    "mermaid-diagram-2025-12-17-193605.svg",
+    "mermaid-diagram-2025-12-17-170515.svg",
+    "Resource/Pasted image 20251217194209.png",
     "Pasted image 20251217170506.png",
-    "Pasted image 20251217194209.png",
     "Resource/Pasted image 20251209134207.png",
     "Resource/Pasted image 20251209114759.png",
     "Resource/Pasted image 20251209114655.png",
     "Resource/Pasted image 20251209114605.png",
-    "Redis 缓存.md",
-    "Canvas/一个真实的网络请求流程.canvas",
-    "mermaid-diagram-2025-12-17-193605.svg",
-    "Canvas/网络基础架构.canvas",
     "一个真实的网络请求处理示例.md",
     "Kafka 核心知识体系汇总.md",
     "Elasticsearch 技术原理解析与应用场景.md",
     "Drawing 2025-12-17 17.06.43.excalidraw.md",
-    "mermaid-diagram-2025-12-17-170515.svg",
     "Docs/UDP 协议详解.md",
-    "Canvas/视频技术图谱.canvas",
     "什么是 SYN 消息？.md",
     "Docs/QA-Socket.md",
     "Docs/详述 Socket 协议.md",
@@ -263,17 +335,8 @@
     "Canvas/HTTP.canvas",
     "Untitled.md",
     "Docs/HTTP-3 与 QUIC 协议详细介绍.md",
-    "Docs/RTMP 协议.md",
-    "Docs/What is the NTP protocol?.md",
-    "Docs/WebRTC：实时通信技术的全面解析.md",
-    "Docs/HLS协议详述.md",
-    "Docs/主流视频传输协议.md",
-    "Docs/TCP 复用TCP 复用.md",
-    "Docs/Should I always add the keyword for classes?.md",
     "Canvas",
     "mermaid-diagram (3).svg",
-    "Docs/mermaid-diagram (1).svg",
-    "Docs/mermaid-diagram.svg",
     "Excalidraw",
     "copilot/copilot-custom-prompts",
     "copilot",
