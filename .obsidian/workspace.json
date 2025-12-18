@@ -30,15 +30,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "file": "Canvas/文字排版系统.canvas",
                 "viewState": {
-                  "x": -753.6771629564228,
-                  "y": 2766.0045085464253,
-                  "zoom": -0.3569705346226689
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "一个真实的网络请求流程"
+              "title": "文字排版系统"
             }
           },
           {
@@ -191,7 +191,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "file": "Canvas/文字排版系统.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,7 +201,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 一个真实的网络请求流程"
+              "title": "Backlinks for 文字排版系统"
             }
           },
           {
@@ -210,12 +210,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "file": "Canvas/文字排版系统.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 一个真实的网络请求流程"
+              "title": "Outgoing links from 文字排版系统"
             }
           },
           {
@@ -253,13 +253,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "file": "Canvas/文字排版系统.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 一个真实的网络请求流程"
+              "title": "Outline of 文字排版系统"
             }
           },
           {
@@ -294,10 +294,11 @@
   },
   "active": "333e65b7c6fecca8",
   "lastOpenFiles": [
+    "Canvas/一个真实的网络请求流程.canvas",
+    "Canvas/文字排版系统.canvas",
     "Redis 缓存.md",
     "RPC 调用.md",
     "Pasted image 20251217200211.png",
-    "Canvas/一个真实的网络请求流程.canvas",
     "Canvas/网络基础架构.canvas",
     "TCP 中 server 的 ACK 是如何计算的？.md",
     "Canvas/视频技术图谱.canvas",
