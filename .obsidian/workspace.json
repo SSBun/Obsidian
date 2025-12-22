@@ -32,8 +32,8 @@
               "state": {
                 "file": "Canvas/文字排版系统.canvas",
                 "viewState": {
-                  "x": 0,
-                  "y": 0,
+                  "x": 101.37000000000005,
+                  "y": -41.84999999999992,
                   "zoom": 0
                 }
               },
@@ -175,7 +175,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5
+    "width": 344.5,
+    "collapsed": true
   },
   "right": {
     "id": "d22c3be14a683c0f",
@@ -276,7 +277,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 389.5
+    "width": 389.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -294,6 +296,7 @@
   },
   "active": "333e65b7c6fecca8",
   "lastOpenFiles": [
+    "常见的字体文件格式.md",
     "Canvas/一个真实的网络请求流程.canvas",
     "Canvas/文字排版系统.canvas",
     "Redis 缓存.md",
