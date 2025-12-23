@@ -96,14 +96,14 @@ graph TD
 
 如果你要自己实现或研究这个架构，通常会接触以下库：
 
-| 模块 | 工业界标准库 (C/C++) | Web/JS 生态 |
-| :--- | :--- | :--- |
-| **解析** | cmark | remark, markdown-it |
-| **文本分析 (Unicode)** | **ICU** (International Components for Unicode) | Intl API |
-| **文本塑形 (Shaping)** | **HarfBuzz** (Chrome, Android, Firefox 都在用) | harfbuzzjs |
-| **字体解析** | **FreeType** | opentype.js |
-| **2D 渲染引擎** | **Skia** (Chrome, Flutter), Cairo | Canvas API, WebGL |
-| **布局引擎** | **Yoga** (Flexbox), Pango | Browser Native |
+| 模块                 | 工业界标准库 (C/C++)                                 | Web/JS 生态           |
+| :----------------- | :--------------------------------------------- | :------------------ |
+| **解析**             | cmark                                          | remark, markdown-it |
+| **文本分析 (Unicode)** | **ICU** (International Components for Unicode) | Intl API            |
+| **文本塑形 (Shaping)** | **HarfBuzz** (Chrome, Android, Firefox 都在用)    | harfbuzzjs          |
+| **字体解析**           | **FreeType**                                   | opentype.js         |
+| **2D 渲染引擎**        | **Skia** (Chrome, Flutter), Cairo              | Canvas API, WebGL   |
+| **布局引擎**           | **Yoga** (Flexbox), Pango                      | Browser Native      |
 
 ### 总结
 将 MD 渲染为位图，本质上是一个**从语义（Markdown）到矢量（Glyph Outline）再到像素（Bitmap）的数据降维过程**。其中最困难的部分通常不在于画出像素，而在于**Shaping（如何正确选择字形）**和**Layout（如何优雅地放置字形）**。

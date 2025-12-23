@@ -32,9 +32,9 @@
               "state": {
                 "file": "Canvas/文字排版系统.canvas",
                 "viewState": {
-                  "x": -1312.8134367587913,
-                  "y": 350.5736291010021,
-                  "zoom": -0.4041194227337833
+                  "x": -1371.3482317059234,
+                  "y": -47.99139253002915,
+                  "zoom": -0.06899702827135727
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -220,10 +220,11 @@
   },
   "active": "333e65b7c6fecca8",
   "lastOpenFiles": [
+    "HarfBuzz.md",
+    "Canvas/文字排版系统.canvas",
     "如何解析并渲染MD文件？.md",
     "RPC 调用.md",
     "Canvas/一个真实的网络请求流程.canvas",
-    "Canvas/文字排版系统.canvas",
     "详述 OTF 字体文件.md",
     "Canvas/网络基础架构.canvas",
     "Redis 缓存.md",
@@ -257,9 +258,7 @@
     "TCP “全双工”和“基于字节流”.md",
     "握手和挥手阶段的消息如果发送失败了会怎样？.md",
     "Docs/高级图片格式.md",
-    "Docs/UDP-Lite 协议.md",
     "Docs",
-    "Docs/HTTP 协议详细介绍.md",
     "Canvas/LLM Compare.canvas",
     "Canvas/iOS 工程问题速查.canvas",
     "Canvas/HTTP.canvas",
