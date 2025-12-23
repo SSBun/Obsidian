@@ -33,7 +33,7 @@
                 "file": "Canvas/文字排版系统.canvas",
                 "viewState": {
                   "x": 101.37000000000005,
-                  "y": 26.03999999999995,
+                  "y": -468.1114015076658,
                   "zoom": -0.0033333333333333335
                 }
               },
@@ -73,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -147,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "file": "Canvas/文字排版系统.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +157,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 一个真实的网络请求流程"
+              "title": "Backlinks for 文字排版系统"
             }
           },
           {
@@ -166,12 +166,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "file": "Canvas/文字排版系统.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 一个真实的网络请求流程"
+              "title": "Outgoing links from 文字排版系统"
             }
           },
           {
@@ -209,13 +209,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "file": "Canvas/文字排版系统.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 一个真实的网络请求流程"
+              "title": "Outline of 文字排版系统"
             }
           },
           {
@@ -249,15 +249,15 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "fcd869a65720eda9",
+  "active": "333e65b7c6fecca8",
   "lastOpenFiles": [
+    "Canvas/一个真实的网络请求流程.canvas",
     "Canvas/网络基础架构.canvas",
     "RPC 调用.md",
     "Redis 缓存.md",
     "什么是贝赛尔曲线？.md",
     "Canvas/文字排版系统.canvas",
     "常见的字体文件格式.md",
-    "Canvas/一个真实的网络请求流程.canvas",
     "Pasted image 20251217200211.png",
     "TCP 中 server 的 ACK 是如何计算的？.md",
     "Canvas/视频技术图谱.canvas",
