@@ -42,65 +42,6 @@
             }
           },
           {
-            "id": "cbdda4cc45f68e74",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "什么是贝赛尔曲线？.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "什么是贝赛尔曲线？"
-            }
-          },
-          {
-            "id": "9624ca591ad21bf7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Redis 缓存.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Redis 缓存"
-            }
-          },
-          {
-            "id": "2d069859cb1bab9e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RPC 调用.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "RPC 调用"
-            }
-          },
-          {
-            "id": "285f0b2382df1a40",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Canvas/网络基础架构.canvas",
-                "viewState": {
-                  "x": -1019.8181906163021,
-                  "y": 555.501386037071,
-                  "zoom": -0.07711620864564953
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "网络基础架构"
-            }
-          },
-          {
             "id": "fcd869a65720eda9",
             "type": "leaf",
             "state": {
@@ -108,9 +49,9 @@
               "state": {
                 "file": "Canvas/一个真实的网络请求流程.canvas",
                 "viewState": {
-                  "x": -603.6790974332009,
-                  "y": 2581.6797376471377,
-                  "zoom": -0.0757044263680802
+                  "x": 382.563549571782,
+                  "y": 506.954371507704,
+                  "zoom": -0.42296232302983866
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -206,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "什么是贝赛尔曲线？.md",
+                "file": "Canvas/一个真实的网络请求流程.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,7 +157,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 什么是贝赛尔曲线？"
+              "title": "Backlinks for 一个真实的网络请求流程"
             }
           },
           {
@@ -225,12 +166,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "什么是贝赛尔曲线？.md",
+                "file": "Canvas/一个真实的网络请求流程.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 什么是贝赛尔曲线？"
+              "title": "Outgoing links from 一个真实的网络请求流程"
             }
           },
           {
@@ -268,13 +209,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "什么是贝赛尔曲线？.md",
+                "file": "Canvas/一个真实的网络请求流程.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 什么是贝赛尔曲线？"
+              "title": "Outline of 一个真实的网络请求流程"
             }
           },
           {
@@ -308,16 +249,16 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "cbdda4cc45f68e74",
+  "active": "fcd869a65720eda9",
   "lastOpenFiles": [
-    "Canvas/文字排版系统.canvas",
+    "Canvas/网络基础架构.canvas",
+    "RPC 调用.md",
+    "Redis 缓存.md",
     "什么是贝赛尔曲线？.md",
+    "Canvas/文字排版系统.canvas",
     "常见的字体文件格式.md",
     "Canvas/一个真实的网络请求流程.canvas",
-    "Redis 缓存.md",
-    "RPC 调用.md",
     "Pasted image 20251217200211.png",
-    "Canvas/网络基础架构.canvas",
     "TCP 中 server 的 ACK 是如何计算的？.md",
     "Canvas/视频技术图谱.canvas",
     "主流音频格式对比.md",
