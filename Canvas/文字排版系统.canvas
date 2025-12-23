@@ -1,8 +1,20 @@
 {
 	"nodes":[
-		{"id":"04e9347af89595d2","type":"file","file":"常见的字体文件格式.md","x":-540,"y":-280,"width":800,"height":400}
+		{"id":"d1b99dfb7e8c7a92","type":"file","file":"什么是贝赛尔曲线？.md","x":-300,"y":-180,"width":800,"height":400},
+		{"id":"1becf0676a58ac63","type":"link","url":"https://www.youtube.com/watch?v=aVwxzDHniEw","x":260,"y":-820,"width":640,"height":360},
+		{"id":"04e9347af89595d2","type":"file","file":"常见的字体文件格式.md","x":-740,"y":-660,"width":800,"height":400}
 	],
-	"edges":[],
+	"edges":[
+		{
+			"id":"3a2560f745d0961d",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"04e9347af89595d2",
+			"fromSide":"right",
+			"toNode":"1becf0676a58ac63",
+			"toSide":"left"
+		}
+	],
 	"metadata":{
 		"version":"1.0-1.0",
 		"frontmatter":{}
