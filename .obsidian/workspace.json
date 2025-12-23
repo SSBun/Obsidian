@@ -32,8 +32,8 @@
               "state": {
                 "file": "Canvas/文字排版系统.canvas",
                 "viewState": {
-                  "x": -1371.3482317059234,
-                  "y": 298.3317205960572,
+                  "x": -1621.0910963827635,
+                  "y": -16.77353444542423,
                   "zoom": -0.06899702827135727
                 }
               },
@@ -220,6 +220,7 @@
   },
   "active": "333e65b7c6fecca8",
   "lastOpenFiles": [
+    "ICU (International Components for Unicode) 详解.md",
     "HarfBuzz.md",
     "Canvas/文字排版系统.canvas",
     "如何解析并渲染MD文件？.md",
