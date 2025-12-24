@@ -30,15 +30,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Canvas/视频技术图谱.canvas",
+                "file": "Canvas/文字排版系统.canvas",
                 "viewState": {
-                  "x": 3755.6884458436643,
-                  "y": -1833.2804147297625,
-                  "zoom": -0.33752367214437146
+                  "x": -1526.4384795370272,
+                  "y": 184.3778666086739,
+                  "zoom": -0.8333333333333331
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "视频技术图谱"
+              "title": "文字排版系统"
             }
           }
         ],
@@ -219,8 +219,9 @@
   },
   "active": "333e65b7c6fecca8",
   "lastOpenFiles": [
-    "Docs/主流视频封装格式.md",
+    "Canvas/网络基础架构.canvas",
     "Canvas/视频技术图谱.canvas",
+    "Docs/主流视频封装格式.md",
     "Docs/主流视频编码格式.md",
     "Canvas/文字排版系统.canvas",
     "ICU (International Components for Unicode) 详解.md",
@@ -229,7 +230,6 @@
     "RPC 调用.md",
     "Canvas/一个真实的网络请求流程.canvas",
     "详述 OTF 字体文件.md",
-    "Canvas/网络基础架构.canvas",
     "Redis 缓存.md",
     "什么是贝赛尔曲线？.md",
     "常见的字体文件格式.md",
@@ -257,7 +257,6 @@
     "Docs/QA-Socket.md",
     "Docs/详述 Socket 协议.md",
     "Docs/视频技术小测验.md",
-    "TCP “全双工”和“基于字节流”.md",
     "Docs",
     "Canvas/LLM Compare.canvas",
     "Canvas/iOS 工程问题速查.canvas",
