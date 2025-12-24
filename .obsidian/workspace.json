@@ -30,15 +30,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Canvas/文字排版系统.canvas",
+                "file": "Canvas/视频技术图谱.canvas",
                 "viewState": {
-                  "x": -1621.0910963827635,
-                  "y": -16.77353444542423,
-                  "zoom": -0.06899702827135727
+                  "x": 4086.8367811122557,
+                  "y": -1357.354165486442,
+                  "zoom": -0.33752367214437146
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "文字排版系统"
+              "title": "视频技术图谱"
             }
           }
         ],
@@ -99,8 +99,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5,
-    "collapsed": true
+    "width": 344.5
   },
   "right": {
     "id": "d22c3be14a683c0f",
@@ -116,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Canvas/文字排版系统.canvas",
+                "file": "Canvas/视频技术图谱.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +125,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 文字排版系统"
+              "title": "Backlinks for 视频技术图谱"
             }
           },
           {
@@ -135,12 +134,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Canvas/文字排版系统.canvas",
+                "file": "Canvas/视频技术图谱.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 文字排版系统"
+              "title": "Outgoing links from 视频技术图谱"
             }
           },
           {
@@ -178,13 +177,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Canvas/文字排版系统.canvas",
+                "file": "Canvas/视频技术图谱.canvas",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 文字排版系统"
+              "title": "Outline of 视频技术图谱"
             }
           },
           {
@@ -220,9 +219,11 @@
   },
   "active": "333e65b7c6fecca8",
   "lastOpenFiles": [
+    "Docs/主流视频编码格式.md",
+    "Canvas/视频技术图谱.canvas",
+    "Canvas/文字排版系统.canvas",
     "ICU (International Components for Unicode) 详解.md",
     "HarfBuzz.md",
-    "Canvas/文字排版系统.canvas",
     "如何解析并渲染MD文件？.md",
     "RPC 调用.md",
     "Canvas/一个真实的网络请求流程.canvas",
@@ -233,7 +234,6 @@
     "常见的字体文件格式.md",
     "Pasted image 20251217200211.png",
     "TCP 中 server 的 ACK 是如何计算的？.md",
-    "Canvas/视频技术图谱.canvas",
     "主流音频格式对比.md",
     "AIFF 格式.md",
     "DASH 与 HLS 协议对比.md",
@@ -258,7 +258,6 @@
     "Docs/视频技术小测验.md",
     "TCP “全双工”和“基于字节流”.md",
     "握手和挥手阶段的消息如果发送失败了会怎样？.md",
-    "Docs/高级图片格式.md",
     "Docs",
     "Canvas/LLM Compare.canvas",
     "Canvas/iOS 工程问题速查.canvas",
