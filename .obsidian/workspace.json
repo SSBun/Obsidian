@@ -219,8 +219,9 @@
   },
   "active": "333e65b7c6fecca8",
   "lastOpenFiles": [
-    "Docs/主流视频编码格式.md",
+    "Docs/主流视频封装格式.md",
     "Canvas/视频技术图谱.canvas",
+    "Docs/主流视频编码格式.md",
     "Canvas/文字排版系统.canvas",
     "ICU (International Components for Unicode) 详解.md",
     "HarfBuzz.md",
@@ -257,7 +258,6 @@
     "Docs/详述 Socket 协议.md",
     "Docs/视频技术小测验.md",
     "TCP “全双工”和“基于字节流”.md",
-    "握手和挥手阶段的消息如果发送失败了会怎样？.md",
     "Docs",
     "Canvas/LLM Compare.canvas",
     "Canvas/iOS 工程问题速查.canvas",

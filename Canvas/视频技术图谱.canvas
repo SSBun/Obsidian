@@ -13,7 +13,7 @@
 		{"id":"a65b27ef2cf76933","type":"file","file":"Docs/YUV420 的色值含义.md","x":3480,"y":-2140,"width":800,"height":400},
 		{"id":"dd67f054755582b0","type":"file","file":"Docs/高级图片格式.md","x":3380,"y":-2660,"width":1733,"height":380},
 		{"id":"4031a777ea4645c5","type":"file","file":"Docs/主流视频编码格式.md","x":2820,"y":-1660,"width":800,"height":400},
-		{"id":"69662ca2461e4576","type":"file","file":"Docs/主流视频封装格式.md","x":3780,"y":-1660,"width":800,"height":400},
+		{"id":"69662ca2461e4576","type":"file","file":"Docs/主流视频封装格式.md","x":3780,"y":-1660,"width":940,"height":400},
 		{"id":"141507c60fcef00e","type":"file","file":"Docs/主流视频传输协议.md","x":-680,"y":-1620,"width":820,"height":440},
 		{"id":"31e52d7264dca8e0","type":"file","file":"Docs/HLS协议详述.md","x":-1680,"y":-1960,"width":800,"height":400},
 		{"id":"89cf9dd0c2ea3cbf","type":"file","file":"Docs/WebRTC：实时通信技术的全面解析.md","x":-680,"y":-1020,"width":800,"height":400},
