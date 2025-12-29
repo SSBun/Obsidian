@@ -15,9 +15,9 @@
               "state": {
                 "file": "Canvas/常见网络协议.canvas",
                 "viewState": {
-                  "x": 114.8455136286221,
-                  "y": 141.06775167287253,
-                  "zoom": -0.9456460204588382
+                  "x": 40.82623993778408,
+                  "y": 298.17085892982504,
+                  "zoom": -0.5672453401353961
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -56,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"tags\"]",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
