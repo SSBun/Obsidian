@@ -8,41 +8,23 @@
         "type": "tabs",
         "children": [
           {
-            "id": "155bf9a6b2cbdaa8",
+            "id": "333e65b7c6fecca8",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
                 "file": "Canvas/网络基础架构.canvas",
                 "viewState": {
-                  "x": -1720,
-                  "y": 640,
-                  "zoom": 0
+                  "x": -852.7853723049811,
+                  "y": 1540.4996582252763,
+                  "zoom": -1.1186960645516713
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "网络基础架构"
             }
-          },
-          {
-            "id": "333e65b7c6fecca8",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Canvas/设计原则.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 9.299999999999999,
-                  "zoom": 0
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "设计原则"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -219,10 +201,11 @@
   },
   "active": "333e65b7c6fecca8",
   "lastOpenFiles": [
-    "Canvas/文字排版系统.canvas",
-    "Canvas/设计原则.canvas",
-    "Canvas/网络基础架构.canvas",
     "Canvas/视频技术图谱.canvas",
+    "Canvas/设计原则.canvas",
+    "Resource/2112a03d-cc48-4db5-9740-94adc1a7efbf_2360x2920.png",
+    "Canvas/网络基础架构.canvas",
+    "Canvas/文字排版系统.canvas",
     "Docs/主流视频封装格式.md",
     "Docs/主流视频编码格式.md",
     "ICU (International Components for Unicode) 详解.md",
@@ -263,7 +246,6 @@
     "Canvas/iOS 工程问题速查.canvas",
     "Canvas/HTTP.canvas",
     "Canvas",
-    "mermaid-diagram (3).svg",
     "Excalidraw",
     "copilot/copilot-custom-prompts",
     "copilot",
