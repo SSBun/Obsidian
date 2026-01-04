@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Canvas/常见网络协议.canvas",
+                "file": "Canvas/一个真实的网络请求流程.canvas",
                 "viewState": {
-                  "x": 40.82623993778408,
-                  "y": 357.4237119478759,
-                  "zoom": -0.5672453401353961
+                  "x": 280,
+                  "y": 1960,
+                  "zoom": -1.7891032175013815
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "常见网络协议"
+              "title": "一个真实的网络请求流程"
             }
           }
         ]
@@ -201,12 +201,20 @@
   },
   "active": "333e65b7c6fecca8",
   "lastOpenFiles": [
-    "Canvas/网络基础架构.canvas",
-    "Canvas/视频技术图谱.canvas",
     "Canvas/常见网络协议.canvas",
-    "Canvas/设计原则.canvas",
-    "Resource/2112a03d-cc48-4db5-9740-94adc1a7efbf_2360x2920.png",
     "Canvas/文字排版系统.canvas",
+    "Canvas/视频技术图谱.canvas",
+    "Canvas/设计原则.canvas",
+    "Docs/HLS协议详述.md",
+    "Resource/Pasted image 20251209134207.png",
+    "Resource/Pasted image 20251209114655.png",
+    "Resource/2112a03d-cc48-4db5-9740-94adc1a7efbf_2360x2920.png",
+    "DASH 协议详解.md",
+    "Pasted image 20251217200211.png",
+    "TCP “全双工”和“基于字节流”.md",
+    "什么是贝赛尔曲线？.md",
+    "详述 OTF 字体文件.md",
+    "Canvas/网络基础架构.canvas",
     "Docs/主流视频封装格式.md",
     "Docs/主流视频编码格式.md",
     "ICU (International Components for Unicode) 详解.md",
@@ -214,24 +222,18 @@
     "如何解析并渲染MD文件？.md",
     "RPC 调用.md",
     "Canvas/一个真实的网络请求流程.canvas",
-    "详述 OTF 字体文件.md",
     "Redis 缓存.md",
-    "什么是贝赛尔曲线？.md",
     "常见的字体文件格式.md",
-    "Pasted image 20251217200211.png",
     "TCP 中 server 的 ACK 是如何计算的？.md",
     "主流音频格式对比.md",
     "AIFF 格式.md",
     "DASH 与 HLS 协议对比.md",
-    "DASH 协议详解.md",
     "RTMP 在直播中的应用：为什么推流常用但分发罕见.md",
     "mermaid-diagram-2025-12-17-193605.svg",
     "mermaid-diagram-2025-12-17-170515.svg",
     "Resource/Pasted image 20251217194209.png",
     "Pasted image 20251217170506.png",
-    "Resource/Pasted image 20251209134207.png",
     "Resource/Pasted image 20251209114759.png",
-    "Resource/Pasted image 20251209114655.png",
     "Resource/Pasted image 20251209114605.png",
     "一个真实的网络请求处理示例.md",
     "Kafka 核心知识体系汇总.md",
@@ -240,8 +242,6 @@
     "Docs/UDP 协议详解.md",
     "什么是 SYN 消息？.md",
     "Docs/QA-Socket.md",
-    "Docs/详述 Socket 协议.md",
-    "Docs/视频技术小测验.md",
     "Docs",
     "Canvas/LLM Compare.canvas",
     "Canvas/iOS 工程问题速查.canvas",
