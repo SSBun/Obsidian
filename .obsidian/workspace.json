@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Canvas/一个真实的网络请求流程.canvas",
+                "file": "Canvas/人工智能概述.canvas",
                 "viewState": {
-                  "x": 280,
-                  "y": 1960,
-                  "zoom": -1.7891032175013815
+                  "x": 0,
+                  "y": 48.35999999999984,
+                  "zoom": 0
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "一个真实的网络请求流程"
+              "title": "人工智能概述"
             }
           }
         ]
@@ -201,6 +201,8 @@
   },
   "active": "333e65b7c6fecca8",
   "lastOpenFiles": [
+    "Canvas/一个真实的网络请求流程.canvas",
+    "Canvas/人工智能概述.canvas",
     "Canvas/常见网络协议.canvas",
     "Canvas/文字排版系统.canvas",
     "Canvas/视频技术图谱.canvas",
@@ -221,7 +223,6 @@
     "HarfBuzz.md",
     "如何解析并渲染MD文件？.md",
     "RPC 调用.md",
-    "Canvas/一个真实的网络请求流程.canvas",
     "Redis 缓存.md",
     "常见的字体文件格式.md",
     "TCP 中 server 的 ACK 是如何计算的？.md",
