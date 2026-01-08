@@ -11,16 +11,13 @@
             "id": "b182afad6d2fff63",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Canvas/AI Agent.canvas",
-                "viewState": {
-                  "x": -1331.1787648123889,
-                  "y": -2292.570000000005,
-                  "zoom": -0.494860368569692
-                }
+                "file": "Docs/Agent/AI Agent.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
+              "icon": "lucide-file",
               "title": "AI Agent"
             }
           }
@@ -201,15 +198,17 @@
   },
   "active": "b182afad6d2fff63",
   "lastOpenFiles": [
-    "Canvas/HTTP.canvas",
-    "Canvas/AI Agent.canvas",
-    "Docs/Agent/AGENT.md",
-    "Docs/Agent/Agent Skills.md",
-    "Docs/Agent/AI Agent.md",
+    "Docs/Agent/Developing Agent Skills.md",
     "Docs/Agent/MCPs.md",
     "Docs/Agent/Tools and Frameworks.md",
-    "Docs/Agent",
+    "Docs/Agent/Agent Skills.md",
+    "Canvas/AI Agent.canvas",
+    "Canvas/HTTP.canvas",
+    "AGENT.md",
+    "Docs/Agent/AGENT.md",
     "Docs/AGENT.md",
+    "Docs/Agent/AI Agent.md",
+    "Docs/Agent",
     "Docs/AAC.md",
     "Docs/mermaid-diagram (1).svg",
     "Canvas/iOS 工程问题速查.canvas",
@@ -241,7 +240,6 @@
     "主流音频格式对比.md",
     "AIFF 格式.md",
     "DASH 与 HLS 协议对比.md",
-    "RTMP 在直播中的应用：为什么推流常用但分发罕见.md",
     "mermaid-diagram-2025-12-17-193605.svg",
     "mermaid-diagram-2025-12-17-170515.svg",
     "Resource/Pasted image 20251217194209.png",

@@ -1,10 +1,10 @@
 {
 	"nodes":[
-		{"id":"2415f132785b1df6","type":"file","file":"Docs/Agent/AGENT.md","x":-2020,"y":-2600,"width":400,"height":400},
-		{"id":"46a8b9c0d1e2f3a5","type":"file","file":"Docs/Agent/MCPs.md","x":-2020,"y":-2100,"width":400,"height":400},
-		{"id":"35f7a8b9c1d2e3f4","type":"file","file":"Docs/Agent/AI Agent.md","x":-1080,"y":-2440,"width":400,"height":400},
-		{"id":"24c68121ddf71152","type":"file","file":"Docs/Agent/Agent Skills.md","x":-1500,"y":-2920,"width":400,"height":400},
-		{"id":"57b9c0d1e2f3a4b6","type":"file","file":"Docs/Agent/Tools and Frameworks.md","x":-1540,"y":-2140,"width":400,"height":400}
+		{"id":"35f7a8b9c1d2e3f4","type":"file","file":"Docs/Agent/AI Agent.md","x":-1020,"y":-2500,"width":400,"height":400},
+		{"id":"24c68121ddf71152","type":"file","file":"Docs/Agent/Agent Skills.md","x":-1460,"y":-2900,"width":400,"height":400},
+		{"id":"46a8b9c0d1e2f3a5","type":"file","file":"Docs/Agent/MCPs.md","x":-2040,"y":-2160,"width":400,"height":400},
+		{"id":"57b9c0d1e2f3a4b6","type":"file","file":"Docs/Agent/Tools and Frameworks.md","x":-1460,"y":-2160,"width":400,"height":400},
+		{"id":"2415f132785b1df6","type":"file","file":"AGENT.md","x":-2160,"y":-2760,"width":400,"height":400}
 	],
 	"edges":[
 		{
@@ -15,6 +15,25 @@
 			"fromSide":"right",
 			"toNode":"24c68121ddf71152",
 			"toSide":"left"
+		},
+		{
+			"id":"6c5adfe17b8e6eb6",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"2415f132785b1df6",
+			"fromSide":"right",
+			"toNode":"57b9c0d1e2f3a4b6",
+			"toSide":"top"
+		},
+		{
+			"id":"330d558844c684b9",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromFloating":false,
+			"fromNode":"2415f132785b1df6",
+			"fromSide":"right",
+			"toNode":"46a8b9c0d1e2f3a5",
+			"toSide":"top"
 		}
 	],
 	"metadata":{
