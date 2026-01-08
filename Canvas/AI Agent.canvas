@@ -1,7 +1,10 @@
 {
 	"nodes":[
-		{"id":"24c68121ddf71152","type":"file","file":"Docs/Agent/Agent Skills.md","x":-1480,"y":-2720,"width":400,"height":400},
-		{"id":"2415f132785b1df6","type":"file","file":"Docs/Agent/AGENT.md","x":-2000,"y":-2400,"width":400,"height":400}
+		{"id":"2415f132785b1df6","type":"file","file":"Docs/Agent/AGENT.md","x":-2020,"y":-2600,"width":400,"height":400},
+		{"id":"46a8b9c0d1e2f3a5","type":"file","file":"Docs/Agent/MCPs.md","x":-2020,"y":-2100,"width":400,"height":400},
+		{"id":"35f7a8b9c1d2e3f4","type":"file","file":"Docs/Agent/AI Agent.md","x":-1080,"y":-2440,"width":400,"height":400},
+		{"id":"24c68121ddf71152","type":"file","file":"Docs/Agent/Agent Skills.md","x":-1500,"y":-2920,"width":400,"height":400},
+		{"id":"57b9c0d1e2f3a4b6","type":"file","file":"Docs/Agent/Tools and Frameworks.md","x":-1540,"y":-2140,"width":400,"height":400}
 	],
 	"edges":[
 		{
