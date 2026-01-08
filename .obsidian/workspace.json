@@ -4,24 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "33e4784ebcc34ada",
+        "id": "2151e5dc904476c9",
         "type": "tabs",
         "children": [
           {
-            "id": "333e65b7c6fecca8",
+            "id": "b182afad6d2fff63",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Canvas/人工智能概述.canvas",
+                "file": "Canvas/AI Agent.canvas",
                 "viewState": {
-                  "x": 0,
-                  "y": 187.2073892675173,
-                  "zoom": -0.12271004974842074
+                  "x": -1520,
+                  "y": -2340,
+                  "zoom": 0
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "人工智能概述"
+              "title": "AI Agent"
             }
           }
         ]
@@ -199,11 +199,24 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "333e65b7c6fecca8",
+  "active": "b182afad6d2fff63",
   "lastOpenFiles": [
-    "Canvas/一个真实的网络请求流程.canvas",
-    "Canvas/人工智能概述.canvas",
+    "Canvas/HTTP.canvas",
+    "Canvas/AI Agent.canvas",
+    "Docs/Agent/AGENT.md",
+    "Docs/Agent/Agent Skills.md",
+    "Docs/Agent/AI Agent.md",
+    "Docs/Agent/MCPs.md",
+    "Docs/Agent/Tools and Frameworks.md",
+    "Docs/Agent",
+    "Docs/AGENT.md",
+    "Docs/AAC.md",
+    "Docs/mermaid-diagram (1).svg",
+    "Canvas/iOS 工程问题速查.canvas",
     "Canvas/常见网络协议.canvas",
+    "Canvas/LLM Compare.canvas",
+    "Canvas/人工智能概述.canvas",
+    "Canvas/一个真实的网络请求流程.canvas",
     "Canvas/文字排版系统.canvas",
     "Canvas/视频技术图谱.canvas",
     "Canvas/设计原则.canvas",
@@ -216,7 +229,6 @@
     "TCP “全双工”和“基于字节流”.md",
     "什么是贝赛尔曲线？.md",
     "详述 OTF 字体文件.md",
-    "Canvas/网络基础架构.canvas",
     "Docs/主流视频封装格式.md",
     "Docs/主流视频编码格式.md",
     "ICU (International Components for Unicode) 详解.md",
@@ -235,27 +247,14 @@
     "Resource/Pasted image 20251217194209.png",
     "Pasted image 20251217170506.png",
     "Resource/Pasted image 20251209114759.png",
-    "Resource/Pasted image 20251209114605.png",
-    "一个真实的网络请求处理示例.md",
-    "Kafka 核心知识体系汇总.md",
-    "Elasticsearch 技术原理解析与应用场景.md",
-    "Drawing 2025-12-17 17.06.43.excalidraw.md",
-    "Docs/UDP 协议详解.md",
-    "什么是 SYN 消息？.md",
-    "Docs/QA-Socket.md",
     "Docs",
-    "Canvas/LLM Compare.canvas",
-    "Canvas/iOS 工程问题速查.canvas",
-    "Canvas/HTTP.canvas",
     "Canvas",
     "Excalidraw",
     "copilot/copilot-custom-prompts",
     "copilot",
     "Untitled.base",
-    "互联网/网络传输层协议.canvas",
     "互联网/note",
     "Resource",
-    "互联网",
-    "Untitled 1.base"
+    "互联网"
   ]
 }

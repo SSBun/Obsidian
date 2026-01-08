@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"24c68121ddf71152","type":"file","file":"Docs/Agent/Agent Skills.md","x":-1480,"y":-2720,"width":400,"height":400},
+		{"id":"2415f132785b1df6","type":"file","file":"Docs/Agent/AGENT.md","x":-2000,"y":-2400,"width":400,"height":400}
+	],
+	"edges":[
+		{
+			"id":"53db96676f70ddfe",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"2415f132785b1df6",
+			"fromSide":"right",
+			"toNode":"24c68121ddf71152",
+			"toSide":"left"
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}
