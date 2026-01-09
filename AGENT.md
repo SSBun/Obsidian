@@ -62,11 +62,31 @@ Each edge must have:
 
 7. **Backup**: Consider backing up the canvas before major changes.
 
+## Critical Formatting Requirements
+
+### JSON Minification (CRITICAL)
+- **Rule**: Canvas JSON MUST be minified (no extra whitespace, single-line objects)
+- **Wrong**: Multi-line formatted JSON with proper indentation
+- **Correct**: All objects and arrays on single lines
+- **Reason**: Obsidian's canvas parser expects compact JSON format
+
+### Required Properties (CRITICAL)
+- **Text Nodes**: Must include `"styleAttributes": {}` (empty object)
+- **Edges**: Must include `"styleAttributes": {}, "toFloating": false`
+- **Metadata**: Must include `{"version":"1.0-1.0", "frontmatter":{}}` at end
+
+### ID Format Standards
+- **Nodes**: Use 16-character hexadecimal strings (e.g., `"35f7a8b9c1d2e3f4"`)
+- **Edges**: Can use descriptive strings but must be unique
+- **Avoid**: Simple names like `"runtime-overview"` - use hex format only
+
 ## Common Issues and Solutions
 
-- **Nodes Disappear on Refresh**: Likely due to invalid IDs or JSON syntax errors.
-- **Unmovable Nodes**: Check for duplicate IDs or invalid coordinates.
-- **File Links Broken**: Ensure paths are correct and files exist.
+- **Canvas Resets on Refresh**: Invalid JSON structure or missing required properties
+- **Nodes Disappear on Refresh**: Missing `styleAttributes` or incorrect `toFloating` values
+- **Cannot Edit Nodes**: JSON formatting issues (multi-line instead of minified)
+- **Unmovable Nodes**: Duplicate IDs or invalid coordinates
+- **File Links Broken**: Ensure paths are correct and files exist
 
 ## AI Agent Responsibilities
 

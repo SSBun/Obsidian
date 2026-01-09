@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "OC Runtime Mechanism.canvas",
+                "file": "OhMyOpenCode Runtime Architecture.canvas",
                 "viewState": {
-                  "x": 550,
-                  "y": 510,
-                  "zoom": -0.6701537631044224
+                  "x": 495,
+                  "y": 226.59823529411767,
+                  "zoom": -0.4899659867854093
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "OC Runtime Mechanism"
+              "title": "OhMyOpenCode Runtime Architecture"
             }
           }
         ]
@@ -199,10 +199,11 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "b182afad6d2fff63",
+  "active": "9cc7404291b97418",
   "lastOpenFiles": [
     "Kafka 核心知识体系汇总.md",
     "OC Runtime Mechanism.canvas",
+    "OhMyOpenCode Runtime Architecture.canvas",
     "Test Canvas.canvas",
     "Pasted image 20251217200211.png",
     "ICU (International Components for Unicode) 详解.md",
@@ -213,7 +214,6 @@
     "Canvas/人工智能概述.canvas",
     "Canvas/一个真实的网络请求流程.canvas",
     "Canvas/LLM Compare.canvas",
-    "Canvas/iOS 工程问题速查.canvas",
     "Docs/Agent/AI Agent.md",
     "Docs/Agent/Developing Agent Skills.md",
     "Docs/Agent/MCPs.md",

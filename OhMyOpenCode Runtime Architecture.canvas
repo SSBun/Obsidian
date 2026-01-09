@@ -1,34 +1,14 @@
 {
 	"nodes":[
 		{
-			"id":"9bf3a4b5c6d7e8f0",
-			"type":"text",
-			"text":"## 错误处理和恢复\n\n### Error Classification\n- **Validation Errors**: 输入验证失败\n- **Execution Errors**: 工具执行异常\n- **Network Errors**: 外部服务不可用\n- **Resource Errors**: 系统资源不足\n\n### Recovery Strategies\n\n#### Retry Logic\n```typescript\nclass RetryPolicy {\n  maxAttempts: number;\n  backoffStrategy: BackoffType;\n  shouldRetry(error: Error): boolean;\n}\n```\n\n#### Fallback Mechanisms\n- **降级服务**: 使用简化版本\n- **缓存数据**: 返回缓存结果\n- **默认值**: 提供安全默认值\n\n#### Circuit Breaker\n- **状态**: Closed/Open/Half-Open\n- **阈值**: 失败率触发熔断\n- **恢复**: 定时尝试恢复",
-			"styleAttributes":{},
-			"x":1100,
-			"y":700,
-			"width":400,
-			"height":250
-		},
-		{
 			"id":"79d1e2f3a4b5c6d8",
 			"type":"text",
 			"text":"## 后台处理机制\n\n### Background Task System\n- **类名**: `BackgroundTaskManager`\n- **原理**: 异步队列 + 工作线程池\n- **优势**: 非阻塞执行，提高响应性\n\n### Task Lifecycle\n1. **提交**: `background_task()` 调用\n2. **排队**: 加入执行队列\n3. **调度**: 分配到可用工作线程\n4. **执行**: 异步运行任务逻辑\n5. **回调**: 结果通知或状态更新\n\n### Resource Management\n- **内存限制**: 防止内存泄漏\n- **超时控制**: 避免无限等待\n- **并发限制**: 防止资源竞争\n- **清理机制**: 自动释放资源",
 			"styleAttributes":{},
 			"x":-460,
 			"y":650,
-			"width":400,
-			"height":250
-		},
-		{
-			"id":"8ae2f3a4b5c6d7e9",
-			"type":"text",
-			"text":"## 状态管理\n\n### Session State\n```typescript\ninterface Session {\n  id: string;\n  messages: Message[];\n  todos: TodoItem[];\n  backgroundTasks: Task[];\n  createdAt: Date;\n  lastActivity: Date;\n}\n```\n\n### Todo System\n- **状态机**: pending → in_progress → completed\n- **优先级**: high/medium/low\n- **依赖管理**: 任务间依赖关系\n\n### Persistence Layer\n- **存储格式**: JSON + 文件系统\n- **索引策略**: 时间和内容索引\n- **查询接口**: 高效的状态检索\n\n### Recovery Mechanism\n- **检查点**: 定期状态快照\n- **回滚**: 失败时状态恢复\n- **重试**: 自动重试失败操作",
-			"styleAttributes":{},
-			"x":140,
-			"y":700,
-			"width":400,
-			"height":250
+			"width":450,
+			"height":350
 		},
 		{
 			"id":"46a8b9c0d1e2f3a5",
@@ -37,8 +17,8 @@
 			"styleAttributes":{},
 			"x":-460,
 			"y":250,
-			"width":400,
-			"height":300
+			"width":450,
+			"height":350
 		},
 		{
 			"id":"57b9c0d1e2f3a4b6",
@@ -47,8 +27,8 @@
 			"styleAttributes":{},
 			"x":240,
 			"y":250,
-			"width":500,
-			"height":400
+			"width":450,
+			"height":350
 		},
 		{
 			"id":"acf4b5c6d7e8f9a1",
@@ -57,8 +37,8 @@
 			"styleAttributes":{},
 			"x":-260,
 			"y":1100,
-			"width":600,
-			"height":200
+			"width":450,
+			"height":350
 		},
 		{
 			"id":"35f7a8b9c1d2e3f4",
@@ -67,18 +47,8 @@
 			"styleAttributes":{},
 			"x":-460,
 			"y":-220,
-			"width":600,
-			"height":200
-		},
-		{
-			"id":"24c68121ddf71152",
-			"type":"text",
-			"text":"## 核心组件\n\n### 1. Agent Core (代理核心)\n- **类名**: `OhMyAgent`\n- **职责**: 任务调度和状态管理\n- **实现**: 基于异步事件循环\n\n### 2. Tool Registry (工具注册表)\n- **类名**: `ToolManager`\n- **职责**: 工具发现、加载和验证\n- **实现**: 插件化架构，支持动态扩展\n\n### 3. Session Manager (会话管理器)\n- **类名**: `SessionController`\n- **职责**: 会话生命周期和状态持久化\n- **实现**: 文件系统 + 内存缓存\n\n### 4. Orchestrator (编排器)\n- **类名**: `TaskOrchestrator`\n- **职责**: 任务分解和依赖管理\n- **实现**: DAG(有向无环图)算法",
-			"styleAttributes":{},
-			"x":400,
-			"y":-220,
-			"width":500,
-			"height":300
+			"width":450,
+			"height":350
 		},
 		{
 			"id":"68c0d1e2f3a4b5c7",
@@ -87,7 +57,27 @@
 			"styleAttributes":{},
 			"x":1000,
 			"y":140,
-			"width":500,
+			"width":450,
+			"height":350
+		},
+		{
+			"id":"8ae2f3a4b5c6d7e9",
+			"type":"text",
+			"text":"## 状态管理\n\n### Session State\n```typescript\ninterface Session {\n  id: string;\n  messages: Message[];\n  todos: TodoItem[];\n  backgroundTasks: Task[];\n  createdAt: Date;\n  lastActivity: Date;\n}\n```\n\n### Todo System\n- **状态机**: pending → in_progress → completed\n- **优先级**: high/medium/low\n- **依赖管理**: 任务间依赖关系\n\n### Persistence Layer\n- **存储格式**: JSON + 文件系统\n- **索引策略**: 时间和内容索引\n- **查询接口**: 高效的状态检索\n\n### Recovery Mechanism\n- **检查点**: 定期状态快照\n- **回滚**: 失败时状态恢复\n- **重试**: 自动重试失败操作",
+			"styleAttributes":{},
+			"x":175,
+			"y":680,
+			"width":450,
+			"height":350
+		},
+		{
+			"id":"9bf3a4b5c6d7e8f0",
+			"type":"text",
+			"text":"## 错误处理和恢复\n\n### Error Classification\n- **Validation Errors**: 输入验证失败\n- **Execution Errors**: 工具执行异常\n- **Network Errors**: 外部服务不可用\n- **Resource Errors**: 系统资源不足\n\n### Recovery Strategies\n\n#### Retry Logic\n```typescript\nclass RetryPolicy {\n  maxAttempts: number;\n  backoffStrategy: BackoffType;\n  shouldRetry(error: Error): boolean;\n}\n```\n\n#### Fallback Mechanisms\n- **降级服务**: 使用简化版本\n- **缓存数据**: 返回缓存结果\n- **默认值**: 提供安全默认值\n\n#### Circuit Breaker\n- **状态**: Closed/Open/Half-Open\n- **阈值**: 失败率触发熔断\n- **恢复**: 定时尝试恢复",
+			"styleAttributes":{},
+			"x":940,
+			"y":680,
+			"width":450,
 			"height":350
 		},
 		{
@@ -95,10 +85,20 @@
 			"type":"text",
 			"text":"## 性能优化\n\n### Caching Strategy\n- **多层缓存**: 内存 → 磁盘 → 网络\n- **缓存失效**: LRU + TTL策略\n- **预加载**: 预测性数据加载\n\n### Parallel Execution\n- **任务并行**: 独立任务并发执行\n- **流水线处理**: 阶段性并行优化\n- **负载均衡**: 智能任务分配\n\n### Resource Pooling\n- **连接池**: 数据库和网络连接复用\n- **线程池**: 工作线程生命周期管理\n- **内存池**: 频繁分配对象复用\n\n### Monitoring & Profiling\n- **性能指标**: 响应时间、吞吐量、错误率\n- **瓶颈识别**: 热点路径分析\n- **自动调优**: 基于反馈的性能调整",
 			"styleAttributes":{},
-			"x":600,
-			"y":1080,
-			"width":600,
-			"height":200
+			"x":660,
+			"y":1180,
+			"width":450,
+			"height":350
+		},
+		{
+			"id":"24c68121ddf71152",
+			"type":"text",
+			"text":"## 核心组件\n\n### 1. Agent Core (代理核心)\n- **类名**: `OhMyAgent`\n- **职责**: 任务调度和状态管理\n- **实现**: 基于异步事件循环\n\n### 2. Tool Registry (工具注册表)\n- **类名**: `ToolManager`\n- **职责**: 工具发现、加载和验证\n- **实现**: 插件化架构，支持动态扩展\n\n### 3. Session Manager (会话管理器)\n- **类名**: `SessionController`\n- **职责**: 会话生命周期和状态持久化\n- **实现**: 文件系统 + 内存缓存\n\n### 4. Orchestrator (编排器)\n- **类名**: `TaskOrchestrator`\n- **职责**: 任务分解和依赖管理\n- **实现**: DAG(有向无环图)算法",
+			"styleAttributes":{},
+			"x":240,
+			"y":-220,
+			"width":450,
+			"height":350
 		}
 	],
 	"edges":[
