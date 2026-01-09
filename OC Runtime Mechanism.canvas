@@ -1,176 +1,200 @@
 {
-  "nodes": [
-    {
-      "id": "runtime-overview",
-      "type": "text",
-      "x": 0,
-      "y": 0,
-      "width": 600,
-      "height": 200,
-      "text": "# OhMyOpenCode Runtime 机制详解\n\n**核心架构**: OhMyOpenCode 是基于大型语言模型的智能代理编排系统，提供强大的工具调用和任务协调能力。\n\n**设计理念**: 采用分层架构，将复杂任务分解为原子操作，通过智能路由和状态管理实现高效执行。\n\n**关键特性**:\n- 多Agent并行执行\n- 工具动态加载\n- 会话状态持久化\n- 错误恢复机制"
-    },
-    {
-      "id": "core-components",
-      "type": "text",
-      "x": 700,
-      "y": 0,
-      "width": 500,
-      "height": 300,
-      "text": "## 核心组件\n\n### 1. Agent Core (代理核心)\n- **类名**: `OhMyAgent`\n- **职责**: 任务调度和状态管理\n- **实现**: 基于异步事件循环\n\n### 2. Tool Registry (工具注册表)\n- **类名**: `ToolManager`\n- **职责**: 工具发现、加载和验证\n- **实现**: 插件化架构，支持动态扩展\n\n### 3. Session Manager (会话管理器)\n- **类名**: `SessionController`\n- **职责**: 会话生命周期和状态持久化\n- **实现**: 文件系统 + 内存缓存\n\n### 4. Orchestrator (编排器)\n- **类名**: `TaskOrchestrator`\n- **职责**: 任务分解和依赖管理\n- **实现**: DAG(有向无环图)算法"
-    },
-    {
-      "id": "execution-flow",
-      "type": "text",
-      "x": 0,
-      "y": 250,
-      "width": 400,
-      "height": 300,
-      "text": "## 执行流程\n\n### Phase 0: Intent Gate\n1. **请求解析**: 识别任务类型和复杂度\n2. **技能匹配**: 检查是否触发专用技能\n3. **复杂度评估**: 确定是否需要多步骤执行\n\n### Phase 1: Codebase Assessment\n1. **环境扫描**: 分析项目结构和配置\n2. **模式识别**: 识别现有代码规范\n3. **成熟度评估**: 确定代码库状态\n\n### Phase 2A: Exploration & Research\n1. **并行搜索**: 启动多个探索Agent\n2. **上下文收集**: 聚合相关信息\n3. **知识合成**: 整合发现结果\n\n### Phase 2B: Implementation\n1. **任务分解**: 创建详细的todo列表\n2. **原子执行**: 逐个完成任务单元\n3. **质量验证**: LSP诊断和构建检查"
-    },
-    {
-      "id": "agent-types",
-      "type": "text",
-      "x": 450,
-      "y": 250,
-      "width": 500,
-      "height": 400,
-      "text": "## Agent 类型体系\n\n### 1. Specialized Agents (专用代理)\n\n#### Explore Agent\n- **用途**: 代码库探索和模式发现\n- **实现原理**: AST解析 + 全文搜索\n- **输出格式**: 结构化代码片段和依赖关系\n\n#### Librarian Agent\n- **用途**: 外部知识库检索\n- **实现原理**: GitHub API + 文档索引\n- **输出格式**: 最佳实践和实现示例\n\n#### Oracle Agent\n- **用途**: 架构决策和代码审查\n- **实现原理**: 专家级推理引擎\n- **输出格式**: 详细的技术建议和替代方案\n\n### 2. General Agents (通用代理)\n\n#### Frontend UI/UX Engineer\n- **用途**: 视觉组件设计和实现\n- **实现原理**: 设计系统 + 组件库\n- **输出格式**: 像素级UI代码\n\n#### Document Writer\n- **用途**: 技术文档生成\n- **实现原理**: 结构化写作算法\n- **输出格式**: Markdown文档和API参考"
-    },
-    {
-      "id": "tool-system",
-      "type": "text",
-      "x": 1000,
-      "y": 250,
-      "width": 500,
-      "height": 350,
-      "text": "## 工具系统架构\n\n### Tool Interface (工具接口)\n```typescript\ninterface Tool {\n  name: string;\n  description: string;\n  parameters: ParameterSchema;\n  execute(context: ExecutionContext): Promise<Result>;\n}\n```\n\n### Execution Context (执行上下文)\n```typescript\ninterface ExecutionContext {\n  sessionId: string;\n  userId: string;\n  workingDirectory: string;\n  environment: Record<string, any>;\n  timeout: number;\n}\n```\n\n### Tool Categories\n\n#### File Operations\n- **Read/Write**: 基础文件操作\n- **Search**: 内容和模式匹配\n- **Transform**: 代码重构和格式化\n\n#### External Integration\n- **Web Fetch**: HTTP请求和数据获取\n- **API Calls**: 外部服务集成\n- **System Commands**: Shell命令执行\n\n#### Analysis Tools\n- **LSP**: 语言服务器协议集成\n- **AST**: 抽象语法树分析\n- **Diagnostics**: 代码质量检查"
-    },
-    {
-      "id": "background-processing",
-      "type": "text",
-      "x": 0,
-      "y": 600,
-      "width": 400,
-      "height": 250,
-      "text": "## 后台处理机制\n\n### Background Task System\n- **类名**: `BackgroundTaskManager`\n- **原理**: 异步队列 + 工作线程池\n- **优势**: 非阻塞执行，提高响应性\n\n### Task Lifecycle\n1. **提交**: `background_task()` 调用\n2. **排队**: 加入执行队列\n3. **调度**: 分配到可用工作线程\n4. **执行**: 异步运行任务逻辑\n5. **回调**: 结果通知或状态更新\n\n### Resource Management\n- **内存限制**: 防止内存泄漏\n- **超时控制**: 避免无限等待\n- **并发限制**: 防止资源竞争\n- **清理机制**: 自动释放资源"
-    },
-    {
-      "id": "state-management",
-      "type": "text",
-      "x": 450,
-      "y": 600,
-      "width": 400,
-      "height": 250,
-      "text": "## 状态管理\n\n### Session State\n```typescript\ninterface Session {\n  id: string;\n  messages: Message[];\n  todos: TodoItem[];\n  backgroundTasks: Task[];\n  createdAt: Date;\n  lastActivity: Date;\n}\n```\n\n### Todo System\n- **状态机**: pending → in_progress → completed\n- **优先级**: high/medium/low\n- **依赖管理**: 任务间依赖关系\n\n### Persistence Layer\n- **存储格式**: JSON + 文件系统\n- **索引策略**: 时间和内容索引\n- **查询接口**: 高效的状态检索\n\n### Recovery Mechanism\n- **检查点**: 定期状态快照\n- **回滚**: 失败时状态恢复\n- **重试**: 自动重试失败操作"
-    },
-    {
-      "id": "error-handling",
-      "type": "text",
-      "x": 900,
-      "y": 600,
-      "width": 400,
-      "height": 250,
-      "text": "## 错误处理和恢复\n\n### Error Classification\n- **Validation Errors**: 输入验证失败\n- **Execution Errors**: 工具执行异常\n- **Network Errors**: 外部服务不可用\n- **Resource Errors**: 系统资源不足\n\n### Recovery Strategies\n\n#### Retry Logic\n```typescript\nclass RetryPolicy {\n  maxAttempts: number;\n  backoffStrategy: BackoffType;\n  shouldRetry(error: Error): boolean;\n}\n```\n\n#### Fallback Mechanisms\n- **降级服务**: 使用简化版本\n- **缓存数据**: 返回缓存结果\n- **默认值**: 提供安全默认值\n\n#### Circuit Breaker\n- **状态**: Closed/Open/Half-Open\n- **阈值**: 失败率触发熔断\n- **恢复**: 定时尝试恢复"
-    },
-    {
-      "id": "security-model",
-      "type": "text",
-      "x": 0,
-      "y": 900,
-      "width": 600,
-      "height": 200,
-      "text": "## 安全模型\n\n### Sandbox Execution\n- **隔离环境**: 每个工具运行在沙箱中\n- **权限控制**: 最小权限原则\n- **资源限制**: CPU/内存/网络配额\n\n### Input Validation\n- **Schema Validation**: 参数结构验证\n- **Sanitization**: 输入清理和过滤\n- **Type Checking**: 运行时类型安全\n\n### Audit Logging\n- **操作记录**: 所有工具调用日志\n- **访问控制**: 用户权限验证\n- **异常检测**: 异常行为监控\n\n### Encryption\n- **数据传输**: TLS加密通信\n- **存储加密**: 敏感数据加密存储\n- **密钥管理**: 安全的密钥轮换"
-    },
-    {
-      "id": "performance-optimization",
-      "type": "text",
-      "x": 650,
-      "y": 900,
-      "width": 600,
-      "height": 200,
-      "text": "## 性能优化\n\n### Caching Strategy\n- **多层缓存**: 内存 → 磁盘 → 网络\n- **缓存失效**: LRU + TTL策略\n- **预加载**: 预测性数据加载\n\n### Parallel Execution\n- **任务并行**: 独立任务并发执行\n- **流水线处理**: 阶段性并行优化\n- **负载均衡**: 智能任务分配\n\n### Resource Pooling\n- **连接池**: 数据库和网络连接复用\n- **线程池**: 工作线程生命周期管理\n- **内存池**: 频繁分配对象复用\n\n### Monitoring & Profiling\n- **性能指标**: 响应时间、吞吐量、错误率\n- **瓶颈识别**: 热点路径分析\n- **自动调优**: 基于反馈的性能调整"
-    }
-  ],
-  "edges": [
-    {
-      "id": "overview-to-components",
-      "fromNode": "runtime-overview",
-      "fromSide": "right",
-      "toNode": "core-components",
-      "toSide": "left",
-      "label": "核心组件"
-    },
-    {
-      "id": "overview-to-flow",
-      "fromNode": "runtime-overview",
-      "fromSide": "bottom",
-      "toNode": "execution-flow",
-      "toSide": "top",
-      "label": "执行流程"
-    },
-    {
-      "id": "components-to-agents",
-      "fromNode": "core-components",
-      "fromSide": "bottom",
-      "toNode": "agent-types",
-      "toSide": "top",
-      "label": "代理体系"
-    },
-    {
-      "id": "components-to-tools",
-      "fromNode": "core-components",
-      "fromSide": "right",
-      "toNode": "tool-system",
-      "toSide": "left",
-      "label": "工具系统"
-    },
-    {
-      "id": "flow-to-background",
-      "fromNode": "execution-flow",
-      "fromSide": "bottom",
-      "toNode": "background-processing",
-      "toSide": "top",
-      "label": "后台处理"
-    },
-    {
-      "id": "agents-to-state",
-      "fromNode": "agent-types",
-      "fromSide": "bottom",
-      "toNode": "state-management",
-      "toSide": "top",
-      "label": "状态管理"
-    },
-    {
-      "id": "tools-to-error",
-      "fromNode": "tool-system",
-      "fromSide": "bottom",
-      "toNode": "error-handling",
-      "toSide": "top",
-      "label": "错误处理"
-    },
-    {
-      "id": "background-to-security",
-      "fromNode": "background-processing",
-      "fromSide": "bottom",
-      "toNode": "security-model",
-      "toSide": "top",
-      "label": "安全保障"
-    },
-    {
-      "id": "state-to-performance",
-      "fromNode": "state-management",
-      "fromSide": "right",
-      "toNode": "performance-optimization",
-      "toSide": "left",
-      "label": "性能优化"
-    },
-    {
-      "id": "error-to-performance",
-      "fromNode": "error-handling",
-      "fromSide": "right",
-      "toNode": "performance-optimization",
-      "toSide": "left",
-      "label": "优化策略"
-    }
-  ]
+	"nodes":[
+		{
+			"id":"9bf3a4b5c6d7e8f0",
+			"type":"text",
+			"text":"## 错误处理和恢复\n\n### Error Classification\n- **Validation Errors**: 输入验证失败\n- **Execution Errors**: 工具执行异常\n- **Network Errors**: 外部服务不可用\n- **Resource Errors**: 系统资源不足\n\n### Recovery Strategies\n\n#### Retry Logic\n```typescript\nclass RetryPolicy {\n  maxAttempts: number;\n  backoffStrategy: BackoffType;\n  shouldRetry(error: Error): boolean;\n}\n```\n\n#### Fallback Mechanisms\n- **降级服务**: 使用简化版本\n- **缓存数据**: 返回缓存结果\n- **默认值**: 提供安全默认值\n\n#### Circuit Breaker\n- **状态**: Closed/Open/Half-Open\n- **阈值**: 失败率触发熔断\n- **恢复**: 定时尝试恢复",
+			"styleAttributes":{},
+			"x":1100,
+			"y":700,
+			"width":400,
+			"height":250
+		},
+		{
+			"id":"79d1e2f3a4b5c6d8",
+			"type":"text",
+			"text":"## 后台处理机制\n\n### Background Task System\n- **类名**: `BackgroundTaskManager`\n- **原理**: 异步队列 + 工作线程池\n- **优势**: 非阻塞执行，提高响应性\n\n### Task Lifecycle\n1. **提交**: `background_task()` 调用\n2. **排队**: 加入执行队列\n3. **调度**: 分配到可用工作线程\n4. **执行**: 异步运行任务逻辑\n5. **回调**: 结果通知或状态更新\n\n### Resource Management\n- **内存限制**: 防止内存泄漏\n- **超时控制**: 避免无限等待\n- **并发限制**: 防止资源竞争\n- **清理机制**: 自动释放资源",
+			"styleAttributes":{},
+			"x":-460,
+			"y":650,
+			"width":400,
+			"height":250
+		},
+		{
+			"id":"8ae2f3a4b5c6d7e9",
+			"type":"text",
+			"text":"## 状态管理\n\n### Session State\n```typescript\ninterface Session {\n  id: string;\n  messages: Message[];\n  todos: TodoItem[];\n  backgroundTasks: Task[];\n  createdAt: Date;\n  lastActivity: Date;\n}\n```\n\n### Todo System\n- **状态机**: pending → in_progress → completed\n- **优先级**: high/medium/low\n- **依赖管理**: 任务间依赖关系\n\n### Persistence Layer\n- **存储格式**: JSON + 文件系统\n- **索引策略**: 时间和内容索引\n- **查询接口**: 高效的状态检索\n\n### Recovery Mechanism\n- **检查点**: 定期状态快照\n- **回滚**: 失败时状态恢复\n- **重试**: 自动重试失败操作",
+			"styleAttributes":{},
+			"x":140,
+			"y":700,
+			"width":400,
+			"height":250
+		},
+		{
+			"id":"46a8b9c0d1e2f3a5",
+			"type":"text",
+			"text":"## 执行流程\n\n### Phase 0: Intent Gate\n1. **请求解析**: 识别任务类型和复杂度\n2. **技能匹配**: 检查是否触发专用技能\n3. **复杂度评估**: 确定是否需要多步骤执行\n\n### Phase 1: Codebase Assessment\n1. **环境扫描**: 分析项目结构和配置\n2. **模式识别**: 识别现有代码规范\n3. **成熟度评估**: 确定代码库状态\n\n### Phase 2A: Exploration & Research\n1. **并行搜索**: 启动多个探索Agent\n2. **上下文收集**: 聚合相关信息\n3. **知识合成**: 整合发现结果\n\n### Phase 2B: Implementation\n1. **任务分解**: 创建详细的todo列表\n2. **原子执行**: 逐个完成任务单元\n3. **质量验证**: LSP诊断和构建检查",
+			"styleAttributes":{},
+			"x":-460,
+			"y":250,
+			"width":400,
+			"height":300
+		},
+		{
+			"id":"57b9c0d1e2f3a4b6",
+			"type":"text",
+			"text":"## Agent 类型体系\n\n### 1. Specialized Agents (专用代理)\n\n#### Explore Agent\n- **用途**: 代码库探索和模式发现\n- **实现原理**: AST解析 + 全文搜索\n- **输出格式**: 结构化代码片段和依赖关系\n\n#### Librarian Agent\n- **用途**: 外部知识库检索\n- **实现原理**: GitHub API + 文档索引\n- **输出格式**: 最佳实践和实现示例\n\n#### Oracle Agent\n- **用途**: 架构决策和代码审查\n- **实现原理**: 专家级推理引擎\n- **输出格式**: 详细的技术建议和替代方案\n\n### 2. General Agents (通用代理)\n\n#### Frontend UI/UX Engineer\n- **用途**: 视觉组件设计和实现\n- **实现原理**: 设计系统 + 组件库\n- **输出格式**: 像素级UI代码\n\n#### Document Writer\n- **用途**: 技术文档生成\n- **实现原理**: 结构化写作算法\n- **输出格式**: Markdown文档和API参考",
+			"styleAttributes":{},
+			"x":240,
+			"y":250,
+			"width":500,
+			"height":400
+		},
+		{
+			"id":"acf4b5c6d7e8f9a1",
+			"type":"text",
+			"text":"## 安全模型\n\n### Sandbox Execution\n- **隔离环境**: 每个工具运行在沙箱中\n- **权限控制**: 最小权限原则\n- **资源限制**: CPU/内存/网络配额\n\n### Input Validation\n- **Schema Validation**: 参数结构验证\n- **Sanitization**: 输入清理和过滤\n- **Type Checking**: 运行时类型安全\n\n### Audit Logging\n- **操作记录**: 所有工具调用日志\n- **访问控制**: 用户权限验证\n- **异常检测**: 异常行为监控\n\n### Encryption\n- **数据传输**: TLS加密通信\n- **存储加密**: 敏感数据加密存储\n- **密钥管理**: 安全的密钥轮换",
+			"styleAttributes":{},
+			"x":-260,
+			"y":1100,
+			"width":600,
+			"height":200
+		},
+		{
+			"id":"35f7a8b9c1d2e3f4",
+			"type":"text",
+			"text":"# OhMyOpenCode Runtime 机制详解\n\n**核心架构**: OhMyOpenCode 是基于大型语言模型的智能代理编排系统，提供强大的工具调用和任务协调能力。\n\n**设计理念**: 采用分层架构，将复杂任务分解为原子操作，通过智能路由和状态管理实现高效执行。\n\n**关键特性**:\n- 多Agent并行执行\n- 工具动态加载\n- 会话状态持久化\n- 错误恢复机制",
+			"styleAttributes":{},
+			"x":-460,
+			"y":-220,
+			"width":600,
+			"height":200
+		},
+		{
+			"id":"24c68121ddf71152",
+			"type":"text",
+			"text":"## 核心组件\n\n### 1. Agent Core (代理核心)\n- **类名**: `OhMyAgent`\n- **职责**: 任务调度和状态管理\n- **实现**: 基于异步事件循环\n\n### 2. Tool Registry (工具注册表)\n- **类名**: `ToolManager`\n- **职责**: 工具发现、加载和验证\n- **实现**: 插件化架构，支持动态扩展\n\n### 3. Session Manager (会话管理器)\n- **类名**: `SessionController`\n- **职责**: 会话生命周期和状态持久化\n- **实现**: 文件系统 + 内存缓存\n\n### 4. Orchestrator (编排器)\n- **类名**: `TaskOrchestrator`\n- **职责**: 任务分解和依赖管理\n- **实现**: DAG(有向无环图)算法",
+			"styleAttributes":{},
+			"x":400,
+			"y":-220,
+			"width":500,
+			"height":300
+		},
+		{
+			"id":"68c0d1e2f3a4b5c7",
+			"type":"text",
+			"text":"## 工具系统架构\n\n### Tool Interface (工具接口)\n```typescript\ninterface Tool {\n  name: string;\n  description: string;\n  parameters: ParameterSchema;\n  execute(context: ExecutionContext): Promise<Result>;\n}\n```\n\n### Execution Context (执行上下文)\n```typescript\ninterface ExecutionContext {\n  sessionId: string;\n  userId: string;\n  workingDirectory: string;\n  environment: Record<string, any>;\n  timeout: number;\n}\n```\n\n### Tool Categories\n\n#### File Operations\n- **Read/Write**: 基础文件操作\n- **Search**: 内容和模式匹配\n- **Transform**: 代码重构和格式化\n\n#### External Integration\n- **Web Fetch**: HTTP请求和数据获取\n- **API Calls**: 外部服务集成\n- **System Commands**: Shell命令执行\n\n#### Analysis Tools\n- **LSP**: 语言服务器协议集成\n- **AST**: 抽象语法树分析\n- **Diagnostics**: 代码质量检查",
+			"styleAttributes":{},
+			"x":1000,
+			"y":140,
+			"width":500,
+			"height":350
+		},
+		{
+			"id":"bdf5c6d7e8f9a0b2",
+			"type":"text",
+			"text":"## 性能优化\n\n### Caching Strategy\n- **多层缓存**: 内存 → 磁盘 → 网络\n- **缓存失效**: LRU + TTL策略\n- **预加载**: 预测性数据加载\n\n### Parallel Execution\n- **任务并行**: 独立任务并发执行\n- **流水线处理**: 阶段性并行优化\n- **负载均衡**: 智能任务分配\n\n### Resource Pooling\n- **连接池**: 数据库和网络连接复用\n- **线程池**: 工作线程生命周期管理\n- **内存池**: 频繁分配对象复用\n\n### Monitoring & Profiling\n- **性能指标**: 响应时间、吞吐量、错误率\n- **瓶颈识别**: 热点路径分析\n- **自动调优**: 基于反馈的性能调整",
+			"styleAttributes":{},
+			"x":600,
+			"y":1080,
+			"width":600,
+			"height":200
+		}
+	],
+	"edges":[
+		{
+			"id":"53db96676f70ddfe",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"35f7a8b9c1d2e3f4",
+			"fromSide":"right",
+			"toNode":"24c68121ddf71152",
+			"toSide":"left"
+		},
+		{
+			"id":"6c5adfe17b8e6eb6",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"35f7a8b9c1d2e3f4",
+			"fromSide":"bottom",
+			"toNode":"46a8b9c0d1e2f3a5",
+			"toSide":"top"
+		},
+		{
+			"id":"79d1e2f3a4b5c6d8",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"24c68121ddf71152",
+			"fromSide":"bottom",
+			"toNode":"57b9c0d1e2f3a4b6",
+			"toSide":"top"
+		},
+		{
+			"id":"8ae2f3a4b5c6d7e9",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"24c68121ddf71152",
+			"fromSide":"right",
+			"toNode":"68c0d1e2f3a4b5c7",
+			"toSide":"left"
+		},
+		{
+			"id":"9bf3a4b5c6d7e8f0",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"46a8b9c0d1e2f3a5",
+			"fromSide":"bottom",
+			"toNode":"79d1e2f3a4b5c6d8",
+			"toSide":"top"
+		},
+		{
+			"id":"acf4b5c6d7e8f9a1",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"57b9c0d1e2f3a4b6",
+			"fromSide":"bottom",
+			"toNode":"8ae2f3a4b5c6d7e9",
+			"toSide":"top"
+		},
+		{
+			"id":"bdf5c6d7e8f9a0b2",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"68c0d1e2f3a4b5c7",
+			"fromSide":"bottom",
+			"toNode":"9bf3a4b5c6d7e8f0",
+			"toSide":"top"
+		},
+		{
+			"id":"cef6d7e8f9a0b1c3",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"79d1e2f3a4b5c6d8",
+			"fromSide":"bottom",
+			"toNode":"acf4b5c6d7e8f9a1",
+			"toSide":"top"
+		},
+		{
+			"id":"def7e8f9a0b1c2d4",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"8ae2f3a4b5c6d7e9",
+			"fromSide":"right",
+			"toNode":"bdf5c6d7e8f9a0b2",
+			"toSide":"left"
+		},
+		{
+			"id":"eff8f9a0b1c2d3e5",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"9bf3a4b5c6d7e8f0",
+			"fromSide":"right",
+			"toNode":"bdf5c6d7e8f9a0b2",
+			"toSide":"left"
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
 }
