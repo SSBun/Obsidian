@@ -37,9 +37,21 @@
               "icon": "lucide-layout-dashboard",
               "title": "视频技术图谱"
             }
+          },
+          {
+            "id": "98cd0e69417f5520",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.4"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -214,7 +226,7 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "9cc7404291b97418",
+  "active": "98cd0e69417f5520",
   "lastOpenFiles": [
     "Canvas/网络基础架构.canvas",
     "Canvas/常见网络协议.canvas",
