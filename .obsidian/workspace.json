@@ -25,12 +25,17 @@
             "id": "92d9187120ec92f6",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "canvas",
               "state": {
-                "currentVersion": "1.11.4"
+                "file": "Canvas/视频技术图谱.canvas",
+                "viewState": {
+                  "x": -675.3858392332294,
+                  "y": -1089.0790251045678,
+                  "zoom": -1.3082009863532416
+                }
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.4"
+              "icon": "lucide-layout-dashboard",
+              "title": "视频技术图谱"
             }
           }
         ],
@@ -209,8 +214,11 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "92d9187120ec92f6",
+  "active": "9cc7404291b97418",
   "lastOpenFiles": [
+    "Canvas/网络基础架构.canvas",
+    "Canvas/常见网络协议.canvas",
+    "Canvas/文字排版系统.canvas",
     "OhMyOpenCode Runtime Architecture.canvas",
     "Kafka 核心知识体系汇总.md",
     "OC Runtime Mechanism.canvas",
@@ -219,8 +227,6 @@
     "ICU (International Components for Unicode) 详解.md",
     "Canvas/AI Agent.canvas",
     "Canvas/设计原则.canvas",
-    "Canvas/网络基础架构.canvas",
-    "Canvas/文字排版系统.canvas",
     "Canvas/人工智能概述.canvas",
     "Canvas/一个真实的网络请求流程.canvas",
     "Canvas/LLM Compare.canvas",
