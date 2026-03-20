@@ -11,20 +11,30 @@
             "id": "b182afad6d2fff63",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "OhMyOpenCode Runtime Architecture.canvas",
-                "viewState": {
-                  "x": 246.8404411764705,
-                  "y": 591.0009558823525,
-                  "zoom": -0.4899659867854093
-                }
+                "file": "Elasticsearch 技术原理解析与应用场景.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "OhMyOpenCode Runtime Architecture"
+              "icon": "lucide-file",
+              "title": "Elasticsearch 技术原理解析与应用场景"
+            }
+          },
+          {
+            "id": "92d9187120ec92f6",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.4"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -199,11 +209,11 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "b182afad6d2fff63",
+  "active": "92d9187120ec92f6",
   "lastOpenFiles": [
+    "OhMyOpenCode Runtime Architecture.canvas",
     "Kafka 核心知识体系汇总.md",
     "OC Runtime Mechanism.canvas",
-    "OhMyOpenCode Runtime Architecture.canvas",
     "Test Canvas.canvas",
     "Pasted image 20251217200211.png",
     "ICU (International Components for Unicode) 详解.md",
